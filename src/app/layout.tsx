@@ -1,3 +1,4 @@
+import Header from "@/components/header";
 import "./globals.css";
 
 import type { Metadata } from "next";
@@ -29,6 +30,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} dark antialiased`}
       >
+        <Header />
         {children}
       </body>
     </html>
