@@ -1,9 +1,9 @@
 "use client";
 
-import React from "react";
-import { cn } from "@/lib/utils";
-import { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import UnicornScene from "unicornstudio-react";
+
+import { cn } from "@/lib/utils";
 
 export const useWindowSize = () => {
   const [mounted, setMounted] = useState(false);
