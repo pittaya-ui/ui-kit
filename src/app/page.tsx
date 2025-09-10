@@ -1,30 +1,22 @@
-import Image from "next/image";
+import { PittayaBackground } from "@/components/raycast-animated-background";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center px-6">
-      <Image
-        src={"/pittaya-logo.png"}
-        alt="Pittaya Logo"
-        width={80}
-        height={80}
-      />
-      <h1 className="text-center text-4xl font-bold">
-        Welcome to <b className="text-pink-600">Pittaya UI</b>
-      </h1>
-      <p className="mt-4 text-center text-lg">
-        The best UI library for{" "}
-        <b className="text-fuchsia-400 underline underline-offset-8">Next.js</b>
-        , using{" "}
-        <b className="text-fuchsia-400 underline underline-offset-8">
-          Shadcn UI
-        </b>{" "}
-        and{" "}
-        <b className="text-fuchsia-400 underline underline-offset-8">
-          Tailwind CSS
-        </b>
-        .
-      </p>
-    </main>
+    <>
+      <PittayaBackground className="min-h-screen overflow-x-hidden">
+        <main className="flex min-h-screen flex-1 items-center justify-center px-6">
+          <div className="max-w-4xl space-y-8 text-center">
+            <h1 className="text-6xl leading-tight font-bold text-white">
+              Bem-vindo ao <br />
+              <span className="text-white">Pittaya UI</span>
+            </h1>
+            <p className="mx-auto max-w-2xl text-xl text-white/80">
+              Componentes modernos e animações incríveis para suas aplicações
+              Next.js. Construa interfaces bonitas com facilidade.
+            </p>
+          </div>
+        </main>
+      </PittayaBackground>
+    </>
   );
 }
