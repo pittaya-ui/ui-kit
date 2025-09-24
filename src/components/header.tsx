@@ -7,6 +7,7 @@ import { useState } from "react";
 
 import { cn } from "@/lib/utils";
 
+import { GithubStarsButton } from "./github-stars-button";
 import { Button } from "./ui/button";
 
 export function Header() {
@@ -48,6 +49,7 @@ export function Header() {
                 {item.name}
               </Link>
             ))}
+            <GithubStarsButton />
           </nav>
 
           <Button
