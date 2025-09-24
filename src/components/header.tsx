@@ -79,6 +79,9 @@ export function Header() {
                 {item.name}
               </Link>
             ))}
+            <div className="ml-3">
+              <GithubStarsButton />
+            </div>
           </div>
         </div>
       )}
