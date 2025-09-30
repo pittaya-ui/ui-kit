@@ -6,7 +6,7 @@ export default function DocsHomePage() {
   const components = getComponentsIndex();
 
   return (
-    <>
+    <div className="mx-auto max-w-5xl">
       <header className="space-y-6">
         <span className="border-border/60 bg-primary/10 text-primary inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-xs font-semibold tracking-wide uppercase">
           Documentação
@@ -67,6 +67,6 @@ export default function DocsHomePage() {
           ))}
         </div>
       </section>
-    </>
+    </div>
   );
 }
