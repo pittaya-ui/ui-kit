@@ -41,6 +41,7 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --color-pittaya: var(--pittaya);
 }
 
 :root {
@@ -76,6 +77,7 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --pittaya: oklch(0.712 0.194 13.428)
 }
 
 .dark {
@@ -110,53 +112,77 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+  --pittaya: oklch(0.712 0.194 13.428)
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
-  
+
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
     @apply bg-background text-foreground;
   }
-  
+
+  /* Fix scroll position for anchors when using fixed header */
+  h1[id],
+  h2[id],
+  h3[id],
+  h4[id],
+  h5[id],
+  h6[id],
+  section[id] {
+    scroll-margin-top: 7rem; /* 112px - height of fixed header + some padding */
+  }
+
   /* Custom scrollbar styles */
   ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
   }
-  
+
   ::-webkit-scrollbar-track {
     background: transparent;
   }
-  
+
   ::-webkit-scrollbar-thumb {
     background-color: oklch(71.2% 0.194 13.428);
     border-radius: 4px;
     transition: background-color 0.2s ease;
   }
-  
+
   ::-webkit-scrollbar-thumb:hover {
     background-color: oklch(64.5% 0.246 16.439);
   }
-  
+
   ::-webkit-scrollbar-corner {
     background: transparent;
   }
-  
+
   /* Remove scrollbar arrow buttons */
   ::-webkit-scrollbar-button {
     display: none;
   }
-  
+
   /* Firefox scrollbar */
   * {
     scrollbar-width: thin;
     scrollbar-color: oklch(71.2% 0.194 13.428) transparent;
+  }
+}
+
+@layer utilities {
+  .diagonal-stripes {
+    background-image: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 8px,
+      oklch(0.98 0.01 240 / 0.1) 0px,
+      oklch(0.98 0.01 240 / 0.1) 10px
+    );
   }
 }
