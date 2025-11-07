@@ -1,6 +1,5 @@
 "use client";
 
-
 import { Fragment } from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
@@ -16,8 +15,6 @@ type ComponentContentProps = {
 };
 
 export function ComponentContent({ doc }: ComponentContentProps) {
-
-
   return (
     <div className="prose prose-neutral dark:prose-invert max-w-none">
       <header className="space-y-4">
@@ -70,14 +67,14 @@ export function ComponentContent({ doc }: ComponentContentProps) {
       })}
 
       {doc.examples.length ? (
-        <section id="exemplos" className="mt-12 space-y-6">
+        <section id="exemplos" className="mt-12 space-y-4">
           <div className="space-y-2">
             <h2 className="text-foreground text-2xl font-semibold">Exemplos</h2>
             <p className="text-muted-foreground">
               Combine variantes e tamanhos para atender às suas necessidades.
             </p>
           </div>
-          <div className="grid gap-6 md:grid-cols-1">
+          <div className="space-y-6">
             {doc.examples.map((example) => (
               <article
                 key={example.id}
@@ -112,7 +109,7 @@ export function ComponentContent({ doc }: ComponentContentProps) {
       ) : null}
 
       {doc.props.length ? (
-        <section id="propriedades" className="mt-12 space-y-6">
+        <section id="propriedades" className="mt-12 space-y-4">
           <div className="space-y-2">
             <h2 className="text-foreground text-2xl font-semibold">
               Propriedades
@@ -123,8 +120,8 @@ export function ComponentContent({ doc }: ComponentContentProps) {
             </p>
           </div>
           <div className="border-border/60 bg-card/60 overflow-hidden rounded-2xl border shadow-sm backdrop-blur">
-            <table className="w-full border-collapse text-sm">
-              <thead className="border-border/60 bg-muted/30 border-b text-left">
+            <table className="w-full border-collapse overflow-x-auto text-sm">
+              <thead className="border-border/60 border-b bg-rose-500/30 text-left">
                 <tr>
                   <th className="px-4 py-3 font-semibold">Nome</th>
                   <th className="px-4 py-3 font-semibold">Tipo</th>
