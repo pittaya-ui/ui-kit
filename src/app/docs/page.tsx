@@ -6,19 +6,19 @@ export default function DocsHomePage() {
   const components = getComponentsIndex();
 
   return (
-    <div className="mx-auto max-w-5xl">
+    <div className="space-y-4">
       <header className="space-y-6">
         <span className="border-border/60 bg-primary/10 text-primary inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-xs font-semibold tracking-wide uppercase">
           Documentação
         </span>
         <div className="space-y-3">
-          <h1 className="text-foreground text-4xl font-bold sm:text-5xl">
+          <h1 className="text-foreground text-3xl font-bold sm:text-4xl">
             Explore os componentes da Pittaya UI
           </h1>
-          <p className="text-muted-foreground max-w-2xl text-lg">
-            Cada componente é acompanhado de exemplos reais, boas práticas e
-            referências de API. Navegue pelo índice e descubra como construir
-            interfaces consistentes com rapidez.
+          <p className="text-muted-foreground max-w-2xl">
+            Cada componente é acompanhado de exemplos reais e referências de
+            API. Navegue pelo índice e descubra como construir interfaces
+            consistentes com rapidez.
           </p>
         </div>
       </header>
@@ -28,7 +28,7 @@ export default function DocsHomePage() {
           <h2 className="text-foreground text-2xl font-semibold">
             Componentes
           </h2>
-          <span className="text-muted-foreground text-sm">
+          <span className="text-muted-foreground text-right text-sm">
             {components.length} componentes documentados
           </span>
         </div>
