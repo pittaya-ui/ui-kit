@@ -7,53 +7,68 @@ const buttonDoc: ComponentDoc = {
   metadata: {
     name: "Button",
     description:
-      "Um botão acessível e personalizável que expõe variantes para ações primárias, secundárias e destrutivas.",
-    category: "Ações",
+      "An accessible and customizable button that provides variants for primary, secondary, and destructive actions.",
+    category: "Actions",
     status: "stable",
   },
   sections: [
     {
-      id: "quando-usar",
-      title: "Quando usar",
+      id: "when-to-use",
+      title: "When to use",
       level: 2,
       content: (
-        <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
+        <div className="text-muted-foreground space-y-4 text-base leading-relaxed">
           <p>
-            Utilize o botão sempre que precisar destacar uma ação executável pelo usuário, como enviar formulários, abrir diálogos ou confirmar fluxos críticos.
+            Use the button whenever you need to highlight an action that the
+            user can execute, such as submitting forms, opening dialogs, or
+            confirming critical flows.
           </p>
           <p>
-            Combine as variantes disponíveis para comunicar prioridade visual, mantendo consistência em toda a interface.
+            Combine the available variants to communicate visual priority while
+            maintaining consistency throughout the interface.
           </p>
         </div>
       ),
     },
     {
-      id: "melhores-praticas",
-      title: "Melhores práticas",
+      id: "best-practices",
+      title: "Best practices",
       level: 2,
       content: (
-        <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
+        <div className="text-muted-foreground space-y-4 text-base leading-relaxed">
           <ul className="list-disc space-y-2 pl-5">
-            <li>Prefira verbos curtos no imperativo, como “Salvar” ou “Enviar”.</li>
-            <li>Selecione a variante <code>destructive</code> apenas para ações irreversíveis.</li>
             <li>
-              Combine ícones com texto quando precisar transmitir significado de forma rápida, mantendo a proporção definida nos estilos padrão.
+              Prefer short imperative verbs, such as &quot;Save&quot; or
+              &quot;Submit&quot;.
+            </li>
+            <li>
+              Select the <code>destructive</code> variant only for irreversible
+              actions.
+            </li>
+            <li>
+              Combine icons with text when you need to convey meaning quickly,
+              maintaining the proportion defined in the default styles.
             </li>
           </ul>
         </div>
       ),
     },
     {
-      id: "acessibilidade",
-      title: "Acessibilidade",
+      id: "accessibility",
+      title: "Accessibility",
       level: 2,
       content: (
-        <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
+        <div className="text-muted-foreground space-y-4 text-base leading-relaxed">
           <p>
-            O componente herda atributos nativos de <code>button</code>, incluindo suporte a teclado e estados de foco. Certifique-se de fornecer rótulos descritivos por meio da própria children ou atributo <code>aria-label</code> quando usar ícones isolados.
+            The component inherits native <code>button</code> attributes,
+            including keyboard support and focus states. Make sure to provide
+            descriptive labels through the children prop or{" "}
+            <code>aria-label</code> attribute when using icons alone.
           </p>
           <p>
-            Estados de foco ficam visíveis graças às classes utilitárias definidas em <code>buttonVariants</code>; personalize-as conforme as diretrizes do seu design system.
+            Focus states are visible thanks to the utility classes defined in{" "}
+            <code>buttonVariants</code>; customize them according to your design
+            system guidelines.
           </p>
         </div>
       ),
@@ -65,28 +80,29 @@ const buttonDoc: ComponentDoc = {
       type: '"default" | "destructive" | "outline" | "secondary" | "ghost" | "link"',
       defaultValue: '"default"',
       description:
-        "Define o estilo visual do botão. Utilize a variante que melhor comunica a importância da ação.",
+        "Defines the visual style of the button. Use the variant that best communicates the importance of the action.",
     },
     {
       name: "size",
       type: '"default" | "sm" | "lg" | "icon"',
       defaultValue: '"default"',
       description:
-        "Controla o espaçamento interno e a altura do botão, permitindo adaptações para toolbar, cards ou CTAs principais.",
+        "Controls the internal spacing and height of the button, allowing adaptations for toolbars, cards, or primary CTAs.",
     },
     {
       name: "asChild",
       type: "boolean",
       defaultValue: "false",
       description:
-        "Ao habilitar, usa o slot do Radix para repassar estilos ao componente filho, útil para transformar links em botões estilizados.",
+        "When enabled, uses Radix's slot to pass styles to the child component, useful for transforming links into styled buttons.",
     },
   ],
   examples: [
     {
-      id: "variantes",
-      title: "Variantes padrão",
-      description: "Demonstração das variantes disponíveis para comunicar hierarquia de ações.",
+      id: "variants",
+      title: "Default variants",
+      description:
+        "Demonstration of available variants to communicate action hierarchy.",
       code: `import { Button } from "@/components/ui/button";
 
 export function ButtonVariants() {
@@ -113,23 +129,23 @@ export function ButtonVariants() {
       ),
     },
     {
-      id: "com-icone",
-      title: "Com ícone",
-      description: "Use ícones para reforçar o contexto quando o espaço é limitado.",
+      id: "with-icon",
+      title: "With icon",
+      description: "Use icons to reinforce context when space is limited.",
       code: `import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function ButtonWithIcon() {
   return (
     <Button>
-      Continuar
+      Continue
       <ArrowRight className="size-4" />
     </Button>
   );
 }`,
       preview: (
         <Button>
-          Continuar
+          Continue
           <span aria-hidden className="inline-flex items-center justify-center">
             →
           </span>
@@ -138,11 +154,11 @@ export function ButtonWithIcon() {
     },
   ],
   toc: [
-    { id: "quando-usar", title: "Quando usar", level: 2 },
-    { id: "melhores-praticas", title: "Melhores práticas", level: 2 },
-    { id: "acessibilidade", title: "Acessibilidade", level: 2 },
-    { id: "exemplos", title: "Exemplos", level: 2 },
-    { id: "propriedades", title: "Propriedades", level: 2 },
+    { id: "when-to-use", title: "When to use", level: 2 },
+    { id: "best-practices", title: "Best practices", level: 2 },
+    { id: "accessibility", title: "Accessibility", level: 2 },
+    { id: "examples", title: "Examples", level: 2 },
+    { id: "properties", title: "Properties", level: 2 },
   ],
 };
 
