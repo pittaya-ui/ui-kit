@@ -16,7 +16,7 @@ type ComponentContentProps = {
 
 export function ComponentContent({ doc }: ComponentContentProps) {
   return (
-    <div className="prose prose-neutral dark:prose-invert max-w-none">
+    <div className="max-w-none">
       <header className="space-y-4">
         <div className="text-muted-foreground flex items-center gap-3 text-sm">
           <span className="border-border/60 bg-card/80 rounded-full border px-3 py-1 font-medium tracking-wide">
@@ -32,10 +32,13 @@ export function ComponentContent({ doc }: ComponentContentProps) {
           ) : null}
         </div>
         <div>
-          <h1 id={doc.slug} className="text-foreground text-4xl font-bold">
+          <h1
+            id={doc.slug}
+            className="text-foreground font-sans text-4xl font-semibold"
+          >
             {doc.metadata.name}
           </h1>
-          <p className="text-muted-foreground mt-3 text-lg">
+          <p className="text-muted-foreground text-md mt-3 font-sans">
             {doc.metadata.description}
           </p>
         </div>
@@ -69,9 +72,9 @@ export function ComponentContent({ doc }: ComponentContentProps) {
       {doc.examples.length ? (
         <section id="exemplos" className="mt-12 space-y-4">
           <div className="space-y-2">
-            <h2 className="text-foreground text-2xl font-semibold">Exemplos</h2>
+            <h2 className="text-foreground text-2xl font-semibold">Examples</h2>
             <p className="text-muted-foreground">
-              Combine variantes e tamanhos para atender às suas necessidades.
+              Combine variants and sizes to meet your needs.
             </p>
           </div>
           <div className="space-y-6">
@@ -112,10 +115,10 @@ export function ComponentContent({ doc }: ComponentContentProps) {
         <section id="propriedades" className="mt-12 space-y-4">
           <div className="space-y-2">
             <h2 className="text-foreground text-2xl font-semibold">
-              Propriedades
+              Properties
             </h2>
             <p className="text-muted-foreground">
-              Interface TSX que combina variantes e atributos padrão de
+              TSX interface that combines variants and default attributes of
               `button`.
             </p>
           </div>
@@ -123,10 +126,10 @@ export function ComponentContent({ doc }: ComponentContentProps) {
             <table className="w-full border-collapse overflow-x-auto text-sm">
               <thead className="border-border/60 border-b bg-rose-500/30 text-left">
                 <tr>
-                  <th className="px-4 py-3 font-semibold">Nome</th>
-                  <th className="px-4 py-3 font-semibold">Tipo</th>
-                  <th className="px-4 py-3 font-semibold">Padrão</th>
-                  <th className="px-4 py-3 font-semibold">Descrição</th>
+                  <th className="px-4 py-3 font-semibold">Name</th>
+                  <th className="px-4 py-3 font-semibold">Type</th>
+                  <th className="px-4 py-3 font-semibold">Default</th>
+                  <th className="px-4 py-3 font-semibold">Description</th>
                 </tr>
               </thead>
               <tbody>
@@ -137,7 +140,7 @@ export function ComponentContent({ doc }: ComponentContentProps) {
                         {prop.name}
                         {prop.required ? (
                           <span className="bg-destructive/10 text-destructive ml-2 rounded-full px-2 py-0.5 text-xs font-medium">
-                            Obrigatório
+                            Required
                           </span>
                         ) : null}
                       </td>
