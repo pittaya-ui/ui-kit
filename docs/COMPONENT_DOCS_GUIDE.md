@@ -166,6 +166,7 @@ export function BasicInput() {
     // Add more examples
   ],
   toc: [
+    { id: "installation", title: "Installation", level: 2 }, // ✨ Always include this first
     { id: "when-to-use", title: "When to use", level: 2 },
     { id: "best-practices", title: "Best practices", level: 2 },
     { id: "examples", title: "Examples", level: 2 },
@@ -219,6 +220,7 @@ Before finishing, check that you have:
 - [ ] ✅ Created at least 2-3 useful examples
 - [ ] ✅ Included sections about when to use and best practices
 - [ ] ✅ Configured the TOC (table of contents) correctly
+- [ ] ✅ **Added "Installation" as the first item in the TOC**
 - [ ] ✅ Tested the page locally
 
 ---
@@ -226,6 +228,23 @@ Before finishing, check that you have:
 ## 🎨 Recommended Section Structure
 
 To maintain consistency, use these standard sections:
+
+### 0. **Installation** (`installation`) - _Automatic_
+
+This section is **automatically generated** by the `InstallationSection` component. It displays the CLI command to install the component using the Pittaya CLI:
+
+```bash
+npx pittaya@latest add {component-slug}
+```
+
+> **💡 Important:** You only need to include `{ id: "installation", title: "Installation", level: 2 }` in the TOC array. The section content is rendered automatically based on the component slug.
+
+**Features:**
+
+- ✅ Dynamically displays the correct component slug
+- ✅ Includes a copy-to-clipboard button
+- ✅ Syntax highlighting for bash commands
+- ✅ Consistent styling with the rest of the documentation
 
 ### 1. **When to use** (`when-to-use`)
 
