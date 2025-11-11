@@ -15,7 +15,6 @@ import { Skeleton } from "./ui/skeleton";
 
 export function GithubStarsButton() {
   const { data: starsCount, isLoading } = useQuery({
-    initialData: 0,
     queryKey: [QueryKeys.github.stars],
     queryFn: getGithubStars,
   });
@@ -26,25 +25,25 @@ export function GithubStarsButton() {
     isActive: !isLoading && Boolean(starsCount),
   });
 
-    return (
-      <Button
-        asChild
-        variant={"outline"}
-        size={"sm"}
-        className="group hover:border-pittaya/80 relative flex w-fit items-center gap-2 transition-all hover:shadow-[0_0_20px_rgba(251,113,133,0.5)]"
-      >
-        <Link href={REPO_URL} target="_blank" rel="noopener noreferrer">
-          <Github />
-          <Separator orientation="vertical" />
-          <div className="flex items-center gap-1.5">
-            {isLoading ? (
-              <Skeleton className="h-5 w-6 rounded-full" />
-            ) : (
-              <p>{animatedStarsCount}</p>
-            )}
-            <Star className="group-hover:fill-pittaya group-hover:text-pittaya transition-all" />
-          </div>
-        </Link>
-      </Button>
-    );
+  return (
+    <Button
+      asChild
+      variant={"outline"}
+      size={"sm"}
+      className="group hover:border-pittaya/80 relative flex w-fit items-center gap-2 transition-all hover:shadow-[0_0_20px_rgba(251,113,133,0.5)]"
+    >
+      <Link href={REPO_URL} target="_blank" rel="noopener noreferrer">
+        <Github />
+        <Separator orientation="vertical" />
+        <div className="flex items-center gap-1.5">
+          {isLoading ? (
+            <Skeleton className="h-5 w-6 rounded-full" />
+          ) : (
+            <p>{animatedStarsCount}</p>
+          )}
+          <Star className="group-hover:fill-pittaya group-hover:text-pittaya transition-all" />
+        </div>
+      </Link>
+    </Button>
+  );
 }
