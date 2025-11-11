@@ -32,13 +32,10 @@ export function ComponentContent({ doc }: ComponentContentProps) {
           ) : null}
         </div>
         <div>
-          <h1
-            id={doc.slug}
-            className="text-foreground font-sans text-4xl font-semibold"
-          >
+          <h1 id={doc.slug} className="text-foreground text-4xl font-semibold">
             {doc.metadata.name}
           </h1>
-          <p className="text-muted-foreground text-md mt-3 font-sans">
+          <p className="text-muted-foreground text-md mt-3">
             {doc.metadata.description}
           </p>
         </div>
