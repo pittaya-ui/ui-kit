@@ -14,9 +14,8 @@ export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navigation = [
-    { name: "Components", href: "/components" },
+    { name: "Components", href: "/docs/components" },
     { name: "Templates", href: "/templates" },
-    { name: "Docs", href: "/docs" },
     { name: "Showcase", href: "/showcase" },
   ];
 
