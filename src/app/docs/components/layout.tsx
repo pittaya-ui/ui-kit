@@ -1,4 +1,11 @@
+import { Metadata } from "next";
 import { ReactNode } from "react";
+
+export const metadata: Metadata = {
+  title: "Pittaya UI | Components",
+  description:
+    "Here you'll discover all the components currently available in our library.",
+};
 
 export default function ComponentLayout({ children }: { children: ReactNode }) {
   return (
