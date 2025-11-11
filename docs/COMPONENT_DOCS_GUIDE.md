@@ -19,13 +19,24 @@ src/
 ├── lib/docs/
 │   ├── types.ts                            # Type definitions
 │   ├── components-index.ts                 # Component index
-│   └── component-details.tsx               # Documentation details and content
-└── components/docs/                        # Documentation components
-    ├── component-content.tsx
-    ├── docs-shell.tsx
-    ├── sidebar-general.tsx
-    └── sidebar-local.tsx
+│   └── component-details.tsx               # Documentation registry (imports from contents/)
+└── components/
+    ├── ui/                                  # UI components
+    │   ├── button.tsx
+    │   ├── installation-section.tsx
+    │   └── ...
+    └── docs/                                # Documentation components
+        ├── contents/                        # 📝 Individual component docs
+        │   ├── button.tsx
+        │   ├── installation-section.tsx
+        │   └── ...
+        ├── component-content.tsx
+        ├── docs-shell.tsx
+        ├── sidebar-general.tsx
+        └── sidebar-local.tsx
 ```
+
+> **💡 New Structure:** Each component now has its own documentation file in `src/components/docs/contents/`. This keeps the codebase modular and maintainable.
 
 ---
 
@@ -59,21 +70,22 @@ export const componentsIndex: ComponentIndexItem[] = [
 
 > **💡 Tip:** The `slug` will be used in the URL: `/docs/components/{slug}`
 
-### Step 2: Create Component Documentation
+### Step 2: Create Component Documentation File
 
-**File:** `src/lib/docs/component-details.tsx`
+**File:** `src/components/docs/contents/input.tsx` (create new file)
 
-#### 2.1 Import the Component
+#### 2.1 Import the Component and Types
 
 ```typescript
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input"; // ✨ Add the import
+import { Input } from "@/components/ui/input";
+
+import type { ComponentDoc } from "@/lib/docs/types";
 ```
 
-#### 2.2 Create the Documentation Object
+#### 2.2 Export the Documentation Object
 
 ```typescript
-const inputDoc: ComponentDoc = {
+export const inputDoc: ComponentDoc = {
   slug: "input",
   metadata: {
     name: "Input",
@@ -175,16 +187,37 @@ export function BasicInput() {
 };
 ```
 
-#### 2.3 Add to Document Registry
+### Step 3: Register Documentation in Registry
+
+**File:** `src/lib/docs/component-details.tsx`
+
+Import your new documentation and add it to the registry:
 
 ```typescript
+import { buttonDoc } from "@/components/docs/contents/button";
+import { inputDoc } from "@/components/docs/contents/input"; // ✨ Add the import
+
+import type { ComponentDoc } from "./types";
+
 const docs: Record<string, ComponentDoc> = {
   [buttonDoc.slug]: buttonDoc,
-  [inputDoc.slug]: inputDoc, // ✨ Add here
+  [inputDoc.slug]: inputDoc, // ✨ Add to registry
 };
+
+export function getComponentDoc(slug: string): ComponentDoc | undefined {
+  return docs[slug];
+}
+
+export function getAllComponentDocs(): ComponentDoc[] {
+  return Object.values(docs);
+}
 ```
 
-### Step 3: Verify Types
+> **💡 Tip:** The registry file (`component-details.tsx`) is now just an aggregator. All documentation content lives in individual files under `src/components/docs/contents/`.
+
+---
+
+### Step 4: Verify Types
 
 **File:** `src/lib/docs/types.ts`
 
@@ -212,10 +245,11 @@ export type ComponentDoc = {
 
 Before finishing, check that you have:
 
-- [ ] ✅ Added entry to `components-index.ts`
-- [ ] ✅ Created complete documentation in `component-details.tsx`
-- [ ] ✅ Imported the component correctly
-- [ ] ✅ Added the doc to the `docs` registry
+- [ ] ✅ Added entry to `src/lib/docs/components-index.ts`
+- [ ] ✅ Created documentation file in `src/components/docs/contents/{component}.tsx`
+- [ ] ✅ Imported the UI component correctly
+- [ ] ✅ Exported the documentation object with `export const`
+- [ ] ✅ Imported and registered the doc in `src/lib/docs/component-details.tsx`
 - [ ] ✅ Defined all component props
 - [ ] ✅ Created at least 2-3 useful examples
 - [ ] ✅ Included sections about when to use and best practices
@@ -330,7 +364,35 @@ Document all props, including inherited ones:
 
 ## 🎯 Complete Example
 
-See the `component-details.tsx` file for a complete example with the Button component already implemented.
+See the following files for complete examples:
+
+- **Button Documentation:** `src/components/docs/contents/button.tsx`
+- **Installation Section Documentation:** `src/components/docs/contents/installation-section.tsx`
+- **Registry:** `src/lib/docs/component-details.tsx`
+
+---
+
+## 🗂️ Modular Structure Benefits
+
+The new modular structure provides several advantages:
+
+✅ **Separation of Concerns** - Each component's documentation lives in its own file
+✅ **Easier Maintenance** - No need to navigate a large centralized file
+✅ **Better Collaboration** - Multiple developers can work on different docs simultaneously
+✅ **Cleaner Imports** - The registry file is simple and acts as a single source of truth
+✅ **Scalability** - Easy to add new components without bloating a single file
+
+### Example Structure:
+
+```
+src/components/docs/contents/
+├── button.tsx                    # Button component documentation
+├── installation-section.tsx      # Installation Section documentation
+├── input.tsx                     # Input component documentation (future)
+└── dialog.tsx                    # Dialog component documentation (future)
+```
+
+Each file exports its own `ComponentDoc` object, which is then imported and registered in `component-details.tsx`.
 
 ---
 
