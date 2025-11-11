@@ -154,6 +154,7 @@ export function ButtonWithIcon() {
     },
   ],
   toc: [
+    { id: "installation", title: "Installation", level: 2 },
     { id: "when-to-use", title: "When to use", level: 2 },
     { id: "best-practices", title: "Best practices", level: 2 },
     { id: "accessibility", title: "Accessibility", level: 2 },

@@ -9,6 +9,7 @@ import type { ComponentDoc } from "@/lib/docs/types";
 
 import { CopyCodeButton } from "../copy-code-button";
 import { Badge } from "../ui/badge";
+import { InstallationSection } from "./installation-section";
 
 type ComponentContentProps = {
   doc: ComponentDoc;
@@ -40,6 +41,8 @@ export function ComponentContent({ doc }: ComponentContentProps) {
           </p>
         </div>
       </header>
+
+      <InstallationSection componentSlug={doc.slug} />
 
       {doc.sections.map((section) => {
         const HeadingTag = section.level === 2 ? "h2" : "h3";
