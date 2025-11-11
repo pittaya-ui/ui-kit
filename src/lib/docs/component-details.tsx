@@ -1,11 +1,13 @@
 import { buttonDoc } from "@/components/docs/contents/button";
 import { installationSectionDoc } from "@/components/docs/contents/installation-section";
+import { scrollingAnimationOrbitDoc } from "@/components/docs/contents/orbit-images";
 
 import type { ComponentDoc } from "./types";
 
 const docs: Record<string, ComponentDoc> = {
   [buttonDoc.slug]: buttonDoc,
   [installationSectionDoc.slug]: installationSectionDoc,
+  [scrollingAnimationOrbitDoc.slug]: scrollingAnimationOrbitDoc,
 };
 
 export function getComponentDoc(slug: string): ComponentDoc | undefined {

@@ -9,7 +9,7 @@ export const componentsIndex: ComponentIndexItem[] = [
     tags: ["primary", "form", "cta"],
   },
   {
-    slug: "scrolling-animation-orbit",
+    slug: "orbit-images",
     name: "Orbit images",
     category: "Components",
     status: "stable",
