@@ -11,7 +11,7 @@ export default function Home() {
           </h1>
           <p className="mx-auto max-w-2xl text-xl text-white/90">
             A fully open-source UI library for React, powered by TypeScript and
-            Tailwind CSS.Fast, composable, and ready for production.
+            Tailwind CSS. Fast, composable, and ready for production.
           </p>
         </div>
       </main>
