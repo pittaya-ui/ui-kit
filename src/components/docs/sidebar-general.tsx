@@ -21,7 +21,7 @@ export function SidebarGeneral({ items, activeSlug }: SidebarGeneralProps) {
               <li key={item.slug}>
                 <Link
                   href={`/docs/components/${item.slug}`}
-                  className={`flex flex-col rounded-lg border border-transparent px-3 py-1.5 transition-colors hover:border-border/70 hover:bg-accent/40 ${isActive ? "border-border/80 bg-primary/10 text-primary" : "text-muted-foreground"}`}
+                  className={`hover:border-border/70 hover:bg-accent/40 flex flex-col rounded-lg border border-transparent px-3 py-1.5 transition-colors ${isActive ? "border-border/80 bg-pittaya/80 hover:bg-pittaya/90 text-primary shadow-pittaya/20 shadow-lg" : "text-muted-foreground"}`}
                 >
                   <span className="text-sm font-medium">{item.name}</span>
                 </Link>
