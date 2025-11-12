@@ -17,9 +17,16 @@ export const componentsIndex: ComponentIndexItem[] = [
     status: "stable",
     tags: ["cli", "install", "documentation", "code"],
   },
+  {
+    slug: "orbit-images",
+    name: "Orbit images",
+    description: "Displays a set of images in an orbiting motion.",
+    category: "Components",
+    status: "stable",
+    tags: ["scroll", "motion", "orbit"],
+  },
 ];
 
 export function getComponentsIndex(): ComponentIndexItem[] {
   return componentsIndex;
 }
-

@@ -10,6 +10,14 @@ const withBundleAnalyzer = bundleAnalyzer({
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "github.com",
+      },
+    ],
+  },
 };
 
 export default withBundleAnalyzer(nextConfig);

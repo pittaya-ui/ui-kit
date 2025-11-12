@@ -11,7 +11,7 @@ export function SidebarGeneral({ items, activeSlug }: SidebarGeneralProps) {
   return (
     <nav className="space-y-4">
       <div>
-        <p className="text-xs font-semibold  tracking-wide text-muted-foreground">
+        <p className="text-primary text-xs font-semibold tracking-wide">
           Components
         </p>
         <ul className="mt-3 space-y-1.5">
