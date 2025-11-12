@@ -4,7 +4,7 @@ export const componentsIndex: ComponentIndexItem[] = [
   {
     slug: "button",
     name: "Button",
-    category: "Actions",
+    category: "Components",
     status: "stable",
     tags: ["primary", "form", "cta"],
   },
@@ -14,6 +14,13 @@ export const componentsIndex: ComponentIndexItem[] = [
     category: "Documentation",
     status: "stable",
     tags: ["cli", "install", "documentation", "code"],
+  },
+  {
+    slug: "orbit-images",
+    name: "Orbit images",
+    category: "Components",
+    status: "stable",
+    tags: ["scroll", "motion", "orbit"],
   },
   {
     slug: "utils",
@@ -27,4 +34,3 @@ export const componentsIndex: ComponentIndexItem[] = [
 export function getComponentsIndex(): ComponentIndexItem[] {
   return componentsIndex;
 }
-
