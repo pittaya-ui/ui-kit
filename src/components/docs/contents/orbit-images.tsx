@@ -1,7 +1,7 @@
-import { ScrollingAnimationOrbit } from "@/components/scrolling-animation";
+import { OrbitImages } from "@/components/orbit-images";
 import type { ComponentDoc } from "@/lib/docs/types";
 
-export const scrollingAnimationOrbitDoc: ComponentDoc = {
+export const orbitImagesDoc: ComponentDoc = {
   slug: "orbit-images",
   metadata: {
     name: "Orbit images",
@@ -128,7 +128,7 @@ export const scrollingAnimationOrbitDoc: ComponentDoc = {
       title: "Basic orbit",
       description:
         "Scroll until the orbit reaches 80% of the viewport to expand the circles and trigger the rotation.",
-      code: `import { ScrollingAnimationOrbit } from "@/components/scrolling-animation";
+      code: `import { OrbitImages } from "@/components/orbit-images";
 
 const images = [
   "https://github.com/marcosvbueno.png",
@@ -141,7 +141,7 @@ const images = [
 
 export function OrbitDemo() {
   return (
-    <ScrollingAnimationOrbit
+    <OrbitImages
       title="Build trust and highlight your community with a dynamic orbit."
       buttonText="Join the crew"
       images={images}
@@ -150,7 +150,7 @@ export function OrbitDemo() {
 }`,
       preview: (
         <div className="bg-background">
-          <ScrollingAnimationOrbit
+          <OrbitImages
             title="Build trust and highlight your community with a dynamic orbit."
             buttonText="Join the crew"
             images={[

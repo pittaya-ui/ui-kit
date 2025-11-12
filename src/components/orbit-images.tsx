@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 
 import { Button } from "./ui/button";
 
-interface ScrollingAnimationOrbitProps {
+interface OrbitImagesProps {
   title: string;
   buttonText: string;
   classNameButton?: string;
@@ -22,7 +22,7 @@ function getAngleForIndex(index: number, total: number): number {
   return (2 * Math.PI * index) / total;
 }
 
-export function ScrollingAnimationOrbit({
+export function OrbitImages({
   title,
   buttonText,
   classNameButton,
@@ -30,7 +30,7 @@ export function ScrollingAnimationOrbit({
   outsideBorderColor,
   middleBorderColor,
   innerBorderColor,
-}: ScrollingAnimationOrbitProps) {
+}: OrbitImagesProps) {
   const [animationProgress, setAnimationProgress] = useState(0);
   const [rotationAngle, setRotationAngle] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -124,16 +124,25 @@ export function ScrollingAnimationOrbit({
     >
       <div className="sticky top-0 flex h-screen items-center justify-center p-2 sm:p-4 lg:p-8">
         <div className="relative">
-      
           <div
-            className={cn(`flex h-[280px] w-[280px] items-center justify-center rounded-full transition-all duration-500 sm:h-[600px] sm:w-[600px] lg:h-[500px] lg:w-[500px] xl:h-[600px] xl:w-[600px]`, animationProgress > 0.6 && "border-2 border-pittaya/60", outsideBorderColor)}
+            className={cn(
+              `flex h-[280px] w-[280px] items-center justify-center rounded-full transition-all duration-500 sm:h-[600px] sm:w-[600px] lg:h-[500px] lg:w-[500px] xl:h-[600px] xl:w-[600px]`,
+              animationProgress > 0.6 && "border-pittaya/60 border-2",
+              outsideBorderColor
+            )}
           >
             <div
-              className={cn(`relative flex h-[240px] w-[240px] items-center justify-center rounded-full transition-all duration-500 sm:h-[480px] sm:w-[480px] lg:h-[420px] lg:w-[420px] xl:h-[500px] xl:w-[500px]`, animationProgress > 0.2 && "border-2 border-pittaya/80", middleBorderColor)}
+              className={cn(
+                `relative flex h-[240px] w-[240px] items-center justify-center rounded-full transition-all duration-500 sm:h-[480px] sm:w-[480px] lg:h-[420px] lg:w-[420px] xl:h-[500px] xl:w-[500px]`,
+                animationProgress > 0.2 && "border-pittaya/80 border-2",
+                middleBorderColor
+              )}
             >
               <div
-                className={cn("relative flex h-[200px] w-[200px] items-center justify-center rounded-full p-0.5 sm:h-[400px] sm:w-[400px] lg:h-[340px] lg:w-[340px] xl:h-[400px] xl:w-[400px] border-2 border-pittaya", innerBorderColor)}
-                
+                className={cn(
+                  "border-pittaya relative flex h-[200px] w-[200px] items-center justify-center rounded-full border-2 p-0.5 sm:h-[400px] sm:w-[400px] lg:h-[340px] lg:w-[340px] xl:h-[400px] xl:w-[400px]",
+                  innerBorderColor
+                )}
               >
                 <div className="relative flex h-full w-full items-center justify-center rounded-full bg-[#ffffff] dark:bg-black">
                   {images.map((imageSrc, index) => {
@@ -173,7 +182,13 @@ export function ScrollingAnimationOrbit({
                       {title}
                     </p>
 
-                    <Button variant={"default"} className={cn("rounded-full bg-pittaya text-white shadow-lg shadow-pittaya/20 hover:bg-pittaya/80", classNameButton)}>
+                    <Button
+                      variant={"default"}
+                      className={cn(
+                        "bg-pittaya shadow-pittaya/20 hover:bg-pittaya/80 rounded-full text-white shadow-lg",
+                        classNameButton
+                      )}
+                    >
                       {buttonText}
                     </Button>
                   </div>
