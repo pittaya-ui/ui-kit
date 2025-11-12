@@ -22,6 +22,13 @@ export const componentsIndex: ComponentIndexItem[] = [
     status: "stable",
     tags: ["scroll", "motion", "orbit"],
   },
+  {
+    slug: "utils",
+    name: "Utils",
+    category: "Library",
+    status: "stable",
+    tags: ["utilities", "cn", "classname"],
+  },
 ];
 
 export function getComponentsIndex(): ComponentIndexItem[] {
