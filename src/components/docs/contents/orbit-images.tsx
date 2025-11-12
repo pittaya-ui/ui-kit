@@ -1,4 +1,4 @@
-import { OrbitImages } from "@/components/orbit-images";
+import { OrbitImages } from "@/components/ui/orbit-images";
 import type { ComponentDoc } from "@/lib/docs/types";
 
 export const orbitImagesDoc: ComponentDoc = {
