@@ -202,6 +202,7 @@ Follow these steps to document a new component:
 {
   slug: "your-component",
   name: "YourComponent",
+  description: "Displays a button or a component that looks like a button.",
   category: "Actions",
   status: "stable",
   tags: ["feature", "interaction"]

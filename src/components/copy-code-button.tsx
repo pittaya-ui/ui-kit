@@ -12,7 +12,7 @@ export function CopyCodeButton({ code }: { code: string }) {
   const handleCopyCode = (code: string) => {
     navigator.clipboard.writeText(code);
     setIsCopied(true);
-    toast.success("Código copiado para a área de transferência");
+    toast.success("Successfully copied to clipboard");
     setTimeout(() => {
       setIsCopied(false);
     }, 2000);

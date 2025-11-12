@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 export type ComponentIndexItem = {
   slug: string;
   name: string;
+  description?: string;
   category: string;
   status?: "beta" | "stable" | "deprecated";
   tags?: string[];
