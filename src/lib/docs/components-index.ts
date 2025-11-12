@@ -4,13 +4,15 @@ export const componentsIndex: ComponentIndexItem[] = [
   {
     slug: "button",
     name: "Button",
-    category: "Components",
+    description: "Displays a button or a component that looks like a button.",
+    category: "Actions",
     status: "stable",
     tags: ["primary", "form", "cta"],
   },
   {
     slug: "installation-section",
     name: "Installation Section",
+    description: "Displays installation instructions with code snippets.",
     category: "Documentation",
     status: "stable",
     tags: ["cli", "install", "documentation", "code"],
@@ -18,16 +20,10 @@ export const componentsIndex: ComponentIndexItem[] = [
   {
     slug: "orbit-images",
     name: "Orbit images",
+    description: "Displays a set of images in an orbiting motion.",
     category: "Components",
     status: "stable",
     tags: ["scroll", "motion", "orbit"],
-  },
-  {
-    slug: "utils",
-    name: "Utils",
-    category: "Library",
-    status: "stable",
-    tags: ["utilities", "cn", "classname"],
   },
 ];
 
