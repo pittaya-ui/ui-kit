@@ -1,1 +1,1 @@
-export const REPO_URL = "https://github.com/pittaya-ui/ui";
+export const REPO_URL = "https://github.com/pittaya-ui/ui-kit";
