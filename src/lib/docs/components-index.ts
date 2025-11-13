@@ -8,6 +8,7 @@ export const componentsIndex: ComponentIndexItem[] = [
     category: "Actions",
     status: "stable",
     tags: ["primary", "form", "cta"],
+    dependencies: ["@radix-ui/react-slot"],
   },
   {
     slug: "installation-section",
