@@ -1,7 +1,8 @@
-import { Github, Linkedin } from "lucide-react";
+import { Github, Linkedin, Package } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
+import { NPM_URL } from "@/constants/npm-url";
 import { cn } from "@/lib/utils";
 
 export function Footer() {
@@ -75,6 +76,13 @@ export function Footer() {
                 aria-label="LinkedIn"
               >
                 <Linkedin className="h-5 w-5" />
+              </Link>
+              <Link
+                href={NPM_URL}
+                className="text-muted-foreground hover:text-pittaya transition-colors"
+                aria-label="NPM"
+              >
+                <Package className="h-5 w-5" />
               </Link>
             </div>
           </div>
