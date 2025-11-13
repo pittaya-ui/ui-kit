@@ -7,6 +7,7 @@ export type ComponentIndexItem = {
   category: string;
   status?: "beta" | "stable" | "deprecated";
   tags?: string[];
+  dependencies?: string[];
 };
 
 export type TocItem = {
