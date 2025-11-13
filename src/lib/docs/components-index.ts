@@ -17,7 +17,7 @@ export const componentsIndex: ComponentIndexItem[] = [
     category: "Documentation",
     status: "stable",
     tags: ["cli", "install", "documentation", "code"],
-    dependencies: ["@radix-ui/react-tabs"],
+    dependencies: ["@radix-ui/react-tabs","react-syntax-highlighter"],
   },
   {
     slug: "orbit-images",
