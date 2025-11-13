@@ -97,11 +97,10 @@ export const installationSectionDoc: ComponentDoc = {
       description: "The descriptive text explaining how to use the command.",
     },
     {
-      name: "cliCommand",
-      type: "string",
-      defaultValue: '"npx pittaya@latest add"',
-      description:
-        "The base CLI command. The componentSlug will be appended to this.",
+      name: "availableCommands",
+      type: "object",
+      required: true,
+      description: "The available commands to install the component.",
     },
     {
       name: "className",
@@ -119,9 +118,30 @@ export const installationSectionDoc: ComponentDoc = {
       code: `import { InstallationSection } from "@/components/ui/installation-section";
 
 export function BasicInstallation() {
-  return <InstallationSection componentSlug="button" />;
+  return (
+    <InstallationSection 
+      availableCommands={{ 
+        npm: "npm install @mylib/ui-", 
+        yarn: "yarn add @mylib/ui-", 
+        pnpm: "pnpm add @mylib/ui-",
+        bun: "bun add @mylib/ui-",
+      }} 
+      componentSlug="button" 
+      className="px-4" 
+    />
+  );
 }`,
-      preview: <InstallationSection componentSlug="button" />,
+      preview: (
+        <InstallationSection
+          availableCommands={{
+            npm: "npm install @mylib/ui-",
+            yarn: "yarn add @mylib/ui-",
+            pnpm: "pnpm add @mylib/ui-",
+          }}
+          componentSlug="button"
+          className="px-4"
+        />
+      ),
     },
     {
       id: "custom-text",
@@ -132,17 +152,29 @@ export function BasicInstallation() {
 export function CustomInstallation() {
   return (
     <InstallationSection
+      availableCommands={{ 
+        npm: "npm install @mylib/ui-", 
+        yarn: "yarn add @mylib/ui-", 
+        pnpm: "pnpm add @mylib/ui-",
+      }}
       componentSlug="avatar"
       title="Get Started"
+      className="px-4"
       description="Add the Avatar component to your project with a single command."
     />
   );
 }`,
       preview: (
         <InstallationSection
+          availableCommands={{
+            npm: "npm install @mylib/ui-",
+            yarn: "yarn add @mylib/ui-",
+            pnpm: "pnpm add @mylib/ui-",
+          }}
           componentSlug="avatar"
           title="Get Started"
           description="Add the Avatar component to your project with a single command."
+          className="px-4"
         />
       ),
     },
@@ -155,17 +187,21 @@ export function CustomInstallation() {
 export function CustomCLI() {
   return (
     <InstallationSection
+      availableCommands={{ 
+        npm: "npm install @mylib/ui-",
+      }}
       componentSlug="dialog"
-      cliCommand="npm install @mylib/ui-"
       description="Install using npm directly from our package registry."
+      className="px-4"
     />
   );
 }`,
       preview: (
         <InstallationSection
+          availableCommands={{ npm: "npm install @mylib/ui-" }}
           componentSlug="dialog"
-          cliCommand="npm install @mylib/ui-"
           description="Install using npm directly from our package registry."
+          className="px-4"
         />
       ),
     },

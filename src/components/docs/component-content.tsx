@@ -39,7 +39,14 @@ export function ComponentContent({ doc }: ComponentContentProps) {
         </div>
       </header>
 
-      <InstallationSection componentSlug={doc.slug} />
+      <InstallationSection
+        componentSlug={doc.slug}
+        availableCommands={{
+          npm: "npx pittaya@latest add",
+          yarn: "yarn pittaya@latest add",
+          pnpm: "pnpm dlx pittaya@latest add",
+        }}
+      />
 
       <ContentSections sections={doc.sections} />
 
