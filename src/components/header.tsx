@@ -8,6 +8,7 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 import { GithubStarsButton } from "./github-stars-button";
+import { NpmDownloadsButton } from "./npm-downloads-button";
 import { Button } from "./ui/button";
 
 export function Header() {
@@ -49,6 +50,7 @@ export function Header() {
               </Link>
             ))}
             <GithubStarsButton />
+            <NpmDownloadsButton />
           </nav>
 
           <Button
@@ -80,6 +82,7 @@ export function Header() {
             ))}
             <div className="ml-3">
               <GithubStarsButton />
+              <NpmDownloadsButton />
             </div>
           </div>
         </div>
