@@ -7,12 +7,12 @@
   
   A fully open-source UI library for React, powered by TypeScript and Tailwind CSS. Fast, composable, and ready for production.
 
-[![Stars](https://img.shields.io/github/stars/pittaya-ui/ui?style=for-the-badge&logo=github&color=fb7185)](https://github.com/pittaya-ui/ui)
-[![Contributors](https://img.shields.io/github/contributors/pittaya-ui/ui?style=for-the-badge&logo=github&color=fb7185)](https://github.com/pittaya-ui/ui/graphs/contributors)
-[![License](https://img.shields.io/github/license/pittaya-ui/ui?style=for-the-badge&color=fb7185)](./LICENSE)
-[![Last Commit](https://img.shields.io/github/last-commit/pittaya-ui/ui?style=for-the-badge&color=fb7185)](https://github.com/pittaya-ui/ui/commits/main)
+[![Stars](https://img.shields.io/github/stars/pittaya-ui/ui-kit?style=for-the-badge&logo=github&color=fb7185)](https://github.com/pittaya-ui/ui-kit)
+[![Contributors](https://img.shields.io/github/contributors/pittaya-ui/ui-kit?style=for-the-badge&logo=github&color=fb7185)](https://github.com/pittaya-ui/ui-kit/graphs/contributors)
+[![License](https://img.shields.io/github/license/pittaya-ui/ui-kit?style=for-the-badge&color=fb7185)](./LICENSE)
+[![Last Commit](https://img.shields.io/github/last-commit/pittaya-ui/ui-kit?style=for-the-badge&color=fb7185)](https://github.com/pittaya-ui/ui-kit/commits/main)
 
-[Documentation](https://pittaya-ui.vercel.app/docs) · [Components](https://pittaya-ui.vercel.app/docs) · [Report Bug](https://github.com/pittaya-ui/ui/issues) · [Request Feature](https://github.com/pittaya-ui/ui/issues)
+[Components](https://pittaya-ui.vercel.app/docs/components) · [Report Bug](https://github.com/pittaya-ui/ui-kit/issues) · [Request Feature](https://github.com/pittaya-ui/ui-kit/issues)
 
 </div>
 
@@ -73,8 +73,8 @@ Our mission is to provide developers with production-ready components that are:
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/pittaya-ui/ui.git
-cd ui
+git clone https://github.com/pittaya-ui/ui-kit.git
+cd ui-kit
 ```
 
 2. **Install dependencies**
@@ -100,7 +100,7 @@ npm run dev
 | ---------- | --------- | -------- | ---------------------------------------- |
 | **Button** | ✅ Stable | Actions  | Accessible button with multiple variants |
 
-> 🚧 More components coming soon! Check our [roadmap](https://github.com/pittaya-ui/ui/issues) for planned features.
+> 🚧 More components coming soon! Check our [roadmap](https://github.com/pittaya-ui/ui-kit/issues) for planned features.
 
 ---
 
@@ -344,7 +344,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](./LICENSE
 
 **GitHub**: [@pittaya-ui](https://github.com/pittaya-ui)
 
-**Issues**: [Report a bug or request a feature](https://github.com/pittaya-ui/ui/issues)
+**Issues**: [Report a bug or request a feature](https://github.com/pittaya-ui/ui-kit/issues)
 
 ---
 
