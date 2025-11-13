@@ -16,6 +16,7 @@ interface OrbitImagesProps {
   middleBorderColor?: string;
   innerBorderColor?: string;
   images: string[];
+  autoPlay?: boolean;
 }
 
 function getAngleForIndex(index: number, total: number): number {
@@ -28,16 +29,19 @@ export function OrbitImages({
   buttonText,
   classNameButton,
   images,
-  outsideBorderColor,
-  middleBorderColor,
-  innerBorderColor,
+  outsideBorderColor = "border-rose-400/60",
+  middleBorderColor = "border-rose-400/80",
+  innerBorderColor = "border-rose-400",
+  autoPlay = false,
 }: OrbitImagesProps) {
-  const [animationProgress, setAnimationProgress] = useState(0);
+  const [animationProgress, setAnimationProgress] = useState(autoPlay ? 1 : 0);
   const [rotationAngle, setRotationAngle] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
   const rotationRef = useRef<number | null>(null);
 
   useEffect(() => {
+    if (autoPlay) return;
+
     const handleScroll = () => {
       if (!containerRef.current) return;
 
@@ -73,7 +77,7 @@ export function OrbitImages({
       window.removeEventListener("scroll", throttledScroll);
       window.removeEventListener("resize", handleScroll);
     };
-  }, []);
+  }, [autoPlay]);
 
   const shouldStartRotation = animationProgress >= 1;
 
@@ -127,21 +131,19 @@ export function OrbitImages({
         <div className="relative">
           <div
             className={cn(
-              `flex h-[280px] w-[280px] items-center justify-center rounded-full transition-all duration-500 sm:h-[600px] sm:w-[600px] lg:h-[500px] lg:w-[500px] xl:h-[600px] xl:w-[600px]`,
-              animationProgress > 0.6 && "border-pittaya/60 border-2",
-              outsideBorderColor
+              `flex h-[280px] w-[280px] items-center justify-center rounded-full border-2 transition-all duration-500 sm:h-[600px] sm:w-[600px] lg:h-[500px] lg:w-[500px] xl:h-[600px] xl:w-[600px]`,
+              animationProgress > 0.6 && outsideBorderColor
             )}
           >
             <div
               className={cn(
-                `relative flex h-[240px] w-[240px] items-center justify-center rounded-full transition-all duration-500 sm:h-[480px] sm:w-[480px] lg:h-[420px] lg:w-[420px] xl:h-[500px] xl:w-[500px]`,
-                animationProgress > 0.2 && "border-pittaya/80 border-2",
-                middleBorderColor
+                `relative flex h-[240px] w-[240px] items-center justify-center rounded-full border-2 transition-all duration-500 sm:h-[480px] sm:w-[480px] lg:h-[420px] lg:w-[420px] xl:h-[500px] xl:w-[500px]`,
+                animationProgress > 0.2 && middleBorderColor
               )}
             >
               <div
                 className={cn(
-                  "border-pittaya relative flex h-[200px] w-[200px] items-center justify-center rounded-full border-2 p-0.5 sm:h-[400px] sm:w-[400px] lg:h-[340px] lg:w-[340px] xl:h-[400px] xl:w-[400px]",
+                  "relative flex h-[200px] w-[200px] items-center justify-center rounded-full border-2 p-0.5 sm:h-[400px] sm:w-[400px] lg:h-[340px] lg:w-[340px] xl:h-[400px] xl:w-[400px]",
                   innerBorderColor
                 )}
               >
