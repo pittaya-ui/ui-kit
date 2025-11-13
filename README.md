@@ -206,6 +206,7 @@ Follow these steps to document a new component:
   category: "Actions",
   status: "stable",
   tags: ["feature", "interaction"]
+  dependencies: ["@radix-ui/react-slot"]
 }
 ```
 
