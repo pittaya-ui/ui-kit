@@ -186,7 +186,7 @@ export function BadgeAnnouncement() {
 export function TextBadgeAnnouncement() {
   return (
     <AnnouncementContainer>
-      <AnnouncementText text="coming soon" />
+      <AnnouncementText text="soon" />
       <AnnouncementSeparator />
       <AnnouncementTitle>Product Hunt launch is live</AnnouncementTitle>
     </AnnouncementContainer>
@@ -194,7 +194,7 @@ export function TextBadgeAnnouncement() {
 }`,
       preview: (
         <AnnouncementContainer>
-          <AnnouncementText text="coming soon" />
+          <AnnouncementText text="soon" />
           <AnnouncementSeparator />
           <AnnouncementTitle>Product Hunt launch is live</AnnouncementTitle>
         </AnnouncementContainer>
@@ -272,14 +272,14 @@ export function GlassAnnouncement() {
   );
 }`,
       preview: (
-        <div className="relative flex items-center justify-center rounded-lg bg-gradient-to-br from-purple-500 via-pink-500 to-orange-500 p-8">
+        <div className="relative flex items-center justify-center rounded-lg bg-gradient-to-br from-purple-500 via-pink-500 to-orange-500 p-2">
           <AnnouncementContainer
             variant="glassEffect"
             className="cursor-pointer transition-opacity hover:opacity-80"
           >
             <AnnouncementIcon icon="🚀" />
             <AnnouncementSeparator />
-            <AnnouncementTitle>
+            <AnnouncementTitle className="w-full">
               Try our new dashboard
               <ArrowRight className="size-4" />
             </AnnouncementTitle>
