@@ -2,6 +2,14 @@ import type { ComponentIndexItem } from "./types";
 
 export const componentsIndex: ComponentIndexItem[] = [
   {
+    slug: "announcement-badge",
+    name: "Announcement Badge",
+    description: "Displays a badge with an icon and a title.",
+    category: "Components",
+    status: "stable",
+    tags: ["badge", "announcement", "alert"],
+  },
+  {
     slug: "button",
     name: "Button",
     description: "Displays a button or a component that looks like a button.",
