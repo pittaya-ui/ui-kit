@@ -17,7 +17,10 @@ export const componentsIndex: ComponentIndexItem[] = [
     category: "Documentation",
     status: "stable",
     tags: ["cli", "install", "documentation", "code"],
-    dependencies: ["react-syntax-highlighter"],
+    dependencies: [
+      "react-syntax-highlighter",
+      "@types/react-syntax-highlighter",
+    ],
   },
   {
     slug: "orbit-images",

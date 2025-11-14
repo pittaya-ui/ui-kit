@@ -1,16 +1,20 @@
 "use client";
 
+import { SquareTerminal } from "lucide-react";
 import * as React from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
+import { cn } from "@/lib/utils";
+
 import { CopyCodeButton } from "../copy-code-button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "./tabs";
 
 type InstallationSectionProps = {
   componentSlug: string;
   title?: string;
   description?: string;
-  cliCommand?: string;
+  availableCommands: { [key: string]: string };
   className?: string;
 };
 
@@ -18,33 +22,53 @@ function InstallationSection({
   componentSlug,
   title = "Installation",
   description = "Install the component directly into your project using the Pittaya CLI.",
-  cliCommand = "npx pittaya@latest add",
+  availableCommands,
   className,
 }: InstallationSectionProps) {
-  const installCommand = `${cliCommand} ${componentSlug}`;
-
   return (
-    <section id="installation" className={className ?? "mt-8 space-y-4"}>
+    <section id="installation" className={cn("mt-8 space-y-4", className)}>
       <div className="space-y-2">
         <h2 className="text-foreground text-2xl font-semibold">{title}</h2>
         <p className="text-muted-foreground">{description}</p>
       </div>
-      <div className="border-border/60 bg-card/60 rounded-2xl border p-6 shadow-sm backdrop-blur">
-        <pre className="relative overflow-x-auto rounded-lg bg-[#282C34] p-4">
-          <CopyCodeButton code={installCommand} />
-          <SyntaxHighlighter
-            language="bash"
-            style={atomOneDark}
-            customStyle={{
-              margin: 0,
-              padding: 0,
-              background: "transparent",
-            }}
-          >
-            {installCommand}
-          </SyntaxHighlighter>
-        </pre>
-      </div>
+
+      <Tabs
+        defaultValue="npm"
+        className="border-border bg-card/60 w-full rounded-lg border"
+      >
+        <div className="flex items-center justify-start gap-2 px-4 py-2">
+          <SquareTerminal className="size-6" />
+          <TabsList className="bg-card/60">
+            {Object.keys(availableCommands).map((command) => (
+              <TabsTrigger key={command} value={command} className="w-full">
+                {command}
+              </TabsTrigger>
+            ))}
+          </TabsList>
+        </div>
+        {Object.keys(availableCommands).map((command) => (
+          <TabsContent key={command} value={command}>
+            <pre className="relative flex items-center justify-between gap-2 overflow-x-auto border-t p-4">
+              <CopyCodeButton
+                code={`${availableCommands[command as keyof typeof availableCommands]} ${componentSlug}`}
+              />
+              <div className="max-w-[85%] overflow-x-auto">
+                <SyntaxHighlighter
+                  language="bash"
+                  style={atomOneDark}
+                  customStyle={{
+                    margin: 0,
+                    padding: 0,
+                    background: "transparent",
+                  }}
+                >
+                  {`${availableCommands[command as keyof typeof availableCommands]} ${componentSlug}`}
+                </SyntaxHighlighter>
+              </div>
+            </pre>
+          </TabsContent>
+        ))}
+      </Tabs>
     </section>
   );
 }
