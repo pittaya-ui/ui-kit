@@ -1,4 +1,4 @@
-import { ArrowUpRight, Bell } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
 import { PittayaBackground } from "@/components/raycast-animated-background";
@@ -6,7 +6,6 @@ import {
   AnnouncementContainer,
   AnnouncementIcon,
   AnnouncementSeparator,
-  AnnouncementText,
   AnnouncementTitle,
 } from "@/components/ui/announcement-badge";
 
@@ -15,7 +14,7 @@ export default function Home() {
     <PittayaBackground className="h-screen max-h-screen overflow-x-hidden overflow-y-hidden">
       <main className="flex h-screen flex-1 flex-col items-center justify-center gap-10 px-6">
         <Link href={"/docs/components"}>
-          <AnnouncementContainer variant={"default"}>
+          <AnnouncementContainer variant={"glassEffect"}>
             <AnnouncementIcon icon={"🎉"} />
             <AnnouncementSeparator className="bg-white/30" />
             <AnnouncementTitle>
