@@ -8,6 +8,7 @@ export type ComponentIndexItem = {
   status?: "beta" | "stable" | "deprecated";
   tags?: string[];
   dependencies?: string[];
+  internalDependencies?: string[];
 };
 
 export type TocItem = {

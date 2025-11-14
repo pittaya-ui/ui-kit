@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 
+import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { Toaster } from "@/components/ui/sonner";
 import { QueryProvider } from "@/providers/react-query";
@@ -21,10 +22,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="dark antialiased">
+      <body className="dark flex min-h-screen flex-col antialiased">
         <QueryProvider>
           <Header />
-          {children}
+          <main className="flex-1">{children}</main>
+          <Footer />
           <Toaster />
         </QueryProvider>
         <SpeedInsights />
