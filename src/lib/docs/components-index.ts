@@ -11,6 +11,16 @@ export const componentsIndex: ComponentIndexItem[] = [
     dependencies: ["@radix-ui/react-slot"],
   },
   {
+    slug: "copy-button",
+    name: "Copy Button",
+    description:
+      "Displays a copy button that copies the text to the clipboard when clicked.",
+    category: "Actions",
+    status: "stable",
+    tags: ["button", "text", "copy"],
+    internalDependencies: ["button"],
+  },
+  {
     slug: "installation-section",
     name: "Installation Section",
     description: "Displays installation instructions with code snippets.",
