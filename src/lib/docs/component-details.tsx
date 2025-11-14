@@ -7,11 +7,11 @@ import { orbitImagesDoc } from "@/components/docs/contents/orbit-images";
 import type { ComponentDoc } from "./types";
 
 const docs: Record<string, ComponentDoc> = {
+  [announcementBadgeDoc.slug]: announcementBadgeDoc,
   [buttonDoc.slug]: buttonDoc,
   [copyButtonDoc.slug]: copyButtonDoc,
   [installationSectionDoc.slug]: installationSectionDoc,
   [orbitImagesDoc.slug]: orbitImagesDoc,
-  [announcementBadgeDoc.slug]: announcementBadgeDoc,
 };
 
 export function getComponentDoc(slug: string): ComponentDoc | undefined {

@@ -1,9 +1,28 @@
+import { ArrowUpRight, Bell } from "lucide-react";
+import Link from "next/link";
+
 import { PittayaBackground } from "@/components/raycast-animated-background";
+import {
+  AnnouncementContainer,
+  AnnouncementIcon,
+  AnnouncementSeparator,
+  AnnouncementText,
+  AnnouncementTitle,
+} from "@/components/ui/announcement-badge";
 
 export default function Home() {
   return (
     <PittayaBackground className="h-screen max-h-screen overflow-x-hidden overflow-y-hidden">
       <main className="flex h-screen flex-1 flex-col items-center justify-center gap-10 px-6">
+        <Link href={"/docs/components"}>
+          <AnnouncementContainer variant={"default"}>
+            <AnnouncementIcon icon={"🎉"} />
+            <AnnouncementSeparator className="bg-white/30" />
+            <AnnouncementTitle>
+              Introducing Pittaya UI <ArrowUpRight className="size-4" />
+            </AnnouncementTitle>
+          </AnnouncementContainer>
+        </Link>
         <div className="max-w-4xl space-y-8 text-center">
           <h1 className="text-6xl leading-tight font-bold text-white [text-shadow:0_0_20px_rgba(255,255,255,0.6)]">
             Components that scale <br />
