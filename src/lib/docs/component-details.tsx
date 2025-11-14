@@ -1,3 +1,4 @@
+import { announcementBadgeDoc } from "@/components/docs/contents/announcement-badge";
 import { buttonDoc } from "@/components/docs/contents/button";
 import { copyButtonDoc } from "@/components/docs/contents/copy-button/copy-button";
 import { installationSectionDoc } from "@/components/docs/contents/installation-section";
@@ -6,6 +7,7 @@ import { orbitImagesDoc } from "@/components/docs/contents/orbit-images";
 import type { ComponentDoc } from "./types";
 
 const docs: Record<string, ComponentDoc> = {
+  [announcementBadgeDoc.slug]: announcementBadgeDoc,
   [buttonDoc.slug]: buttonDoc,
   [copyButtonDoc.slug]: copyButtonDoc,
   [installationSectionDoc.slug]: installationSectionDoc,
