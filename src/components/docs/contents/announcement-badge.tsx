@@ -1,4 +1,4 @@
-import { ArrowRight, ArrowUpRight, Megaphone, Package } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Megaphone } from "lucide-react";
 
 import {
   AnnouncementContainer,
@@ -145,19 +145,20 @@ export const announcementBadgeDoc: ComponentDoc = {
       code: `import {
   AnnouncementContainer,
   AnnouncementSeparator,
-  AnnouncementText,
+  AnnouncementIcon,
   AnnouncementTitle,
 } from "@/components/ui/announcement-badge";
+import { Megaphone } from "lucide-react";
 
 export function BadgeAnnouncement() {
   return (
-        <AnnouncementContainer variant={"default"}>
-          <AnnouncementIcon icon={Megaphone} />
-          <AnnouncementSeparator className="bg-white/30" />
-          <AnnouncementTitle>
-            Introducing Pittaya UI <ArrowUpRight className="size-4" />
-          </AnnouncementTitle>
-        </AnnouncementContainer>
+    <AnnouncementContainer variant={"default"}>
+      <AnnouncementIcon icon={Megaphone} />
+      <AnnouncementSeparator className="bg-white/30" />
+      <AnnouncementTitle>
+        Introducing Pittaya UI <ArrowUpRight className="size-4" />
+      </AnnouncementTitle>
+    </AnnouncementContainer>
   );
 }`,
       preview: (
