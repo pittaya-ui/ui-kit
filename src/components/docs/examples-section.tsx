@@ -3,10 +3,11 @@
 import { Code, Eye } from "lucide-react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { toast } from "sonner";
 
 import type { DocExample } from "@/lib/docs/types";
 
-import { CopyCodeButton } from "../copy-code-button";
+import { CopyButton } from "../ui/copy-button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
 
 type ExamplesSectionProps = {
@@ -67,7 +68,12 @@ export function ExamplesSection({
                   className="bg-background flex h-[500px] items-start justify-center overflow-x-auto overflow-y-auto rounded-lg"
                 >
                   <div className="relative max-h-[500px] min-h-[500px] w-full text-xs lg:text-sm">
-                    <CopyCodeButton code={example.code} />
+                    <CopyButton
+                      text={example.code}
+                      onCopy={() => {
+                        toast.success("Successfully copied to clipboard");
+                      }}
+                    />
                     <SyntaxHighlighter
                       showLineNumbers={true}
                       language="typescript"
@@ -90,4 +96,3 @@ export function ExamplesSection({
     </section>
   );
 }
-

@@ -4,10 +4,11 @@ import { SquareTerminal } from "lucide-react";
 import * as React from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { toast } from "sonner";
 
 import { cn } from "@/lib/utils";
 
-import { CopyCodeButton } from "../copy-code-button";
+import { CopyButton } from "./copy-button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./tabs";
 
 type InstallationSectionProps = {
@@ -49,8 +50,11 @@ function InstallationSection({
         {Object.keys(availableCommands).map((command) => (
           <TabsContent key={command} value={command}>
             <pre className="relative flex items-center justify-between gap-2 overflow-x-auto border-t p-4">
-              <CopyCodeButton
-                code={`${availableCommands[command as keyof typeof availableCommands]} ${componentSlug}`}
+              <CopyButton
+                text={`${availableCommands[command as keyof typeof availableCommands]} ${componentSlug}`}
+                onCopy={() => {
+                  toast.success("Successfully copied to clipboard");
+                }}
               />
               <div className="max-w-[85%] overflow-x-auto">
                 <SyntaxHighlighter
