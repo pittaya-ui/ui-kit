@@ -88,6 +88,7 @@ export const copyButtonDoc: ComponentDoc = {
     {
       name: "text",
       type: "string",
+      required: true,
       description:
         "The text content that will be copied to the clipboard when the button is clicked.",
     },
