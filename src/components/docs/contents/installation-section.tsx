@@ -121,10 +121,10 @@ export function BasicInstallation() {
   return (
     <InstallationSection 
       availableCommands={{ 
-        npm: "npm install @mylib/ui-", 
-        yarn: "yarn add @mylib/ui-", 
-        pnpm: "pnpm add @mylib/ui-",
-        bun: "bun add @mylib/ui-",
+        npm: "npm install @mylib/ui", 
+        yarn: "yarn add @mylib/ui", 
+        pnpm: "pnpm add @mylib/ui",
+        bun: "bun add @mylib/ui",
       }} 
       componentSlug="button" 
       className="px-4" 
@@ -134,9 +134,9 @@ export function BasicInstallation() {
       preview: (
         <InstallationSection
           availableCommands={{
-            npm: "npm install @mylib/ui-",
-            yarn: "yarn add @mylib/ui-",
-            pnpm: "pnpm add @mylib/ui-",
+            npm: "npm install @mylib/ui",
+            yarn: "yarn add @mylib/ui",
+            pnpm: "pnpm add @mylib/ui",
           }}
           componentSlug="button"
           className="px-4"
@@ -153,9 +153,9 @@ export function CustomInstallation() {
   return (
     <InstallationSection
       availableCommands={{ 
-        npm: "npm install @mylib/ui-", 
-        yarn: "yarn add @mylib/ui-", 
-        pnpm: "pnpm add @mylib/ui-",
+        npm: "npm install @mylib/ui", 
+        yarn: "yarn add @mylib/ui", 
+        pnpm: "pnpm add @mylib/ui",
       }}
       componentSlug="avatar"
       title="Get Started"
@@ -167,9 +167,9 @@ export function CustomInstallation() {
       preview: (
         <InstallationSection
           availableCommands={{
-            npm: "npm install @mylib/ui-",
-            yarn: "yarn add @mylib/ui-",
-            pnpm: "pnpm add @mylib/ui-",
+            npm: "npm install @mylib/ui",
+            yarn: "yarn add @mylib/ui",
+            pnpm: "pnpm add @mylib/ui",
           }}
           componentSlug="avatar"
           title="Get Started"
@@ -188,7 +188,7 @@ export function CustomCLI() {
   return (
     <InstallationSection
       availableCommands={{ 
-        npm: "npm install @mylib/ui-",
+        npm: "npm install @mylib/ui",
       }}
       componentSlug="dialog"
       description="Install using npm directly from our package registry."
@@ -198,7 +198,7 @@ export function CustomCLI() {
 }`,
       preview: (
         <InstallationSection
-          availableCommands={{ npm: "npm install @mylib/ui-" }}
+          availableCommands={{ npm: "npm install @mylib/ui" }}
           componentSlug="dialog"
           description="Install using npm directly from our package registry."
           className="px-4"
