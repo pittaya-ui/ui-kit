@@ -101,18 +101,21 @@ export const orbitImagesDoc: ComponentDoc = {
       type: "string",
       description:
         "Utility classes to customize the outer circle border color.",
+      defaultValue: "border-rose-400/60",
     },
     {
       name: "middleBorderColor",
       type: "string",
       description:
         "Utility classes to customize the middle circle border color.",
+      defaultValue: "border-rose-400/80",
     },
     {
       name: "innerBorderColor",
       type: "string",
       description:
         "Utility classes to customize the inner circle border color.",
+      defaultValue: "border-rose-400",
     },
     {
       name: "images",
@@ -120,6 +123,13 @@ export const orbitImagesDoc: ComponentDoc = {
       required: true,
       description:
         "List of image URLs to distribute evenly around the orbit. Accepts any length.",
+    },
+    {
+      name: "autoPlay",
+      type: "boolean",
+      description:
+        "When true, starts the animation immediately without requiring scroll. Useful for previews and demos.",
+      defaultValue: "false",
     },
   ],
   examples: [
@@ -149,19 +159,22 @@ export function OrbitDemo() {
   );
 }`,
       preview: (
-        <div className="bg-background">
-          <OrbitImages
-            title="Build trust and highlight your community with a dynamic orbit."
-            buttonText="Join the crew"
-            images={[
-              "https://github.com/marcosvbueno.png",
-              "https://github.com/lucasadsr.png",
-              "https://github.com/jjgouveia.png",
-              "https://github.com/marcosvbueno.png",
-              "https://github.com/lucasadsr.png",
-              "https://github.com/jjgouveia.png",
-            ]}
-          />
+        <div className="flex h-full w-full items-center justify-center overflow-hidden">
+          <div className="scale-75 lg:scale-[0.65]">
+            <OrbitImages
+              title="Build trust and highlight your community with a dynamic orbit."
+              buttonText="Join the crew"
+              autoPlay
+              images={[
+                "https://github.com/marcosvbueno.png",
+                "https://github.com/lucasadsr.png",
+                "https://github.com/jjgouveia.png",
+                "https://github.com/marcosvbueno.png",
+                "https://github.com/lucasadsr.png",
+                "https://github.com/jjgouveia.png",
+              ]}
+            />
+          </div>
         </div>
       ),
     },

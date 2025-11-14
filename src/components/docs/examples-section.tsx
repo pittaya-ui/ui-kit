@@ -1,11 +1,14 @@
 "use client";
 
+import { Code, Eye } from "lucide-react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { toast } from "sonner";
 
 import type { DocExample } from "@/lib/docs/types";
 
-import { CopyCodeButton } from "../copy-code-button";
+import { CopyButton } from "../ui/copy-button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
 
 type ExamplesSectionProps = {
   examples: DocExample[];
@@ -32,7 +35,7 @@ export function ExamplesSection({
         {examples.map((example) => (
           <article
             key={example.id}
-            className="border-border/60 bg-card/60 rounded-2xl border p-6 shadow-sm backdrop-blur"
+            className="border-border/60 bg-card/60 rounded-2xl border p-4 shadow-sm backdrop-blur"
           >
             <div className="space-y-3">
               <div>
@@ -43,23 +46,49 @@ export function ExamplesSection({
                   {example.description}
                 </p>
               </div>
-              <div className="border-border/60 bg-background/70 rounded-xl border p-4">
-                {example.preview}
-              </div>
-              <pre className="relative overflow-x-auto rounded-lg bg-[#282C34] p-4 text-xs">
-                <CopyCodeButton code={example.code} />
-                <SyntaxHighlighter
-                  language="typescript"
-                  style={atomOneDark}
-                  customStyle={{
-                    margin: 0,
-                    padding: 0,
-                    background: "transparent",
-                  }}
+              <Tabs defaultValue="preview">
+                <TabsList className="w-full">
+                  <TabsTrigger value="preview" className="w-full">
+                    <Eye className="size-4" /> Preview
+                  </TabsTrigger>
+                  <TabsTrigger value="code" className="w-full">
+                    <Code className="size-4" /> Code
+                  </TabsTrigger>
+                </TabsList>
+                <TabsContent
+                  value="preview"
+                  className="bg-background flex min-h-[500px] overflow-y-auto rounded-xl"
                 >
-                  {example.code}
-                </SyntaxHighlighter>
-              </pre>
+                  <div className="flex max-h-[500px] min-h-[500px] w-full items-center justify-center">
+                    {example.preview}
+                  </div>
+                </TabsContent>
+                <TabsContent
+                  value="code"
+                  className="bg-background flex h-[500px] items-start justify-center overflow-x-auto overflow-y-auto rounded-lg"
+                >
+                  <div className="relative max-h-[500px] min-h-[500px] w-full text-xs lg:text-sm">
+                    <CopyButton
+                      text={example.code}
+                      onCopy={() => {
+                        toast.success("Successfully copied to clipboard");
+                      }}
+                    />
+                    <SyntaxHighlighter
+                      showLineNumbers={true}
+                      language="typescript"
+                      style={atomOneDark}
+                      customStyle={{
+                        margin: 0,
+                        padding: 20,
+                        background: "#0a0a0a",
+                      }}
+                    >
+                      {example.code}
+                    </SyntaxHighlighter>
+                  </div>
+                </TabsContent>
+              </Tabs>
             </div>
           </article>
         ))}
@@ -67,4 +96,3 @@ export function ExamplesSection({
     </section>
   );
 }
-
