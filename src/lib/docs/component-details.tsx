@@ -1,3 +1,4 @@
+import { announcementBadgeDoc } from "@/components/docs/contents/announcement-badge";
 import { buttonDoc } from "@/components/docs/contents/button";
 import { installationSectionDoc } from "@/components/docs/contents/installation-section";
 import { orbitImagesDoc } from "@/components/docs/contents/orbit-images";
@@ -8,6 +9,7 @@ const docs: Record<string, ComponentDoc> = {
   [buttonDoc.slug]: buttonDoc,
   [installationSectionDoc.slug]: installationSectionDoc,
   [orbitImagesDoc.slug]: orbitImagesDoc,
+  [announcementBadgeDoc.slug]: announcementBadgeDoc,
 };
 
 export function getComponentDoc(slug: string): ComponentDoc | undefined {
