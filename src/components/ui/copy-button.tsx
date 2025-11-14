@@ -1,29 +1,38 @@
+"use client";
+
 import { CheckIcon, CopyIcon } from "lucide-react";
 import { useState } from "react";
-import { toast } from "sonner";
 
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-import { Button } from "./ui/button";
+interface CopyButtonProps {
+  text: string;
+  onCopy?: () => void;
+  className?: string;
+}
 
-export function CopyCodeButton({ code }: { code: string }) {
+export function CopyButton({ text, onCopy, className }: CopyButtonProps) {
   const [isCopied, setIsCopied] = useState(false);
 
-  const handleCopyCode = (code: string) => {
-    navigator.clipboard.writeText(code);
+  function handleCopy(text: string) {
+    navigator.clipboard.writeText(text);
     setIsCopied(true);
-    toast.success("Successfully copied to clipboard");
+
+    onCopy?.();
+
     setTimeout(() => {
       setIsCopied(false);
     }, 2000);
-  };
+  }
+
   return (
     <Button
       variant="outline"
       size="icon"
-      className="absolute top-2 right-2"
+      className={cn("absolute top-2 right-2", className)}
       onClick={() => {
-        handleCopyCode(code);
+        handleCopy(text);
       }}
     >
       <span
