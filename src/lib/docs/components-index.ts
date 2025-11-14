@@ -17,8 +17,10 @@ export const componentsIndex: ComponentIndexItem[] = [
     category: "Documentation",
     status: "stable",
     tags: ["cli", "install", "documentation", "code"],
-    dependencies: ["@radix-ui/react-tabs","react-syntax-highlighter"],
-    internalDependencies: ["button"],
+    dependencies: [
+      "react-syntax-highlighter",
+      "@types/react-syntax-highlighter",
+    ],
   },
   {
     slug: "orbit-images",
@@ -27,7 +29,6 @@ export const componentsIndex: ComponentIndexItem[] = [
     category: "Components",
     status: "stable",
     tags: ["scroll", "motion", "orbit"],
-    dependencies: ["@radix-ui/react-slot"],
     internalDependencies: ["button"],
   },
 ];
