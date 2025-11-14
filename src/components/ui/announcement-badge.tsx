@@ -18,37 +18,69 @@ const announcementContainerVariants = cva(
   }
 );
 
-
-
-export function AnnouncementContainer({ className, variant, ...props }: React.ComponentProps<"div"> & VariantProps<typeof announcementContainerVariants>) {
+export function AnnouncementContainer({
+  className,
+  variant,
+  ...props
+}: React.ComponentProps<"div"> &
+  VariantProps<typeof announcementContainerVariants>) {
   return (
     <div
-    className={announcementContainerVariants({ variant, className })}
-    {...props}
+      className={announcementContainerVariants({ variant, className })}
+      {...props}
     />
   );
 }
 
 export function AnnouncementSeparator({ className }: { className?: string }) {
-  return <div className={cn("h-5 w-px bg-accent", className)} />;
+  return <div className={cn("bg-accent h-5 w-px", className)} />;
 }
 
-export function AnnouncementText({ className, text}: React.ComponentProps<"div"> & {text: string}) {
-  return <div className={cn("text-sm font-medium px-2 py-1 rounded-full bg-accent border border-border", className)}>
-    <p>{text}</p>
-    </div>
-}
-
-export function AnnouncementIcon({ className, icon: Icon }: { className?: string, icon: LucideIcon | string }) {
-
+export function AnnouncementText({
+  className,
+  text,
+}: React.ComponentProps<"div"> & { text: string }) {
   return (
-    <div className="px-2">
-      {typeof Icon === "string" ? <p className={cn("text-sm font-medium", className)}>{Icon}</p> : <Icon className={cn("size-4 ", className)} />}
+    <div
+      className={cn(
+        "bg-accent border-border rounded-full border px-2 py-1 text-sm font-medium",
+        className
+      )}
+    >
+      <p>{text}</p>
     </div>
   );
 }
 
-export function AnnouncementTitle({ className, ...props }: React.ComponentProps<"h3">) {
-  return <h3 className={cn("text-sm font-medium px-2 py-1 flex items-center gap-2", className)} {...props} />;
+export function AnnouncementIcon({
+  className,
+  icon: Icon,
+}: {
+  className?: string;
+  icon: LucideIcon | string;
+}) {
+  return (
+    <div className="px-2">
+      {typeof Icon === "string" ? (
+        <p className={cn("text-sm font-medium", className)}>{Icon}</p>
+      ) : (
+        <Icon className={cn("size-4", className)} />
+      )}
+    </div>
+  );
 }
 
+export function AnnouncementTitle({
+  className,
+  ...props
+}: React.ComponentProps<"h3">) {
+  return (
+    <h3
+      className={cn(
+        "flex items-center gap-2 px-2 py-1 text-sm font-medium",
+        className
+      )}
+      {...props}
+    />
+  );
+}
