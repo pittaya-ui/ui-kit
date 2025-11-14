@@ -96,9 +96,13 @@ npm run dev
 
 ## 📦 Available Components
 
-| Component  | Status    | Category | Description                              |
-| ---------- | --------- | -------- | ---------------------------------------- |
-| **Button** | ✅ Stable | Actions  | Accessible button with multiple variants |
+| Component                | Status    | Category      | Description                                       |
+| ------------------------ | --------- | ------------- | ------------------------------------------------- |
+| **Announcement Badge**   | ✅ Stable | Components    | Badge with icon and title for announcements       |
+| **Button**               | ✅ Stable | Actions       | Accessible button with multiple variants          |
+| **Copy Button**          | ✅ Stable | Actions       | Button that copies text to clipboard when clicked |
+| **Installation Section** | ✅ Stable | Documentation | Installation instructions with code snippets      |
+| **Orbit Images**         | ✅ Stable | Components    | Set of images displayed in orbiting motion        |
 
 > 🚧 More components coming soon! Check our [roadmap](https://github.com/pittaya-ui/ui-kit/issues) for planned features.
 
@@ -154,6 +158,9 @@ pittaya-ui/
 
 - **[Tailwind CSS 4](https://tailwindcss.com/)** - Utility-first CSS
 - **[Radix UI](https://www.radix-ui.com/)** - Unstyled, accessible components
+  - `@radix-ui/react-slot` - Composition utility
+  - `@radix-ui/react-separator` - Separator component
+  - `@radix-ui/react-tabs` - Tabs component
 - **[Class Variance Authority](https://cva.style/)** - Component variants
 - **[Tailwind Merge](https://github.com/dcastil/tailwind-merge)** - Merge Tailwind classes
 
@@ -163,6 +170,7 @@ pittaya-ui/
 - **[Sonner](https://sonner.emilkowal.ski/)** - Toast notifications
 - **[React Syntax Highlighter](https://react-syntax-highlighter.github.io/react-syntax-highlighter/)** - Code highlighting
 - **[Unicorn Studio](https://unicornstudio.io/)** - Animated backgrounds
+- **[clsx](https://github.com/lukeed/clsx)** - Utility for constructing className strings
 
 ### State & Data
 
@@ -201,13 +209,13 @@ Follow these steps to document a new component:
 ```typescript
 {
   slug: "your-component",
-  name: "YourComponent",
-  description: "Displays a button or a component that looks like a button.",
-  category: "Actions",
+  name: "Your Component",
+  description: "Brief description of what the component does.",
+  category: "Components", // or "Actions", "Documentation", etc.
   status: "stable",
-  tags: ["feature", "interaction"]
-  dependencies: ["@radix-ui/react-slot"],
-  internalDependencies: ["button"]
+  tags: ["feature", "interaction"],
+  dependencies: ["@radix-ui/react-slot"], // Optional: external dependencies
+  internalDependencies: ["button"] // Optional: other UI components used
 }
 ```
 
