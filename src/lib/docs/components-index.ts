@@ -26,6 +26,7 @@ export const componentsIndex: ComponentIndexItem[] = [
     category: "Components",
     status: "stable",
     tags: ["scroll", "motion", "orbit"],
+    internalDependencies: ["button"],
   },
 ];
 
