@@ -80,7 +80,7 @@ export function WhyPittaya() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="group bg-card hover:border-pittaya/50 hover:shadow-pittaya/10 relative flex min-h-[280px] flex-col overflow-hidden rounded-2xl border border-2 p-6 transition-all hover:shadow-md"
+              className="group bg-card hover:border-pittaya/50 hover:shadow-pittaya/10 relative flex min-h-[280px] flex-col overflow-hidden rounded-2xl border-2 p-6 transition-all hover:shadow-md"
             >
               <div className="from-primary/5 absolute inset-0 bg-gradient-to-br to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
               <div className="relative flex flex-1 flex-col">
