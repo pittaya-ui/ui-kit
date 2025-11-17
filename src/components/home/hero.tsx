@@ -37,13 +37,13 @@ export function Hero() {
           </AnnouncementContainer>
         </Link>
         <div className="max-w-4xl space-y-8 text-center">
-          <h1 className="text-4xl leading-tight font-normal tracking-tight text-white lg:text-6xl">
+          <h1 className="text-4xl leading-tight font-light tracking-tight text-white lg:text-6xl">
             Components that scale <br />
             <span className="text-white">
               with your <span className="font-semibold">ideas.</span>{" "}
             </span>
           </h1>
-          <p className="mx-auto max-w-2xl text-xl text-white/90">
+          <p className="mx-auto max-w-2xl text-lg text-white/90 lg:text-xl">
             A fully open-source UI library for React, powered by TypeScript and
             Tailwind CSS. Fast, composable, and ready for production.
           </p>

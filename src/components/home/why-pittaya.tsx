@@ -9,6 +9,8 @@ import {
   Terminal,
 } from "lucide-react";
 
+import { Separator } from "../ui/separator";
+
 interface Feature {
   icon: LucideIcon;
   title: string;
@@ -63,10 +65,10 @@ const features: Feature[] = [
 
 export function WhyPittaya() {
   return (
-    <section className="from-background to-muted/20 bg-gradient-to-b px-6 py-24">
+    <section className="bg-background px-6 py-24">
       <div className="container mx-auto max-w-6xl">
-        <div className="mb-16 space-y-4 text-center">
-          <h2 className="text-4xl font-bold md:text-5xl">
+        <div className="mb-16 flex flex-col items-center space-y-4 text-center">
+          <h2 className="text-4xl font-normal tracking-tighter md:text-5xl">
             Why Choose Pittaya UI?
           </h2>
           <p className="text-muted-foreground mx-auto max-w-2xl">
@@ -74,13 +76,14 @@ export function WhyPittaya() {
             Tailwind CSS, and Radix UI. Production-ready components with
             complete documentation and live examples.
           </p>
+          <Separator className="w-full max-w-xl" />
         </div>
 
         <div className="mb-12 grid gap-6 md:grid-cols-3">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="group bg-card hover:border-pittaya/50 hover:shadow-pittaya/10 relative flex min-h-[280px] flex-col overflow-hidden rounded-2xl border-2 p-6 transition-all hover:shadow-md"
+              className="group bg-card hover:border-pittaya/50 hover:shadow-pittaya/10 relative flex min-h-[280px] flex-col overflow-hidden rounded-2xl border-2 p-6 [box-shadow:0_-20px_80px_-20px_#ff637e3f_inset] transition-all hover:shadow-md"
             >
               <div className="from-primary/5 absolute inset-0 bg-gradient-to-br to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
               <div className="relative flex flex-1 flex-col">
