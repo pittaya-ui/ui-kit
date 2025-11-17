@@ -80,7 +80,7 @@ export function Header() {
                 {item.name}
               </Link>
             ))}
-            <div className="ml-3">
+            <div className="ml-3 space-y-3">
               <GithubStarsButton />
               <NpmDownloadsButton />
             </div>
