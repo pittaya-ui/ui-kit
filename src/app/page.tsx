@@ -1,38 +1,57 @@
 import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
-import { PittayaBackground } from "@/components/raycast-animated-background";
+import Beams from "@/components/Beams";
 import {
   AnnouncementContainer,
-  AnnouncementIcon,
   AnnouncementSeparator,
   AnnouncementTitle,
 } from "@/components/ui/announcement-badge";
 
 export default function Home() {
   return (
-    <PittayaBackground className="h-screen max-h-screen overflow-x-hidden overflow-y-hidden">
-      <main className="flex h-screen flex-1 flex-col items-center justify-center gap-10 px-6">
+    <Beams
+      beamWidth={2}
+      beamHeight={15}
+      beamNumber={12}
+      lightColor="#ff637e"
+      speed={4}
+      noiseIntensity={1.75}
+      scale={0.2}
+      rotation={136}
+      className="h-screen overflow-hidden"
+    >
+      <div className="flex h-full w-full flex-col items-center justify-center gap-10 px-6">
         <Link href={"/docs/components"}>
           <AnnouncementContainer variant={"glassEffect"}>
-            <AnnouncementIcon icon={"🎉"} />
+            <div className="px-2">
+              <Image
+                width="20"
+                height="20"
+                src="https://img.icons8.com/color/48/brazil.png"
+                alt="brazil"
+              />
+            </div>
             <AnnouncementSeparator className="bg-white/30" />
             <AnnouncementTitle>
               Introducing Pittaya UI <ArrowUpRight className="size-4" />
             </AnnouncementTitle>
           </AnnouncementContainer>
         </Link>
-        <div className="max-w-4xl space-y-8 px-3 text-center">
-          <h1 className="text-3xl leading-tight font-bold text-white [text-shadow:0_0_20px_rgba(255,255,255,0.6)] lg:text-6xl">
+        <div className="max-w-4xl space-y-8 text-center">
+          <h1 className="text-6xl leading-tight font-normal tracking-tight text-white">
             Components that scale <br />
-            <span className="text-white">with your ideas.</span>
+            <span className="text-white">
+              with your <span className="font-semibold">ideas</span>.
+            </span>
           </h1>
-          <p className="mx-auto max-w-2xl text-lg text-white/90 lg:text-xl">
+          <p className="mx-auto max-w-2xl text-xl text-white/90">
             A fully open-source UI library for React, powered by TypeScript and
             Tailwind CSS. Fast, composable, and ready for production.
           </p>
         </div>
-      </main>
-    </PittayaBackground>
+      </div>
+    </Beams>
   );
 }
