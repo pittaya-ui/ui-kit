@@ -22,12 +22,12 @@ export default function Home() {
             </AnnouncementTitle>
           </AnnouncementContainer>
         </Link>
-        <div className="max-w-4xl space-y-8 text-center">
-          <h1 className="text-6xl leading-tight font-bold text-white [text-shadow:0_0_20px_rgba(255,255,255,0.6)]">
+        <div className="max-w-4xl space-y-8 px-3 text-center">
+          <h1 className="text-3xl leading-tight font-bold text-white [text-shadow:0_0_20px_rgba(255,255,255,0.6)] lg:text-6xl">
             Components that scale <br />
             <span className="text-white">with your ideas.</span>
           </h1>
-          <p className="mx-auto max-w-2xl text-xl text-white/90">
+          <p className="mx-auto max-w-2xl text-lg text-white/90 lg:text-xl">
             A fully open-source UI library for React, powered by TypeScript and
             Tailwind CSS. Fast, composable, and ready for production.
           </p>
