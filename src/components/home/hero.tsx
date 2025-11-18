@@ -11,10 +11,22 @@ import {
 import { Button } from "@/components/ui/button";
 import { REPO_URL } from "@/constants/repo-url";
 
+import Beams from "../Beams";
+
 export function Hero() {
   return (
-    <PittayaBackground className="h-screen max-h-screen overflow-x-hidden overflow-y-hidden">
-      <main className="flex h-screen flex-1 flex-col items-center justify-center gap-6 px-6">
+    <Beams
+      beamWidth={2}
+      beamHeight={15}
+      beamNumber={12}
+      lightColor="#ff637e"
+      speed={4}
+      noiseIntensity={1.75}
+      scale={0.2}
+      rotation={136}
+      className="h-screen overflow-hidden"
+    >
+      <main className="flex h-screen flex-1 flex-col items-center justify-center gap-6 px-4">
         <Link href={"/docs/components"}>
           <AnnouncementContainer variant={"glassEffect"}>
             <AnnouncementIcon icon={"🎉"} />
@@ -25,11 +37,13 @@ export function Hero() {
           </AnnouncementContainer>
         </Link>
         <div className="max-w-4xl space-y-8 text-center">
-          <h1 className="text-6xl leading-tight font-bold text-white">
+          <h1 className="text-4xl leading-tight font-light tracking-tight text-white lg:text-6xl">
             Components that scale <br />
-            <span className="text-white">with your ideas.</span>
+            <span className="text-white">
+              with your <span className="font-semibold">ideas.</span>{" "}
+            </span>
           </h1>
-          <p className="mx-auto max-w-2xl text-xl text-white/90">
+          <p className="mx-auto max-w-2xl text-lg text-white/90 lg:text-xl">
             A fully open-source UI library for React, powered by TypeScript and
             Tailwind CSS. Fast, composable, and ready for production.
           </p>
@@ -59,6 +73,6 @@ export function Hero() {
           </div>
         </div>
       </main>
-    </PittayaBackground>
+    </Beams>
   );
 }
