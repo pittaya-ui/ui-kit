@@ -1,38 +1,11 @@
-import { ArrowUpRight } from "lucide-react";
-import Link from "next/link";
-
-import { PittayaBackground } from "@/components/raycast-animated-background";
-import {
-  AnnouncementContainer,
-  AnnouncementIcon,
-  AnnouncementSeparator,
-  AnnouncementTitle,
-} from "@/components/ui/announcement-badge";
+import { Hero } from "@/components/home/hero";
+import { WhyPittaya } from "@/components/home/why-pittaya";
 
 export default function Home() {
   return (
-    <PittayaBackground className="h-screen max-h-screen overflow-x-hidden overflow-y-hidden">
-      <main className="flex h-screen flex-1 flex-col items-center justify-center gap-10 px-6">
-        <Link href={"/docs/components"}>
-          <AnnouncementContainer variant={"glassEffect"}>
-            <AnnouncementIcon icon={"🎉"} />
-            <AnnouncementSeparator className="bg-white/30" />
-            <AnnouncementTitle>
-              Introducing Pittaya UI <ArrowUpRight className="size-4" />
-            </AnnouncementTitle>
-          </AnnouncementContainer>
-        </Link>
-        <div className="max-w-4xl space-y-8 px-3 text-center">
-          <h1 className="text-3xl leading-tight font-bold text-white [text-shadow:0_0_20px_rgba(255,255,255,0.6)] lg:text-6xl">
-            Components that scale <br />
-            <span className="text-white">with your ideas.</span>
-          </h1>
-          <p className="mx-auto max-w-2xl text-lg text-white/90 lg:text-xl">
-            A fully open-source UI library for React, powered by TypeScript and
-            Tailwind CSS. Fast, composable, and ready for production.
-          </p>
-        </div>
-      </main>
-    </PittayaBackground>
+    <>
+      <Hero />
+      <WhyPittaya />
+    </>
   );
 }
