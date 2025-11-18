@@ -85,7 +85,7 @@ export function WhyPittaya() {
               background:
                 "linear-gradient(152.92deg, rgba(192, 15, 102, 0.2) 4.54%, rgba(192, 11, 109, 0.26) 34.2%, rgba(192, 15, 102, 0.1) 77.55%)",
             }}
-          ></div>
+          />
         </div>
         <Separator className="bg-foreground/30 mx-auto mt-5 max-w-lg" />
         <div className="relative mt-12">
@@ -98,7 +98,7 @@ export function WhyPittaya() {
                 <div className="text-primary w-fit transform-gpu rounded-full border p-4 [box-shadow:0_-20px_80px_-20px_#ff7aa40f_inset]">
                   <feature.icon className="stroke-pittaya size-6" />
                 </div>
-                <h4 className="font-geist text-lg font-bold tracking-tighter">
+                <h4 className="font-geist text-lg font-semibold">
                   {feature.title}
                 </h4>
                 <p className="text-gray-500">{feature.description}</p>
