@@ -2,9 +2,11 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { ComponentContent } from "@/components/docs/component-content";
+import { ComponentsNavigation } from "@/components/docs/components-navigation";
 import { DocsShell } from "@/components/docs/docs-shell";
 import { SidebarGeneral } from "@/components/docs/sidebar-general";
 import { SidebarLocal } from "@/components/docs/sidebar-local";
+import { getAdjacentItems } from "@/helpers/navigation";
 import {
   getAllComponentDocs,
   getComponentDoc,
@@ -51,12 +53,15 @@ export default async function ComponentDocsPage({ params }: PageProps) {
 
   const index = getComponentsIndex();
 
+  const { previous, next } = getAdjacentItems(index, slug);
+
   return (
     <DocsShell
       sidebar={<SidebarGeneral items={index} activeSlug={slug} />}
       secondarySidebar={<SidebarLocal toc={doc.toc} />}
     >
       <ComponentContent doc={doc} />
+      <ComponentsNavigation previous={previous} next={next} />
     </DocsShell>
   );
 }
