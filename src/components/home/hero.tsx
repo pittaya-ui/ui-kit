@@ -1,7 +1,8 @@
+"use client";
+
 import { ArrowUpRight, BookOpen, Github } from "lucide-react";
 import Link from "next/link";
 
-import { PittayaBackground } from "@/components/raycast-animated-background";
 import {
   AnnouncementContainer,
   AnnouncementIcon,
@@ -10,10 +11,13 @@ import {
 } from "@/components/ui/announcement-badge";
 import { Button } from "@/components/ui/button";
 import { REPO_URL } from "@/constants/repo-url";
+import { useInView } from "@/hooks/useInView";
 
 import Beams from "../Beams";
 
 export function Hero() {
+  const { ref, isInView } = useInView({ threshold: 0.1, triggerOnce: true });
+
   return (
     <Beams
       beamWidth={2}
@@ -26,8 +30,16 @@ export function Hero() {
       rotation={136}
       className="h-screen overflow-hidden"
     >
-      <main className="flex h-screen flex-1 flex-col items-center justify-center gap-6 px-4">
-        <Link href={"/docs/components"}>
+      <main
+        ref={ref}
+        className="flex h-screen flex-1 flex-col items-center justify-center gap-6 px-4"
+      >
+        <Link
+          href={"/docs/components"}
+          className={`transition-all ${
+            isInView ? "animate-fade-in-down opacity-0" : "opacity-0"
+          }`}
+        >
           <AnnouncementContainer variant={"glassEffect"}>
             <AnnouncementIcon icon={"🎉"} />
             <AnnouncementSeparator className="bg-white/30" />
@@ -37,17 +49,35 @@ export function Hero() {
           </AnnouncementContainer>
         </Link>
         <div className="max-w-4xl space-y-8 text-center">
-          <h1 className="text-4xl leading-tight font-light tracking-tight text-white lg:text-6xl">
+          <h1
+            className={`text-4xl leading-tight font-light tracking-tight text-white transition-all lg:text-6xl ${
+              isInView
+                ? "animate-fade-in-up animation-delay-200 opacity-0"
+                : "opacity-0"
+            }`}
+          >
             Components that scale <br />
             <span className="text-white">
               with your <span className="font-semibold">ideas.</span>{" "}
             </span>
           </h1>
-          <p className="mx-auto max-w-2xl text-lg text-white/90 lg:text-xl">
+          <p
+            className={`mx-auto max-w-2xl text-lg text-white/90 transition-all lg:text-xl ${
+              isInView
+                ? "animate-fade-in-up animation-delay-400 opacity-0"
+                : "opacity-0"
+            }`}
+          >
             A fully open-source UI library for React, powered by TypeScript and
             Tailwind CSS. Fast, composable, and ready for production.
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-4">
+          <div
+            className={`flex flex-wrap items-center justify-center gap-4 transition-all ${
+              isInView
+                ? "animate-scale-in animation-delay-600 opacity-0"
+                : "opacity-0"
+            }`}
+          >
             <Button
               asChild
               size="lg"

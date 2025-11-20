@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Accessibility,
   Code2,
@@ -8,16 +10,17 @@ import {
   Terminal,
 } from "lucide-react";
 
+import { useInView } from "@/hooks/useInView";
+import { componentsIndex } from "@/lib/docs/components-index";
+
+import { Separator } from "../ui/separator";
+
 interface Feature {
   icon: LucideIcon;
   title: string;
   description: string;
   highlight: string;
 }
-
-import { componentsIndex } from "@/lib/docs/components-index";
-
-import { Separator } from "../ui/separator";
 
 const features: Feature[] = [
   {
@@ -65,15 +68,27 @@ const features: Feature[] = [
 ];
 
 export function WhyPittaya() {
+  const { ref, isInView } = useInView({ threshold: 0.1, triggerOnce: true });
+
   return (
-    <section className="relative py-24">
+    <section ref={ref} className="relative py-24">
       <div className="mx-auto max-w-screen-xl px-4 md:px-8">
         <div className="relative mx-auto max-w-2xl text-center">
           <div className="relative z-10">
-            <h3 className="font-geist mt-4 text-3xl font-normal tracking-tighter sm:text-4xl md:text-5xl">
+            <h3
+              className={`font-geist mt-4 text-3xl font-normal tracking-tighter transition-all sm:text-4xl md:text-5xl ${
+                isInView ? "animate-fade-in-up opacity-0" : "opacity-0"
+              }`}
+            >
               Why Choose <span className="text-pittaya">Pittaya UI</span> ?
             </h3>
-            <p className="font-geist text-foreground/60 mt-3">
+            <p
+              className={`font-geist text-foreground/60 mt-3 transition-all ${
+                isInView
+                  ? "animate-fade-in-up animation-delay-200 opacity-0"
+                  : "opacity-0"
+              }`}
+            >
               A fully open-source component library built on React, TypeScript,
               Tailwind CSS, and Radix UI. Production-ready components with
               complete documentation and live examples.
@@ -87,13 +102,24 @@ export function WhyPittaya() {
             }}
           />
         </div>
-        <Separator className="bg-foreground/30 mx-auto mt-5 max-w-lg" />
+        <Separator
+          className={`bg-foreground/30 mx-auto mt-5 max-w-lg transition-all ${
+            isInView
+              ? "animate-scale-in animation-delay-400 opacity-0"
+              : "opacity-0"
+          }`}
+        />
         <div className="relative mt-12">
           <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {features.map((feature, idx) => (
               <li
                 key={idx}
-                className="transform-gpu space-y-3 rounded-xl border bg-transparent p-4"
+                className={`transform-gpu space-y-3 rounded-xl border bg-transparent p-4 transition-all ${
+                  isInView ? "animate-fade-in-up opacity-0" : "opacity-0"
+                }`}
+                style={{
+                  animationDelay: isInView ? `${600 + idx * 100}ms` : "0ms",
+                }}
               >
                 <div className="text-primary w-fit transform-gpu rounded-full border p-4 [box-shadow:0_-20px_80px_-20px_#ff7aa40f_inset]">
                   <feature.icon className="stroke-pittaya size-6" />
