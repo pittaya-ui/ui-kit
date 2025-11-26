@@ -13,6 +13,33 @@ export const metadata: Metadata = {
   title: "Pittaya UI",
   description:
     "The best UI library for Next.js, using Shadcn UI and Tailwind CSS.",
+  keywords: [
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Tailwind CSS",
+    "UI Components",
+    "Design System",
+    "Shadcn UI",
+    "Radix UI",
+    "Component Library",
+    "Open Source",
+  ],
+  authors: [{ name: "Pittaya Team" }],
+  creator: "Pittaya",
+  publisher: "Pittaya",
+  category: "technology",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({
