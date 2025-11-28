@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { DocsShell } from "@/components/docs/docs-shell";
@@ -11,6 +12,32 @@ import { getGettingStartPage } from "@/lib/docs/getting-start-pages";
 type PageProps = {
   params: Promise<{ slug: string }>;
 };
+
+type GenerateStaticParamsResult = {
+  slug: string;
+};
+
+export function generateStaticParams(): GenerateStaticParamsResult[] {
+  return getGettingStartedIndex().map((doc) => ({ slug: doc.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const doc = getGettingStartPage(slug);
+
+  if (!doc) {
+    return {
+      title: "Pittaya UI | Page Not Found",
+    };
+  }
+
+  return {
+    title: `Pittaya UI | ${doc.metadata.name}`,
+    description: doc.metadata.description,
+  };
+}
 
 export default async function ComponentDocsPage({ params }: PageProps) {
   const { slug } = await params;
@@ -35,7 +62,6 @@ export default async function ComponentDocsPage({ params }: PageProps) {
       secondarySidebar={<SidebarLocal toc={doc.toc ?? []} />}
     >
       <PageContent doc={doc} />
-      
     </DocsShell>
   );
 }
