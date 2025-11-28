@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import { ComponentContent } from "@/components/docs/component-content";
+import { ComponentContent } from "@/components/docs/component-sections-renders/component-content";
 import { ComponentsNavigation } from "@/components/docs/components-navigation";
 import { DocsShell } from "@/components/docs/docs-shell";
 import { SidebarGeneral } from "@/components/docs/sidebar-general";
@@ -12,6 +12,7 @@ import {
   getComponentDoc,
 } from "@/lib/docs/component-details";
 import { getComponentsIndex } from "@/lib/docs/components-index";
+import { getGettingStartedIndex } from "@/lib/docs/getting-start-index";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -52,12 +53,19 @@ export default async function ComponentDocsPage({ params }: PageProps) {
   }
 
   const index = getComponentsIndex();
+  const gettingStartedItems = getGettingStartedIndex();
 
   const { previous, next } = getAdjacentItems(index, slug);
 
   return (
     <DocsShell
-      sidebar={<SidebarGeneral items={index} activeSlug={slug} />}
+      sidebar={
+        <SidebarGeneral
+          items={index}
+          gettingStartedItems={gettingStartedItems}
+          activeSlug={slug}
+        />
+      }
       secondarySidebar={<SidebarLocal toc={doc.toc} />}
     >
       <ComponentContent doc={doc} />
