@@ -7,8 +7,8 @@ import { toast } from "sonner";
 
 import type { DocExample } from "@/lib/docs/types";
 
-import { CopyButton } from "../ui/copy-button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
+import { CopyButton } from "../../ui/copy-button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../ui/tabs";
 
 type ExamplesSectionProps = {
   examples: DocExample[];
