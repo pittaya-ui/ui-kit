@@ -4,12 +4,21 @@ import { DocsShell } from "@/components/docs/docs-shell";
 import { SidebarGeneral } from "@/components/docs/sidebar-general";
 import { Button } from "@/components/ui/button";
 import { getComponentsIndex } from "@/lib/docs/components-index";
+import { getGettingStartedIndex } from "@/lib/docs/getting-start-index";
 
 export default function Components() {
   const index = getComponentsIndex();
+  const gettingStartedItems = getGettingStartedIndex();
   return (
-    <DocsShell sidebar={<SidebarGeneral items={index} />}>
-      <div className="flex flex-col gap-8">
+    <DocsShell
+      sidebar={
+        <SidebarGeneral
+          items={index}
+          gettingStartedItems={gettingStartedItems}
+        />
+      }
+    >
+      <div className="mt-2 flex flex-col gap-8">
         <div className="flex flex-col gap-2">
           <h1 className="text-3xl font-semibold">Components</h1>
           <span className="text-md max-w-lg opacity-80">

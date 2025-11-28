@@ -11,6 +11,22 @@ export type ComponentIndexItem = {
   internalDependencies?: string[];
 };
 
+export type GettingStartedItem = {
+  slug: string;
+  title: string;
+  href: string;
+};
+
+export type PageSection = {
+  slug: string;
+  metadata: {
+    name: string;
+    description: string;
+  };
+  sections: DocSection[];
+  toc?: TocItem[];
+};
+
 export type TocItem = {
   id: string;
   title: string;
@@ -54,4 +70,3 @@ export type ComponentDoc = {
   examples: DocExample[];
   toc: TocItem[];
 };
-

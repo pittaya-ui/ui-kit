@@ -2,8 +2,8 @@
 
 import type { ComponentDoc } from "@/lib/docs/types";
 
-import { Badge } from "../ui/badge";
-import { InstallationSection } from "../ui/installation-section";
+import { Badge } from "../../ui/badge";
+import { InstallationSection } from "../../ui/installation-section";
 import { ContentSections } from "./content-sections";
 import { ExamplesSection } from "./examples-section";
 import { PropertiesSection } from "./properties-section";
