@@ -1,18 +1,13 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import { ComponentContent } from "@/components/docs/component-sections-renders/component-content";
-import { ComponentsNavigation } from "@/components/docs/components-navigation";
 import { DocsShell } from "@/components/docs/docs-shell";
+import { PageContent } from "@/components/docs/page-section-renders/page-content";
 import { SidebarGeneral } from "@/components/docs/sidebar-general";
 import { SidebarLocal } from "@/components/docs/sidebar-local";
-import { getAdjacentItems } from "@/helpers/navigation";
-import {
-  getAllComponentDocs,
-  getComponentDoc,
-} from "@/lib/docs/component-details";
 import { getComponentsIndex } from "@/lib/docs/components-index";
 import { getGettingStartedIndex } from "@/lib/docs/getting-start-index";
+import { getGettingStartPage } from "@/lib/docs/getting-start-pages";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -23,18 +18,18 @@ type GenerateStaticParamsResult = {
 };
 
 export function generateStaticParams(): GenerateStaticParamsResult[] {
-  return getAllComponentDocs().map((doc) => ({ slug: doc.slug }));
+  return getGettingStartedIndex().map((doc) => ({ slug: doc.slug }));
 }
 
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  const doc = getComponentDoc(slug);
+  const doc = getGettingStartPage(slug);
 
   if (!doc) {
     return {
-      title: "Pittaya UI | Component Not Found",
+      title: "Pittaya UI | Page Not Found",
     };
   }
 
@@ -46,30 +41,27 @@ export async function generateMetadata({
 
 export default async function ComponentDocsPage({ params }: PageProps) {
   const { slug } = await params;
-  const doc = getComponentDoc(slug);
+  const doc = getGettingStartPage(slug);
 
   if (!doc) {
     notFound();
   }
 
-  const index = getComponentsIndex();
   const gettingStartedItems = getGettingStartedIndex();
-
-  const { previous, next } = getAdjacentItems(index, slug);
+  const componentsIndex = getComponentsIndex();
 
   return (
     <DocsShell
       sidebar={
         <SidebarGeneral
-          items={index}
           gettingStartedItems={gettingStartedItems}
+          items={componentsIndex}
           activeSlug={slug}
         />
       }
-      secondarySidebar={<SidebarLocal toc={doc.toc} />}
+      secondarySidebar={<SidebarLocal toc={doc.toc ?? []} />}
     >
-      <ComponentContent doc={doc} />
-      <ComponentsNavigation previous={previous} next={next} />
+      <PageContent doc={doc} />
     </DocsShell>
   );
 }
