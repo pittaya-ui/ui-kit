@@ -19,6 +19,14 @@ export const componentsIndex: ComponentIndexItem[] = [
     dependencies: ["@radix-ui/react-slot"],
   },
   {
+    slug: "carousel",
+    name: "Carousel",
+    description: "Displays a carousel of images or content.",
+    category: "Components",
+    status: "stable",
+    tags: ["carousel", "images", "content"],
+  },
+  {
     slug: "copy-button",
     name: "Copy Button",
     description:
