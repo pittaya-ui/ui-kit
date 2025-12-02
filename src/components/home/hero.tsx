@@ -35,7 +35,7 @@ export function Hero() {
         className="flex h-screen flex-1 flex-col items-center justify-center gap-6 px-4"
       >
         <Link
-          href={"/docs/components"}
+          href={"/docs/introduction"}
           className={`transition-all ${
             isInView ? "animate-fade-in-down opacity-0" : "opacity-0"
           }`}
@@ -94,10 +94,15 @@ export function Hero() {
               variant="outline"
               className="w-full border-white/30 bg-white/10 font-semibold text-white backdrop-blur-sm hover:bg-white/20 hover:text-white md:w-fit"
             >
-              <Link href={REPO_URL} target="_blank" rel="noopener noreferrer">
+              <Link
+                href={REPO_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group"
+              >
                 <Github className="mr-2 size-5" />
                 CLI Documentation
-                <ArrowUpRight className="ml-1 size-4" />
+                <ArrowUpRight className="ml-1 size-4 transition-all group-hover:translate-x-[3px] group-hover:translate-y-[-3px]" />
               </Link>
             </Button>
           </div>
