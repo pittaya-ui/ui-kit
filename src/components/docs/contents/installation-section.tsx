@@ -115,7 +115,7 @@ export const installationSectionDoc: ComponentDoc = {
       title: "Basic usage",
       description:
         "Simple usage with just the component slug. Uses all default values.",
-      code: `import { InstallationSection } from "@/components/ui/installation-section";
+      code: `import { InstallationSection } from "@/components/pittaya/ui/installation-section";
 
 export function BasicInstallation() {
   return (
@@ -147,7 +147,7 @@ export function BasicInstallation() {
       id: "custom-text",
       title: "Custom title and description",
       description: "Customize the title and description to match your needs.",
-      code: `import { InstallationSection } from "@/components/ui/installation-section";
+      code: `import { InstallationSection } from "@/components/pittaya/ui/installation-section";
 
 export function CustomInstallation() {
   return (
@@ -182,7 +182,7 @@ export function CustomInstallation() {
       id: "custom-cli",
       title: "Custom CLI command",
       description: "Use a different CLI command or package manager.",
-      code: `import { InstallationSection } from "@/components/ui/installation-section";
+      code: `import { InstallationSection } from "@/components/pittaya/ui/installation-section";
 
 export function CustomCLI() {
   return (
