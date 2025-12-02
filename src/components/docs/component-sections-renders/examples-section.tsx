@@ -57,7 +57,7 @@ export function ExamplesSection({
                 </TabsList>
                 <TabsContent
                   value="preview"
-                  className="bg-background flex min-h-[500px] overflow-y-auto rounded-xl"
+                  className="bg-background animate-in fade-in-0 slide-in-from-left-4 flex min-h-[500px] overflow-y-auto rounded-xl duration-300"
                 >
                   <div className="flex max-h-[500px] min-h-[500px] w-full items-center justify-center">
                     {example.preview}
@@ -65,7 +65,7 @@ export function ExamplesSection({
                 </TabsContent>
                 <TabsContent
                   value="code"
-                  className="bg-background flex h-[500px] items-start justify-center overflow-x-auto overflow-y-auto rounded-lg"
+                  className="bg-background animate-in fade-in-0 slide-in-from-right-4 flex h-[500px] items-start justify-center overflow-x-auto overflow-y-auto rounded-lg duration-300"
                 >
                   <div className="relative max-h-[500px] min-h-[500px] w-full text-xs lg:text-sm">
                     <CopyButton
