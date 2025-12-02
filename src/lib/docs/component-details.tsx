@@ -4,6 +4,7 @@ import { carouselDoc } from "@/components/docs/contents/carousel";
 import { copyButtonDoc } from "@/components/docs/contents/copy-button/copy-button";
 import { installationSectionDoc } from "@/components/docs/contents/installation-section";
 import { orbitImagesDoc } from "@/components/docs/contents/orbit-images";
+import { tabsDoc } from "@/components/docs/contents/tabs";
 
 import type { ComponentDoc } from "./types";
 
@@ -14,6 +15,7 @@ const docs: Record<string, ComponentDoc> = {
   [copyButtonDoc.slug]: copyButtonDoc,
   [installationSectionDoc.slug]: installationSectionDoc,
   [orbitImagesDoc.slug]: orbitImagesDoc,
+  [tabsDoc.slug]: tabsDoc,
 };
 
 export function getComponentDoc(slug: string): ComponentDoc | undefined {
