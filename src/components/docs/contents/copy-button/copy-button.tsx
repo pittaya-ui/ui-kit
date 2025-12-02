@@ -113,7 +113,7 @@ export const copyButtonDoc: ComponentDoc = {
         "Display multiple options with individual copy buttons and track which one was copied.",
       code: `"use client";
       
-import { CopyButton } from "@/components/ui/copy-button";
+import { CopyButton } from "@/components/pittaya/ui/copy-button";
 import { Badge } from "@/components/ui/badge";
 import { toast } from "sonner";
 import { useState } from "react";
@@ -153,7 +153,7 @@ export function MultipleButtons() {
       title: "API key with security",
       description:
         "Copy sensitive information like API keys with masked display and secure copy.",
-      code: `import { CopyButton } from "@/components/ui/copy-button";
+      code: `import { CopyButton } from "@/components/pittaya/ui/copy-button";
 import { Badge } from "@/components/ui/badge";
 import { KeyIcon } from "lucide-react";
 import { toast } from "sonner";
@@ -198,7 +198,7 @@ export function ApiKeyExample() {
       title: "Share URL",
       description:
         "Enable easy sharing of URLs with visual feedback and contextual information.",
-      code: `import { CopyButton } from "@/components/ui/copy-button";
+      code: `import { CopyButton } from "@/components/pittaya/ui/copy-button";
 import { toast } from "sonner";
 
 export function UrlShare() {
