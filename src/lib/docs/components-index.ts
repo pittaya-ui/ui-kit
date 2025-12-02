@@ -19,6 +19,15 @@ export const componentsIndex: ComponentIndexItem[] = [
     dependencies: ["@radix-ui/react-slot"],
   },
   {
+    slug: "card",
+    name: "Card",
+    description:
+      "Displays a card with a title, description, content and footer.",
+    category: "Components",
+    status: "stable",
+    tags: ["card", "title", "description"],
+  },
+  {
     slug: "carousel",
     name: "Carousel",
     description: "Displays a carousel of images or content.",
