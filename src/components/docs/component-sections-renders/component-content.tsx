@@ -17,20 +17,23 @@ export function ComponentContent({ doc }: ComponentContentProps) {
     <div className="max-w-none">
       <header className="space-y-4">
         <div className="text-muted-foreground flex items-center gap-3 text-sm">
-          <span className="border-border/60 bg-card/80 rounded-full border px-3 py-1 font-medium tracking-wide">
+          <Badge className="rounded-full tracking-wide" variant="secondary">
             {doc.metadata.category}
-          </span>
+          </Badge>
           {doc.metadata.status ? (
             <Badge
               variant={doc.metadata.status}
-              className="rounded-full px-3 py-1 tracking-wide"
+              className="rounded-full tracking-wide"
             >
               {doc.metadata.status}
             </Badge>
           ) : null}
         </div>
         <div>
-          <h1 id={doc.slug} className="text-foreground text-4xl font-semibold">
+          <h1
+            id={doc.slug}
+            className="text-foreground text-4xl font-semibold tracking-tight"
+          >
             {doc.metadata.name}
           </h1>
           <p className="text-muted-foreground text-md mt-3">
