@@ -7,9 +7,10 @@ import {
   AnnouncementText,
   AnnouncementTitle,
 } from "@/components/ui/announcement-badge";
+import { createComponentDoc } from "@/helpers/component-doc";
 import type { ComponentDoc } from "@/lib/docs/types";
 
-export const announcementBadgeDoc: ComponentDoc = {
+export const announcementBadgeDoc: ComponentDoc = createComponentDoc({
   slug: "announcement-badge",
   metadata: {
     name: "Announcement Badge",
@@ -335,4 +336,4 @@ export function LucideAnnouncement() {
     { id: "examples", title: "Examples", level: 2 },
     { id: "properties", title: "Properties", level: 2 },
   ],
-};
+});

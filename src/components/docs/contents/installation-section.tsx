@@ -1,7 +1,8 @@
 import { InstallationSection } from "@/components/ui/installation-section";
+import { createComponentDoc } from "@/helpers/component-doc";
 import type { ComponentDoc } from "@/lib/docs/types";
 
-export const installationSectionDoc: ComponentDoc = {
+export const installationSectionDoc: ComponentDoc = createComponentDoc({
   slug: "installation-section",
   metadata: {
     name: "Installation Section",
@@ -214,4 +215,4 @@ export function CustomCLI() {
     { id: "examples", title: "Examples", level: 2 },
     { id: "properties", title: "Properties", level: 2 },
   ],
-};
+});

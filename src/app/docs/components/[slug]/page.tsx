@@ -57,20 +57,6 @@ export default async function ComponentDocsPage({ params }: PageProps) {
 
   const { previous, next } = getAdjacentItems(index, slug);
 
-  const tocWithExamples = [...doc.toc];
-  const examplesIndex = tocWithExamples.findIndex(
-    (item) => item.id === "examples"
-  );
-
-  if (examplesIndex !== -1 && doc.examples?.length) {
-    const exampleItems = doc.examples.map((example) => ({
-      id: example.id,
-      title: example.title,
-      level: 3 as const,
-    }));
-    tocWithExamples.splice(examplesIndex + 1, 0, ...exampleItems);
-  }
-
   return (
     <DocsShell
       sidebar={
@@ -80,7 +66,7 @@ export default async function ComponentDocsPage({ params }: PageProps) {
           activeSlug={slug}
         />
       }
-      secondarySidebar={<SidebarLocal toc={tocWithExamples} />}
+      secondarySidebar={<SidebarLocal toc={doc.toc} />}
     >
       <ComponentContent doc={doc} />
       <ComponentsNavigation previous={previous} next={next} />

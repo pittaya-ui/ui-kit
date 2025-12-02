@@ -9,9 +9,10 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { createComponentDoc } from "@/helpers/component-doc";
 import type { ComponentDoc } from "@/lib/docs/types";
 
-export const cardDoc: ComponentDoc = {
+export const cardDoc: ComponentDoc = createComponentDoc({
   slug: "card",
   metadata: {
     name: "Card",
@@ -813,5 +814,5 @@ export function CardVariants() {
     { id: "examples", title: "Examples", level: 2 },
     { id: "properties", title: "Properties", level: 2 },
   ],
-};
+});
   
