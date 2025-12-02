@@ -19,6 +19,15 @@ export const componentsIndex: ComponentIndexItem[] = [
     dependencies: ["@radix-ui/react-slot"],
   },
   {
+    slug: "card",
+    name: "Card",
+    description:
+      "Displays a card with a title, description, content and footer.",
+    category: "Components",
+    status: "stable",
+    tags: ["card", "title", "description"],
+  },
+  {
     slug: "carousel",
     name: "Carousel",
     description: "Displays a carousel of images or content.",
@@ -56,6 +65,16 @@ export const componentsIndex: ComponentIndexItem[] = [
     status: "stable",
     tags: ["scroll", "motion", "orbit"],
     internalDependencies: ["button"],
+  },
+  {
+    slug: "tabs",
+    name: "Tabs",
+    description:
+      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
+    category: "Navigation",
+    status: "stable",
+    tags: ["navigation", "tabs", "panels", "sections"],
+    dependencies: ["@radix-ui/react-tabs"],
   },
 ];
 
