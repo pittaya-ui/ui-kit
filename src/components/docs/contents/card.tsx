@@ -29,14 +29,14 @@ export const cardDoc: ComponentDoc = {
         <div className="text-muted-foreground space-y-4 text-base leading-relaxed">
           <p>
             Use the Card to group related information in a visual and
-            hierarchical way, such as user profiles, blog articles, products
-            in an online store, or any content that benefits from a
-            container with defined borders and spacing.
+            hierarchical way, such as user profiles, blog articles, products in
+            an online store, or any content that benefits from a container with
+            defined borders and spacing.
           </p>
           <p>
-            The component is ideal for creating grid layouts or item lists
-            that need to stand out from the page background, maintaining
-            visual consistency through the available variants.
+            The component is ideal for creating grid layouts or item lists that
+            need to stand out from the page background, maintaining visual
+            consistency through the available variants.
           </p>
         </div>
       ),
@@ -62,8 +62,8 @@ export const cardDoc: ComponentDoc = {
               <code>lifted</code> for interactive elements.
             </li>
             <li>
-              Avoid overloading a single card with too much information;
-              prefer splitting content into multiple cards when necessary.
+              Avoid overloading a single card with too much information; prefer
+              splitting content into multiple cards when necessary.
             </li>
             <li>
               Combine with components like <code>Button</code> and{" "}
@@ -80,9 +80,9 @@ export const cardDoc: ComponentDoc = {
       content: (
         <div className="text-muted-foreground space-y-4 text-base leading-relaxed">
           <p>
-            The Card is rendered as a semantic <code>div</code>, but you
-            can add ARIA attributes when it contains interactive content
-            or is part of a navigation pattern.
+            The Card is rendered as a semantic <code>div</code>, but you can add
+            ARIA attributes when it contains interactive content or is part of a
+            navigation pattern.
           </p>
           <p>
             When using clickable cards, wrap all content in a{" "}
@@ -90,8 +90,8 @@ export const cardDoc: ComponentDoc = {
             keyboard users can access the main action without difficulty.
           </p>
           <p>
-            Make sure variant colors maintain adequate contrast in both
-            light and dark mode, especially in decorative variants like{" "}
+            Make sure variant colors maintain adequate contrast in both light
+            and dark mode, especially in decorative variants like{" "}
             <code>crosshair</code> and <code>corners</code>.
           </p>
         </div>
@@ -115,8 +115,7 @@ export const cardDoc: ComponentDoc = {
     {
       name: "className",
       type: "string",
-      description:
-        "Additional Tailwind classes to customize the card style.",
+      description: "Additional Tailwind classes to customize the card style.",
     },
   ],
   examples: [
@@ -172,10 +171,10 @@ export function ProductCard() {
             </CardHeader>
             <CardContent>
               <img
-                src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&q=80" 
+                src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&q=80"
                 alt="Premium headphones"
                 className="aspect-video w-full rounded-lg object-cover"
-              />  
+              />
               <p className="mt-4 text-2xl font-bold">$149.90</p>
             </CardContent>
             <CardFooter className="gap-2">
@@ -227,8 +226,8 @@ export function UserProfile() {
         <div className="flex justify-center">
           <Card variant="lifted" className="max-w-xs">
             <CardHeader className="items-center">
-              <img 
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80" 
+              <img
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80"
                 alt="Sarah Johnson"
                 className="size-20 rounded-full object-cover"
               />
@@ -236,7 +235,7 @@ export function UserProfile() {
               <CardDescription>Product Designer</CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="space-y-2 text-sm text-muted-foreground">
+              <div className="text-muted-foreground space-y-2 text-sm">
                 <p>📍 San Francisco, CA</p>
                 <p>✉️ sarah.johnson@example.com</p>
                 <p>🔗 linkedin.com/in/sarahjohnson</p>
@@ -430,7 +429,7 @@ export function BlogPostCard() {
           <Card className="max-w-md">
             <CardHeader className="p-0">
               <img
-                src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80" 
+                src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80"
                 alt="Coding on laptop"
                 width={800}
                 height={450}
@@ -444,7 +443,7 @@ export function BlogPostCard() {
                 component library.
               </CardDescription>
             </CardContent>
-            <CardFooter className="text-sm text-muted-foreground">
+            <CardFooter className="text-muted-foreground text-sm">
               <span>By John Smith</span>
               <span className="mx-2">•</span>
               <span>5 min read</span>
@@ -558,37 +557,39 @@ export function GradientFeatureCard() {
 }`,
       preview: (
         <div className="flex justify-center">
-          <Card 
-            variant="gradient" 
+          <Card
+            variant="gradient"
             gradientClassName="bg-gradient-to-br from-blue-600 via-cyan-500 to-teal-400"
             className="max-w-sm"
           >
             <CardHeader>
               <div className="flex items-center gap-2">
                 <div className="rounded-lg bg-blue-500/10 p-2">
-                  <svg 
-                    className="size-6 text-blue-500" 
-                    fill="none" 
-                    viewBox="0 0 24 24" 
+                  <svg
+                    className="size-6 text-blue-500"
+                    fill="none"
+                    viewBox="0 0 24 24"
                     stroke="currentColor"
                   >
-                    <path 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round" 
-                      strokeWidth={2} 
-                      d="M13 10V3L4 14h7v7l9-11h-7z" 
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M13 10V3L4 14h7v7l9-11h-7z"
                     />
                   </svg>
                 </div>
                 <div>
                   <CardTitle>Pro Feature</CardTitle>
-                  <CardDescription>Unlock advanced capabilities</CardDescription>
+                  <CardDescription>
+                    Unlock advanced capabilities
+                  </CardDescription>
                 </div>
               </div>
             </CardHeader>
             <CardContent>
-              <p className="text-sm text-muted-foreground">
-                Get access to AI-powered insights, advanced analytics, and 
+              <p className="text-muted-foreground text-sm">
+                Get access to AI-powered insights, advanced analytics, and
                 priority support with our Pro plan.
               </p>
             </CardContent>
@@ -601,7 +602,7 @@ export function GradientFeatureCard() {
     },
     {
       id: "crosshair-technical",
-      title: "Technical specification card",
+      title: "Technical specification",
       description:
         "Crosshair variant for technical documentation, API specs, or development-related content.",
       code: `import {
@@ -664,15 +665,19 @@ export function TechnicalCard() {
             <CardContent className="space-y-4">
               <div>
                 <h4 className="mb-2 text-sm font-medium">Response</h4>
-                <pre className="rounded-md bg-zinc-950 p-3 text-xs text-zinc-50 dark:bg-accent">
-{JSON.stringify({
-  id: "123",
-  name: "John Doe",
-  email: "john@example.com"
-}, null, 2)}
+                <pre className="dark:bg-accent rounded-md bg-zinc-950 p-3 text-xs text-zinc-50">
+                  {JSON.stringify(
+                    {
+                      id: "123",
+                      name: "John Doe",
+                      email: "john@example.com",
+                    },
+                    null,
+                    2
+                  )}
                 </pre>
               </div>
-              <div className="flex items-center gap-2 text-xs text-muted-foreground">
+              <div className="text-muted-foreground flex items-center gap-2 text-xs">
                 <span>Status:</span>
                 <span className="font-medium text-green-600 dark:text-green-400">
                   200 OK
@@ -786,7 +791,10 @@ export function CardVariants() {
             <CardContent className="text-sm">Dashboards</CardContent>
           </Card>
 
-          <Card variant="gradient" gradientClassName="bg-gradient-to-br from-violet-600 via-fuchsia-500 to-orange-500">
+          <Card
+            variant="gradient"
+            gradientClassName="bg-gradient-to-br from-violet-600 via-fuchsia-500 to-orange-500"
+          >
             <CardHeader>
               <CardTitle>Gradient</CardTitle>
               <CardDescription>Gradient border</CardDescription>
