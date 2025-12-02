@@ -66,6 +66,16 @@ export const componentsIndex: ComponentIndexItem[] = [
     tags: ["scroll", "motion", "orbit"],
     internalDependencies: ["button"],
   },
+  {
+    slug: "tabs",
+    name: "Tabs",
+    description:
+      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
+    category: "Navigation",
+    status: "stable",
+    tags: ["navigation", "tabs", "panels", "sections"],
+    dependencies: ["@radix-ui/react-tabs"],
+  },
 ];
 
 export function getComponentsIndex(): ComponentIndexItem[] {
