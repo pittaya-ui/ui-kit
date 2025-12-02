@@ -1,7 +1,8 @@
 import { OrbitImages } from "@/components/ui/orbit-images";
+import { createComponentDoc } from "@/helpers/component-doc";
 import type { ComponentDoc } from "@/lib/docs/types";
 
-export const orbitImagesDoc: ComponentDoc = {
+export const orbitImagesDoc: ComponentDoc = createComponentDoc({
   slug: "orbit-images",
   metadata: {
     name: "Orbit images",
@@ -187,4 +188,4 @@ export function OrbitDemo() {
     { id: "examples", title: "Examples", level: 2 },
     { id: "properties", title: "Properties", level: 2 },
   ],
-};
+});

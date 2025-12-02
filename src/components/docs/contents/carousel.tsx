@@ -2,9 +2,10 @@ import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselItem } from "@/components/ui/carousel";
+import { createComponentDoc } from "@/helpers/component-doc";
 import type { ComponentDoc } from "@/lib/docs/types";
 
-export const carouselDoc: ComponentDoc = {
+export const carouselDoc: ComponentDoc = createComponentDoc({
   slug: "carousel",
   metadata: {
     name: "Carousel",
@@ -748,4 +749,4 @@ export function GalleryCarousel() {
     { id: "examples", title: "Examples", level: 2 },
     { id: "properties", title: "Properties", level: 2 },
   ],
-};
+});

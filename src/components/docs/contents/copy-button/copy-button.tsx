@@ -1,3 +1,4 @@
+import { createComponentDoc } from "@/helpers/component-doc";
 import type { ComponentDoc } from "@/lib/docs/types";
 
 import {
@@ -6,7 +7,7 @@ import {
   UrlShareExample,
 } from "./copy-button-examples";
 
-export const copyButtonDoc: ComponentDoc = {
+export const copyButtonDoc: ComponentDoc = createComponentDoc({
   slug: "copy-button",
   metadata: {
     name: "Copy Button",
@@ -243,4 +244,4 @@ export function UrlShare() {
     { id: "examples", title: "Examples", level: 2 },
     { id: "properties", title: "Properties", level: 2 },
   ],
-};
+});

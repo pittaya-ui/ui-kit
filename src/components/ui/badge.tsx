@@ -17,19 +17,18 @@ const badgeVariants = cva(
           "border-transparent bg-destructive text-white [a&]:hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
         outline:
           "text-foreground [a&]:hover:bg-accent [a&]:hover:text-accent-foreground",
-          stable:
-            "border-green-600 bg-green-600/15 text-green-700/80 [a&]:hover:bg-green-500/90",
-          beta:
-            "border-transparent bg-yellow-500 text-white [a&]:hover:bg-yellow-500/90",
-          deprecated:
-            "border-transparent bg-red-500 text-white [a&]:hover:bg-red-500/90",
+        stable:
+          "border-green-900 bg-emerald-600/30 text-emerald-400 [a&]:hover:bg-green-500/90",
+        beta: "border-transparent bg-yellow-500 text-white [a&]:hover:bg-yellow-500/90",
+        deprecated:
+          "border-transparent bg-red-500 text-white [a&]:hover:bg-red-500/90",
       },
     },
     defaultVariants: {
       variant: "default",
     },
   }
-)
+);
 
 function Badge({
   className,

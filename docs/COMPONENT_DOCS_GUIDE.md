@@ -74,18 +74,20 @@ export const componentsIndex: ComponentIndexItem[] = [
 
 **File:** `src/components/docs/contents/input.tsx` (create new file)
 
-#### 2.1 Import the Component and Types
+#### 2.1 Import the Component, Helper and Types
 
 ```typescript
 import { Input } from "@/components/ui/input";
-
+import { createComponentDoc } from "@/helpers/component-doc";
 import type { ComponentDoc } from "@/lib/docs/types";
 ```
+
+> **💡 Important:** Always import `createComponentDoc` - this helper automatically adds examples to the TOC!
 
 #### 2.2 Export the Documentation Object
 
 ```typescript
-export const inputDoc: ComponentDoc = {
+export const inputDoc: ComponentDoc = createComponentDoc({
   slug: "input",
   metadata: {
     name: "Input",
@@ -181,11 +183,13 @@ export function BasicInput() {
     { id: "installation", title: "Installation", level: 2 }, // ✨ Always include this first
     { id: "when-to-use", title: "When to use", level: 2 },
     { id: "best-practices", title: "Best practices", level: 2 },
-    { id: "examples", title: "Examples", level: 2 },
+    { id: "examples", title: "Examples", level: 2 }, // 🎯 Examples are auto-expanded in TOC
     { id: "properties", title: "Properties", level: 2 },
   ],
-};
+});
 ```
+
+> **🎯 Magic Happens Here:** The `createComponentDoc` function automatically finds the "examples" item in your TOC and inserts each individual example as a level 3 entry right after it. You don't need to manually map them anymore!
 
 ### Step 3: Register Documentation in Registry
 
@@ -249,13 +253,18 @@ Before finishing, check that you have:
 - [ ] ✅ Created documentation file in `src/components/docs/contents/{component}.tsx`
 - [ ] ✅ Imported the UI component correctly
 - [ ] ✅ Exported the documentation object with `export const`
+- [ ] ✅ **Imported `createComponentDoc` from `@/helpers/component-doc`**
+- [ ] ✅ Wrapped the documentation object with `createComponentDoc({ ... })`
 - [ ] ✅ Imported and registered the doc in `src/lib/docs/component-details.tsx`
-- [ ] ✅ Defined all component props
-- [ ] ✅ Created at least 2-3 useful examples
+- [ ] ✅ Defined all component props with clear descriptions
+- [ ] ✅ Exported the documentation object with `export const`
+- [ ] ✅ Created at least 2-3 useful examples with unique IDs
 - [ ] ✅ Included sections about when to use and best practices
-- [ ] ✅ Configured the TOC (table of contents) correctly
-- [ ] ✅ **Added "Installation" as the first item in the TOC**
+- [ ] ✅ Configured the TOC correctly (let `createComponentDoc` handle example items)
 - [ ] ✅ Tested the page locally
+- [ ] ✅ **Added "Installation" as the first item in the TOC**
+- [ ] ✅ Added "examples" to TOC (individual examples are auto-generated)
+- [ ] ✅ Tested the page locally and verified the sidebar navigation
 
 ---
 
@@ -304,6 +313,34 @@ How to integrate with forms, APIs, or other components.
 
 ## 💡 Advanced Tips
 
+### Example IDs and TOC Generation
+
+Each example needs a unique `id` and `title` - these are automatically used to generate TOC entries:
+
+```typescript
+examples: [
+  {
+    id: "basic", // 🎯 Used in URL anchors and TOC
+    title: "Basic usage", // 🎯 Displayed in sidebar TOC
+    description: "A simple input example.",
+    code: `...`,
+    preview: <Input />,
+  },
+  {
+    id: "with-validation", // Must be unique!
+    title: "With validation", // Shows in sidebar!
+    description: "Input with form validation.",
+    code: `...`,
+    preview: <Input />,
+  },
+]
+```
+
+The sidebar will automatically show:
+- Examples (level 2)
+  - Basic usage (level 3) ← Auto-generated
+  - With validation (level 3) ← Auto-generated
+
 ### Interactive Examples
 
 Use real components in example previews:
@@ -348,17 +385,25 @@ Document all props, including inherited ones:
 ### Error: Page not found
 
 - Check if the `slug` is correct in both files
-- Confirm that the component was added to the `docs` registry
+- Confirm that the component was added to the `docs` registry in `component-details.tsx`
 
 ### Error: Component doesn't render
 
 - Check component imports
 - Make sure the component is exported correctly
+- Verify that `createComponentDoc` is being called correctly
 
 ### TOC doesn't appear
 
-- Confirm that section IDs match the TOC
+- Confirm that section IDs match the TOC entries
 - Check if levels (2 or 3) are correct
+
+### Examples not showing in sidebar
+
+- Check that you wrapped your doc with `createComponentDoc({ ... })`
+- Verify that each example has a unique `id`
+- Make sure `{ id: "examples", title: "Examples", level: 2 }` is in your TOC
+- The examples should be placed AFTER the "examples" entry automatically
 
 ---
 
@@ -366,8 +411,10 @@ Document all props, including inherited ones:
 
 See the following files for complete examples:
 
+**Real-world references:**
 - **Button Documentation:** `src/components/docs/contents/button.tsx`
-- **Installation Section Documentation:** `src/components/docs/contents/installation-section.tsx`
+- **Card Documentation:** `src/components/docs/contents/card.tsx`
+- **Carousel Documentation:** `src/components/docs/contents/carousel.tsx`
 - **Registry:** `src/lib/docs/component-details.tsx`
 
 ---
