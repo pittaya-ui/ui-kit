@@ -1,8 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { createComponentDoc } from "@/helpers/component-doc";
 import type { ComponentDoc } from "@/lib/docs/types";
 
-export const tabsDoc: ComponentDoc = {
+export const tabsDoc: ComponentDoc = createComponentDoc({
   slug: "tabs",
   metadata: {
     name: "Tabs",
@@ -564,4 +565,4 @@ export function NotificationsTabs() {
     { id: "examples", title: "Examples", level: 2 },
     { id: "properties", title: "Properties", level: 2 },
   ],
-};
+});

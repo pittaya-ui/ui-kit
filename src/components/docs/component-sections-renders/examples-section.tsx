@@ -35,7 +35,8 @@ export function ExamplesSection({
         {examples.map((example) => (
           <article
             key={example.id}
-            className="border-border/60 bg-card/60 rounded-2xl border p-4 shadow-sm backdrop-blur"
+            id={example.id}
+            className="border-border/60 bg-card/60 scroll-mt-28 rounded-2xl border p-4 shadow-sm backdrop-blur"
           >
             <div className="space-y-3">
               <div>

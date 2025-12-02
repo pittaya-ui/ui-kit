@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
+import { createComponentDoc } from "@/helpers/component-doc";
 import type { ComponentDoc } from "@/lib/docs/types";
 
-export const buttonDoc: ComponentDoc = {
+export const buttonDoc: ComponentDoc = createComponentDoc({
   slug: "button",
   metadata: {
     name: "Button",
@@ -160,4 +161,4 @@ export function ButtonWithIcon() {
     { id: "examples", title: "Examples", level: 2 },
     { id: "properties", title: "Properties", level: 2 },
   ],
-};
+});
