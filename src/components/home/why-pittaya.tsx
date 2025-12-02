@@ -13,6 +13,7 @@ import {
 import { useInView } from "@/hooks/useInView";
 import { componentsIndex } from "@/lib/docs/components-index";
 
+import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import { Separator } from "../ui/separator";
 
 interface Feature {
@@ -112,23 +113,27 @@ export function WhyPittaya() {
         <div className="relative mt-12">
           <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {features.map((feature, idx) => (
-              <li
+              <Card
                 key={idx}
-                className={`transform-gpu space-y-3 rounded-xl border bg-transparent p-4 transition-all ${
+                className={`transform-gpu gap-2 space-y-3 rounded-xl border bg-transparent p-4 transition-all ${
                   isInView ? "animate-fade-in-up opacity-0" : "opacity-0"
                 }`}
                 style={{
                   animationDelay: isInView ? `${600 + idx * 100}ms` : "0ms",
                 }}
               >
-                <div className="text-primary w-fit transform-gpu rounded-full border p-4 [box-shadow:0_-20px_80px_-20px_#ff7aa40f_inset]">
-                  <feature.icon className="stroke-pittaya size-6" />
-                </div>
-                <h4 className="font-geist text-lg font-semibold">
-                  {feature.title}
-                </h4>
-                <p className="text-gray-500">{feature.description}</p>
-              </li>
+                <CardHeader className="gap-4">
+                  <div className="text-primary w-fit transform-gpu rounded-full border p-4 [box-shadow:0_-20px_80px_-20px_#ff7aa40f_inset]">
+                    <feature.icon className="stroke-pittaya size-6" />
+                  </div>
+                  <CardTitle className="font-geist text-lg font-semibold">
+                    {feature.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="text-gray-500">
+                  {feature.description}
+                </CardContent>
+              </Card>
             ))}
           </ul>
         </div>
