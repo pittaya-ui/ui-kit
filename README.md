@@ -32,35 +32,6 @@ Our mission is to provide developers with production-ready components that are:
 
 ---
 
-## ✨ Features
-
-<table>
-  <tr>
-    <td width="50%">
-      
-### 🎯 For Users
-- **Comprehensive documentation** with live examples
-- **Copy-paste ready** code snippets
-- **Interactive previews** for all components
-- **Best practices** and usage guidelines
-- **Accessibility notes** for inclusive design
-
-    </td>
-    <td width="50%">
-
-### 👨‍💻 For Developers
-
-- **Full TypeScript** support
-- **Tree-shakeable** components
-- **Server Components** by default
-- **Zero runtime dependencies** (CSS only)
-- **Extensible architecture**
-
-    </tr>
-  </table>
-
----
-
 ## 🚀 Quick Start
 
 ### Prerequisites
