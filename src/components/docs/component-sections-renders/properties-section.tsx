@@ -19,7 +19,7 @@ export function PropertiesSection({
     return null;
   }
 
-  // Helper para colorir tipos como numa IDE
+  // Helper to color the types like in an IDE
   const getTypeColor = (type: string) => {
     if (type.includes("string")) return "text-green-600 dark:text-green-400";
     if (type.includes("boolean")) return "text-blue-600 dark:text-blue-400";

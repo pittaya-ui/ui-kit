@@ -1,5 +1,8 @@
 "use client";
 
+import { usePathname } from "next/navigation";
+
+import { BreadcrumbContent } from "@/components/breadcrumb-content";
 import type { ComponentDoc } from "@/lib/docs/types";
 
 import { Badge } from "../../ui/badge";
@@ -13,21 +16,26 @@ type ComponentContentProps = {
 };
 
 export function ComponentContent({ doc }: ComponentContentProps) {
+  const pathname = usePathname();
+  const pathPages = pathname.split("/").filter(Boolean);
   return (
     <div className="max-w-none">
       <header className="space-y-4">
-        <div className="text-muted-foreground flex items-center gap-3 text-sm">
-          <Badge className="rounded-full tracking-wide" variant="secondary">
-            {doc.metadata.category}
-          </Badge>
-          {doc.metadata.status ? (
-            <Badge
-              variant={doc.metadata.status}
-              className="rounded-full tracking-wide"
-            >
-              {doc.metadata.status}
+        <div className="text-muted-foreground flex flex-col items-start justify-between gap-3 text-sm md:flex-row md:items-center">
+          <BreadcrumbContent pathPages={pathPages} />
+          <div className="flex items-center gap-2">
+            <Badge className="rounded-full tracking-wide" variant="secondary">
+              {doc.metadata.category}
             </Badge>
-          ) : null}
+            {doc.metadata.status ? (
+              <Badge
+                variant={doc.metadata.status}
+                className="rounded-full tracking-wide"
+              >
+                {doc.metadata.status}
+              </Badge>
+            ) : null}
+          </div>
         </div>
         <div>
           <h1
