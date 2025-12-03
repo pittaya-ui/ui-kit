@@ -7,9 +7,7 @@ interface ComponentDocInput extends Omit<ComponentDoc, "toc"> {
 export function createComponentDoc(input: ComponentDocInput): ComponentDoc {
   const { toc = [], examples } = input;
 
-
   const enhancedToc = [...toc];
-
 
   const examplesIndex = enhancedToc.findIndex((item) => item.id === "examples");
 
@@ -28,4 +26,3 @@ export function createComponentDoc(input: ComponentDocInput): ComponentDoc {
     toc: enhancedToc,
   };
 }
-
