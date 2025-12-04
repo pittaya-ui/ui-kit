@@ -4,14 +4,9 @@ import { ArrowUpRight, BookOpen, Github } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { BiLogoTypescript } from "react-icons/bi";
-import {
-  FaGithub,
-  FaGoogle,
-  FaInstagram,
-  FaLinkedin,
-  FaNodeJs,
-  FaReact,
-} from "react-icons/fa";
+import { DiNpm } from "react-icons/di";
+import { DiTerminal } from "react-icons/di";
+import { FaGithub, FaNodeJs, FaReact } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { RiJavascriptFill } from "react-icons/ri";
 import { SiNextdotjs, SiVercel } from "react-icons/si";
@@ -20,19 +15,17 @@ import { Button } from "@/components/ui/button";
 import { REPO_URL } from "@/constants/repo-url";
 import { cn } from "@/lib/utils";
 
-
 const iconConfigs = [
   { Icon: FaReact, color: "text-[#61DAFB]" },
   { Icon: FaNodeJs, color: "text-[#339933]" },
   { Icon: SiNextdotjs, color: "text-[#FFFFFF] " },
   { Icon: SiVercel, color: "text-[#FFFFFF]" },
   { Icon: FaGithub, color: "text-[#FFFFFF]" },
-  { Icon: FaLinkedin, color: "text-[#0077B5]" },
-  { Icon: FaInstagram, color: "text-[#E1306C]" },
-  { Icon: FaGoogle, color: "text-[#DB4437]" },
   { Icon: RiTailwindCssFill, color: "text-[#2496ED]" },
   { Icon: RiJavascriptFill, color: "text-[#F7DF1E]" },
   { Icon: BiLogoTypescript, color: "text-[#3178C6]" },
+  { Icon: DiNpm, color: "text-[#FFFFFF]" },
+  { Icon: DiTerminal, color: "text-[#FFFFFF]" },
 ];
 
 export function FeatureSection() {
