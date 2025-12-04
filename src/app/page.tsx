@@ -1,4 +1,4 @@
-import FeatureSection from "@/components/cta";
+import { FeatureSection } from "@/components/cta";
 import { Hero } from "@/components/home/hero";
 import { WhyPittaya } from "@/components/home/why-pittaya";
 

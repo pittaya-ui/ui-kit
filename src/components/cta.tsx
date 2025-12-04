@@ -35,16 +35,14 @@ const iconConfigs = [
   { Icon: BiLogoTypescript, color: "text-[#3178C6]" },
 ];
 
-export default function FeatureSection() {
+export function FeatureSection() {
   const orbitCount = 3;
   const iconsPerOrbit = Math.ceil(iconConfigs.length / orbitCount);
 
   return (
     <section className="border-border bg-card/30 relative mx-auto my-24 flex w-full max-w-screen-xl flex-col overflow-hidden rounded-3xl border px-4 py-12 shadow-2xl backdrop-blur-sm md:h-[25rem] md:flex-row md:items-center md:justify-between md:px-8 md:py-0 dark:bg-black/20">
-  
       <div className="bg-pittaya/20 dark:bg-pittaya/10 absolute -top-20 -left-20 h-64 w-64 rounded-full blur-[100px]" />
       <div className="absolute -right-20 -bottom-20 h-64 w-64 rounded-full bg-blue-500/10 blur-[100px]" />
-
 
       <div className="relative z-10 w-full md:w-1/2">
         <h1 className="text-foreground mt-4 text-4xl leading-tight font-normal tracking-tight md:text-5xl lg:text-5xl">
@@ -84,11 +82,8 @@ export default function FeatureSection() {
         </div>
       </div>
 
-
       <div className="relative mt-8 flex h-64 w-full items-center justify-center md:mt-0 md:h-full md:w-1/2 md:justify-end">
-
         <div className="relative flex h-[40rem] w-[40rem] scale-[0.6] items-center justify-center sm:scale-[0.8] md:translate-x-1/4 md:scale-100">
-
           <div className="border-border bg-background shadow-pittaya/10 ring-background/50 relative z-20 flex h-24 w-24 items-center justify-center rounded-full border shadow-2xl ring-4">
             <Image
               src="/pittaya-logo.png"
@@ -102,9 +97,7 @@ export default function FeatureSection() {
             <div className="bg-pittaya/20 absolute inset-0 -z-10 rounded-full blur-xl" />
           </div>
 
-
           {[...Array(orbitCount)].map((_, orbitIdx) => {
-
             const sizeClass = [
               "h-[16rem] w-[16rem]",
               "h-[24rem] w-[24rem]",
