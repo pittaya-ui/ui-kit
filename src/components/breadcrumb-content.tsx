@@ -1,7 +1,19 @@
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "./ui/breadcrumb";
+"use client";
 
-export function BreadcrumbContent({pathPages} : {pathPages: string[]}) {
+import { usePathname } from "next/navigation";
 
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "./ui/breadcrumb";
+
+export function BreadcrumbContent() {
+  const pathname = usePathname();
+  const pathPages = pathname.split("/").filter(Boolean);
   return (
     <Breadcrumb>
       <BreadcrumbList>
@@ -9,14 +21,22 @@ export function BreadcrumbContent({pathPages} : {pathPages: string[]}) {
           const href = `/${pathPages.slice(0, index + 1).join("/")}`;
           const isLast = index === pathPages.length - 1;
           const isDocs = pathPage.toLowerCase() === "docs";
-          
+
           return (
-            <div key={`${pathPage}-${index}`} className="flex items-center gap-2">
+            <div
+              key={`${pathPage}-${index}`}
+              className="flex items-center gap-2"
+            >
               <BreadcrumbItem>
                 {isLast ? (
-                  <BreadcrumbPage className="capitalize">{pathPage}</BreadcrumbPage>
+                  <BreadcrumbPage className="capitalize">
+                    {pathPage}
+                  </BreadcrumbPage>
                 ) : (
-                  <BreadcrumbLink href={isDocs ?"/docs/introduction" :href} className="capitalize">
+                  <BreadcrumbLink
+                    href={isDocs ? "/docs/introduction" : href}
+                    className="capitalize"
+                  >
                     {pathPage}
                   </BreadcrumbLink>
                 )}

@@ -1,7 +1,3 @@
-"use client";
-
-import { usePathname } from "next/navigation";
-
 import { BreadcrumbContent } from "@/components/breadcrumb-content";
 import type { ComponentDoc } from "@/lib/docs/types";
 
@@ -16,13 +12,11 @@ type ComponentContentProps = {
 };
 
 export function ComponentContent({ doc }: ComponentContentProps) {
-  const pathname = usePathname();
-  const pathPages = pathname.split("/").filter(Boolean);
   return (
     <div className="max-w-none">
       <header className="space-y-4">
         <div className="text-muted-foreground flex flex-col items-start justify-between gap-3 text-sm md:flex-row md:items-center">
-          <BreadcrumbContent pathPages={pathPages} />
+          <BreadcrumbContent />
           <div className="flex items-center gap-2">
             <Badge className="rounded-full tracking-wide" variant="secondary">
               {doc.metadata.category}
