@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { BreadcrumbContent } from "@/components/breadcrumb-content";
 import { DocsShell } from "@/components/docs/docs-shell";
 import { SidebarGeneral } from "@/components/docs/sidebar-general";
 import { Button } from "@/components/ui/button";
@@ -20,7 +21,8 @@ export default function Components() {
     >
       <div className="mt-2 flex flex-col gap-8">
         <div className="flex flex-col gap-2">
-          <h1 className="text-3xl font-semibold">Components</h1>
+          <BreadcrumbContent />
+          <h1 className="text-4xl font-semibold">Components</h1>
           <span className="text-md max-w-lg opacity-80">
             Here you’ll discover all the components currently available in our
             library and we’re continuously expanding it with even more to come.

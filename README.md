@@ -67,13 +67,16 @@ npm run dev
 
 ## 📦 Available Components
 
-| Component                | Status    | Category      | Description                                       |
-| ------------------------ | --------- | ------------- | ------------------------------------------------- |
-| **Announcement Badge**   | ✅ Stable | Components    | Badge with icon and title for announcements       |
-| **Button**               | ✅ Stable | Actions       | Accessible button with multiple variants          |
-| **Copy Button**          | ✅ Stable | Actions       | Button that copies text to clipboard when clicked |
-| **Installation Section** | ✅ Stable | Documentation | Installation instructions with code snippets      |
-| **Orbit Images**         | ✅ Stable | Components    | Set of images displayed in orbiting motion        |
+| Component                | Status    | Category      | Description                                                       |
+| ------------------------ | --------- | ------------- | ----------------------------------------------------------------- |
+| **Announcement Badge**   | ✅ Stable | Components    | Displays a badge with an icon and a title                         |
+| **Button**               | ✅ Stable | Actions       | Displays a button or a component that looks like a button         |
+| **Card**                 | ✅ Stable | Components    | Displays a card with a title, description, content and footer     |
+| **Carousel**             | ✅ Stable | Components    | Displays a carousel of images or content                          |
+| **Copy Button**          | ✅ Stable | Actions       | Displays a copy button that copies text to clipboard when clicked |
+| **Installation Section** | ✅ Stable | Documentation | Displays installation instructions with code snippets             |
+| **Orbit Images**         | ✅ Stable | Components    | Displays a set of images in an orbiting motion                    |
+| **Tabs**                 | ✅ Stable | Navigation    | A set of layered sections of content displayed one at a time      |
 
 > 🚧 More components coming soon! Check our [roadmap](https://github.com/pittaya-ui/ui-kit/issues) for planned features.
 
