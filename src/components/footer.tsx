@@ -2,11 +2,14 @@ import { Github, Linkedin, Package } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
+import { NAVIGATION_LINKS } from "@/constants/navigation-links";
 import { NPM_URL } from "@/constants/npm-url";
 import { cn } from "@/lib/utils";
 
 export function Footer() {
   const isAppStable = process.env.NEXT_PUBLIC_FF_IS_APP_STABLE === "true";
+
+  const activeLinks = NAVIGATION_LINKS.filter((link) => link.active);
 
   return (
     <footer className="border-border/40 border-t bg-black">
@@ -33,30 +36,16 @@ export function Footer() {
           <div>
             <h3 className="mb-4 text-sm font-semibold text-white">Product</h3>
             <ul className="space-y-3">
-              <li>
-                <Link
-                  href="/docs/components"
-                  className="text-muted-foreground hover:text-pittaya text-sm transition-colors"
-                >
-                  Components
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/templates"
-                  className="text-muted-foreground hover:text-pittaya text-sm transition-colors"
-                >
-                  Templates
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/showcase"
-                  className="text-muted-foreground hover:text-pittaya text-sm transition-colors"
-                >
-                  Showcase
-                </Link>
-              </li>
+              {activeLinks.map((item) => (
+                <li key={item.name}>
+                  <Link
+                    href={item.href}
+                    className="text-muted-foreground hover:text-pittaya text-sm transition-colors"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 

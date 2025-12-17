@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
+import { NAVIGATION_LINKS } from "@/constants/navigation-links";
 import { cn } from "@/lib/utils";
 
 import { GithubStarsButton } from "./github-stars-button";
@@ -14,11 +15,7 @@ import { Button } from "./ui/button";
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const navigation = [
-    { name: "Components", href: "/docs/components" },
-    { name: "Templates", href: "/templates" },
-    { name: "Showcase", href: "/showcase" },
-  ];
+  const activeLinks = NAVIGATION_LINKS.filter((link) => link.active);
 
   return (
     <header
@@ -40,7 +37,7 @@ export function Header() {
           </Link>
 
           <nav className="hidden items-center space-x-8 md:flex">
-            {navigation.map((item) => (
+            {activeLinks.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
@@ -70,7 +67,7 @@ export function Header() {
       {isMobileMenuOpen && (
         <div className="border-t border-white/10 md:hidden">
           <div className="space-y-1 bg-black/90 px-2 pt-2 pb-3 backdrop-blur-md">
-            {navigation.map((item) => (
+            {activeLinks.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
