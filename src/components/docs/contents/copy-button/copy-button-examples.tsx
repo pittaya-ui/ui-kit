@@ -115,7 +115,7 @@ export function ApiKeyExample() {
 }
 
 export function UrlShareExample() {
-  const shareUrl = "https://pittaya-ui.vercel.app/docs/components/copy-button";
+  const shareUrl = "https://ui.pittaya.org/docs/components/copy-button";
 
   return (
     <div className="space-y-3">
