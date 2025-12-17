@@ -44,6 +44,8 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@types/react-syntax-highlighter": "^15.5.13",
+    "@typescript-eslint/eslint-plugin": "^8.50.0",
+    "@typescript-eslint/parser": "^8.50.0",
     "cross-env": "^10.1.0",
     "eslint": "^9",
     "eslint-config-next": "^16.0.0",
@@ -52,6 +54,7 @@
     "prettier-plugin-tailwindcss": "^0.6.14",
     "tailwindcss": "^4",
     "tw-animate-css": "^1.3.6",
-    "typescript": "^5"
+    "typescript": "^5",
+    "typescript-eslint": "^8.50.0"
   }
 }
