@@ -11,6 +11,7 @@ const withBundleAnalyzer = bundleAnalyzer({
 const nextConfig: NextConfig = {
   poweredByHeader: false,
   images: {
+    qualities: [100, 75],
     remotePatterns: [
       {
         protocol: "https",
