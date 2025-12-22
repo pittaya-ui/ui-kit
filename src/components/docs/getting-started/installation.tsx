@@ -201,7 +201,7 @@ Next steps:
                   </p>
                   <pre className="bg-muted mt-4 overflow-x-auto rounded-lg p-4">
                     <code className="text-sm">
-                      {`import { Button } from "@/components/ui/button";
+                      {`import { Button } from "@/components/pittaya/ui/button";
 
 export default function App() {
   return <Button>Click me</Button>;
