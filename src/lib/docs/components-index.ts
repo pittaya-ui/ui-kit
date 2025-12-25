@@ -10,6 +10,15 @@ export const componentsIndex: ComponentIndexItem[] = [
     tags: ["badge", "announcement", "alert"],
   },
   {
+    slug: "badge",
+    name: "Badge",
+    description: "Displays a badge for status, labels, or metadata.",
+    category: "Components",
+    status: "stable",
+    tags: ["badge", "label", "status", "tag"],
+    dependencies: ["@radix-ui/react-slot"],
+  },
+  {
     slug: "button",
     name: "Button",
     description: "Displays a button or a component that looks like a button.",
@@ -36,6 +45,16 @@ export const componentsIndex: ComponentIndexItem[] = [
     tags: ["carousel", "images", "content"],
   },
   {
+    slug: "command",
+    name: "Command",
+    description: "A fast command menu and search interface.",
+    category: "Navigation",
+    status: "stable",
+    tags: ["command", "search", "menu", "palette", "navigation"],
+    dependencies: ["cmdk", "lucide-react"],
+    internalDependencies: ["dialog"],
+  },
+  {
     slug: "copy-button",
     name: "Copy Button",
     description:
@@ -58,6 +77,17 @@ export const componentsIndex: ComponentIndexItem[] = [
     ],
   },
   {
+    slug: "multi-select",
+    name: "Multi-Select",
+    description:
+      "A searchable multi-select component with badges for displaying selected items.",
+    category: "Forms",
+    status: "stable",
+    tags: ["form", "select", "multi", "combobox", "dropdown"],
+    dependencies: ["lucide-react"],
+    internalDependencies: ["badge", "button", "command", "popover"],
+  },
+  {
     slug: "orbit-images",
     name: "Orbit images",
     description: "Displays a set of images in an orbiting motion.",
@@ -65,6 +95,16 @@ export const componentsIndex: ComponentIndexItem[] = [
     status: "stable",
     tags: ["scroll", "motion", "orbit"],
     internalDependencies: ["button"],
+  },
+  {
+    slug: "popover",
+    name: "Popover",
+    description:
+      "A floating content container positioned relative to a trigger.",
+    category: "Overlays",
+    status: "stable",
+    tags: ["popover", "overlay", "tooltip", "floating"],
+    dependencies: ["@radix-ui/react-popover"],
   },
   {
     slug: "tabs",
