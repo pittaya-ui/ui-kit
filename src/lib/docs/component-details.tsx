@@ -5,7 +5,9 @@ import { cardDoc } from "@/components/docs/contents/card";
 import { carouselDoc } from "@/components/docs/contents/carousel";
 import { commandDoc } from "@/components/docs/contents/command/command";
 import { copyButtonDoc } from "@/components/docs/contents/copy-button/copy-button";
+import { inputDoc } from "@/components/docs/contents/input/input";
 import { installationSectionDoc } from "@/components/docs/contents/installation-section";
+import { labelDoc } from "@/components/docs/contents/label/label";
 import { multiSelectDoc } from "@/components/docs/contents/multi-select/multi-select";
 import { orbitImagesDoc } from "@/components/docs/contents/orbit-images";
 import { popoverDoc } from "@/components/docs/contents/popover";
@@ -21,7 +23,9 @@ const docs: Record<string, ComponentDoc> = {
   [carouselDoc.slug]: carouselDoc,
   [commandDoc.slug]: commandDoc,
   [copyButtonDoc.slug]: copyButtonDoc,
+  [inputDoc.slug]: inputDoc,
   [installationSectionDoc.slug]: installationSectionDoc,
+  [labelDoc.slug]: labelDoc,
   [multiSelectDoc.slug]: multiSelectDoc,
   [orbitImagesDoc.slug]: orbitImagesDoc,
   [popoverDoc.slug]: popoverDoc,
