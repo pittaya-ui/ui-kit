@@ -196,19 +196,19 @@ export function SidebarLocal({ toc }: SidebarLocalProps) {
   if (!toc.length) return null;
 
   return (
-    <div className="flex flex-col gap-6">
-      <nav className="flex h-full max-h-[calc(100vh-9rem)] flex-col gap-3 pl-2">
+    <div className="flex h-full flex-col justify-between gap-6">
+      <nav className="flex min-h-0 flex-col gap-3 overflow-y-auto pl-2">
         <p className="text-foreground shrink-0 pl-4 text-xs font-medium tracking-wide">
           On This Page
         </p>
 
         {/* Scrollable Container */}
         <div
-          className="relative flex-1 overflow-y-auto pr-2 pl-4 [scrollbar-width:thin]"
+          className="relative pr-2 pl-4"
           ref={scrollContainerRef}
         >
           {/* Wrapper ensures SVG and Content scroll together */}
-          <div className="relative min-h-full pb-4">
+          <div className="relative pb-4">
             {/* SVG Track */}
             <div className="pointer-events-none absolute top-0 bottom-0 left-0 w-[24px]">
               <svg className="h-full w-full overflow-visible">
@@ -277,54 +277,55 @@ export function SidebarLocal({ toc }: SidebarLocalProps) {
           </div>
         </div>
       </nav>
+      <div>
+        <Card
+          variant="shadowRight"
+          shadowColor="#b8ff01"
+          className="group relative flex flex-col gap-3 overflow-hidden p-4 dark:border-zinc-800 dark:bg-zinc-900/50"
+        >
+          <div className="relative z-10 flex flex-col gap-3">
+            <div className="h-8 w-fit">
+              <Image
+                src={"/AM-I-ON_-HORIZONTAL-WHITE-GREEN.svg"}
+                alt="Am I On"
+                width={140}
+                height={35}
+                className="h-full w-auto object-contain"
+              />
+            </div>
 
-      <Card
-        variant="shadowRight"
-        shadowColor="#b8ff01"
-        className="group relative flex flex-col gap-3 overflow-hidden p-4 dark:border-zinc-800 dark:bg-zinc-900/50"
-      >
-        <div className="relative z-10 flex flex-col gap-3">
-          <div className="h-8 w-fit">
-            <Image
-              src={"/AM-I-ON_-HORIZONTAL-WHITE-GREEN.svg"}
-              alt="Am I On"
-              width={140}
-              height={35}
-              className="h-full w-auto object-contain"
-            />
+            <p className="text-muted-foreground text-xs leading-relaxed">
+              A unified platform to monitor websites, detect outages, and alert
+              the right teams instantly.
+            </p>
+
+            <Button
+              variant="default"
+              size="sm"
+              className="w-full bg-[#b8ff01] font-semibold text-black hover:bg-[#a3e600]"
+              asChild
+            >
+              <Link
+                href="https://amion.tech"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Get Started
+              </Link>
+            </Button>
           </div>
 
-          <p className="text-muted-foreground text-xs leading-relaxed">
-            A unified platform to monitor websites, detect outages, and alert
-            the right teams instantly.
-          </p>
-
-          <Button
-            variant="default"
-            size="sm"
-            className="w-full bg-[#b8ff01] font-semibold text-black hover:bg-[#a3e600]"
-            asChild
-          >
-            <Link
-              href="https://amion.tech"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Get Started
-            </Link>
-          </Button>
-        </div>
-
-        <div className="pointer-events-none absolute -right-5 -bottom-5 opacity-10 grayscale transition-all duration-500 group-hover:opacity-20 group-hover:grayscale-0">
-          <Image
-            src={"/AM-I-ON_-ICON-GREEN.svg"}
-            alt="Decorative Icon"
-            width={100}
-            height={100}
-            className="-rotate-12"
-          />
-        </div>
-      </Card>
+          <div className="pointer-events-none absolute -right-5 -bottom-5 opacity-10 grayscale transition-all duration-500 group-hover:opacity-20 group-hover:grayscale-0">
+            <Image
+              src={"/AM-I-ON_-ICON-GREEN.svg"}
+              alt="Decorative Icon"
+              width={100}
+              height={100}
+              className="-rotate-12"
+            />
+          </div>
+        </Card>
+      </div>
     </div>
   );
 }
