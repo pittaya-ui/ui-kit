@@ -203,10 +203,7 @@ export function SidebarLocal({ toc }: SidebarLocalProps) {
         </p>
 
         {/* Scrollable Container */}
-        <div
-          className="relative pr-2 pl-4"
-          ref={scrollContainerRef}
-        >
+        <div className="relative pr-2 pl-4" ref={scrollContainerRef}>
           {/* Wrapper ensures SVG and Content scroll together */}
           <div className="relative pb-4">
             {/* SVG Track */}
@@ -286,7 +283,7 @@ export function SidebarLocal({ toc }: SidebarLocalProps) {
           <div className="relative z-10 flex flex-col gap-3">
             <div className="h-8 w-fit">
               <Image
-                src={"/AM-I-ON_-HORIZONTAL-WHITE-GREEN.svg"}
+                src={"/amion-images/amion-horizontal-white-green.svg"}
                 alt="Am I On"
                 width={140}
                 height={35}
@@ -317,7 +314,7 @@ export function SidebarLocal({ toc }: SidebarLocalProps) {
 
           <div className="pointer-events-none absolute -right-5 -bottom-5 opacity-10 grayscale transition-all duration-500 group-hover:opacity-20 group-hover:grayscale-0">
             <Image
-              src={"/AM-I-ON_-ICON-GREEN.svg"}
+              src={"/amion-images/amion-icon-green.svg"}
               alt="Decorative Icon"
               width={100}
               height={100}
