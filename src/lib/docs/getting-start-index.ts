@@ -6,6 +6,11 @@ import { GettingStartedItem } from "./types";
      title: "Introduction",
      href: "/docs/introduction",
    },
+   {
+     slug: "installation",
+     title: "Installation",
+     href: "/docs/installation",
+   },
  ];
 
 export function getGettingStartedIndex(): GettingStartedItem[] {
