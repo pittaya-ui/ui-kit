@@ -1,6 +1,6 @@
 "use client";
 
-import { Menu, X } from "lucide-react";
+import { Menu, Search, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -9,11 +9,13 @@ import { NAVIGATION_LINKS } from "@/constants/navigation-links";
 import { cn } from "@/lib/utils";
 
 import { GithubStarsButton } from "./github-stars-button";
+import { GlobalSearch } from "./global-search";
 import { NpmDownloadsButton } from "./npm-downloads-button";
 import { Button } from "./ui/button";
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   const activeLinks = NAVIGATION_LINKS.filter((link) => link.active);
 
@@ -46,6 +48,20 @@ export function Header() {
                 {item.name}
               </Link>
             ))}
+            <Button
+              onClick={() => setIsSearchOpen(true)}
+              variant="outline"
+              className="group relative h-9 w-full justify-start rounded-md border-white/10 bg-white/5 px-3 text-sm font-normal text-white/60 hover:bg-white/10 hover:text-white sm:pr-12 md:w-40 lg:w-64"
+            >
+              <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" />
+              <span className="hidden lg:inline-flex">
+                Search components...
+              </span>
+              <span className="inline-flex lg:hidden">Search...</span>
+              <kbd className="bg-muted pointer-events-none absolute top-1/2 right-1.5 hidden h-5 -translate-y-1/2 items-center gap-1 rounded border border-white/10 px-1.5 font-mono text-[10px] font-medium opacity-100 select-none sm:flex">
+                <span className="text-xs">⌘</span>K
+              </kbd>
+            </Button>
             <GithubStarsButton />
             <NpmDownloadsButton />
           </nav>
@@ -67,6 +83,17 @@ export function Header() {
       {isMobileMenuOpen && (
         <div className="border-t border-white/10 md:hidden">
           <div className="space-y-1 bg-black/90 px-2 pt-2 pb-3 backdrop-blur-md">
+            <Button
+              onClick={() => {
+                setIsSearchOpen(true);
+                setIsMobileMenuOpen(false);
+              }}
+              variant="outline"
+              className="mb-2 w-full justify-start rounded-md border-white/10 bg-white/5 px-3 text-sm font-normal text-white/60 hover:bg-white/10 hover:text-white"
+            >
+              <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" />
+              Search components...
+            </Button>
             {activeLinks.map((item) => (
               <Link
                 key={item.name}
@@ -84,6 +111,7 @@ export function Header() {
           </div>
         </div>
       )}
+      <GlobalSearch open={isSearchOpen} setOpen={setIsSearchOpen} />
     </header>
   );
 }
