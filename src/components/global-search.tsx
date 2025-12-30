@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 import { getComponentsIndex } from "@/lib/docs/components-index";
 
@@ -58,16 +58,20 @@ export function GlobalSearch({ open, setOpen }: GlobalSearchProps) {
     return nameMatch || descriptionMatch || categoryMatch || tagsMatch;
   });
 
-  const groupedComponents = filteredComponents.reduce(
-    (acc, component) => {
-      const category = component.category || "Other";
-      if (!acc[category]) {
-        acc[category] = [];
-      }
-      acc[category].push(component);
-      return acc;
-    },
-    {} as Record<string, typeof components>
+  const groupedComponents = useMemo(
+    () =>
+      filteredComponents.reduce(
+        (acc, component) => {
+          const category = component.category || "Other";
+          if (!acc[category]) {
+            acc[category] = [];
+          }
+          acc[category].push(component);
+          return acc;
+        },
+        {} as Record<string, typeof components>
+      ),
+    [filteredComponents]
   );
 
   return (
