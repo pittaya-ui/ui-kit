@@ -77,6 +77,27 @@ export const componentsIndex: ComponentIndexItem[] = [
     ],
   },
   {
+    slug: "input",
+    name: "Input",
+    description:
+      "A versatile input field with multiple variants including floating labels and outlined styles.",
+    category: "Forms",
+    status: "stable",
+    tags: ["form", "input", "text", "field", "floating", "outlined"],
+    dependencies: ["class-variance-authority"],
+    internalDependencies: ["label"],
+  },
+  {
+    slug: "label",
+    name: "Label",
+    description:
+      "An accessible label component that renders a caption associated with a control.",
+    category: "Forms",
+    status: "stable",
+    tags: ["form", "label", "accessibility", "a11y"],
+    dependencies: ["@radix-ui/react-label"],
+  },
+  {
     slug: "multi-select",
     name: "Multi-Select",
     description:
