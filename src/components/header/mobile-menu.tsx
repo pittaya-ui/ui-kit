@@ -102,10 +102,8 @@ export function MobileMenu({
                           : "0ms",
                       }}
                     >
-                      <div className="absolute inset-0 bg-gradient-to-r from-pink-500/10 to-purple-500/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                      <div className="absolute inset-0 bg-white/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                       <span className="relative flex items-center">
-                        <span className="mr-3 h-1.5 w-1.5 rounded-full bg-pink-500 opacity-0 transition-all duration-300 group-hover:mr-4 group-hover:opacity-100" />
+                        <span className="bg-pittaya mr-3 h-1.5 w-1.5 rounded-full opacity-0 transition-all duration-300 group-hover:mr-4 group-hover:opacity-100" />
                         {item.name}
                       </span>
                       <ChevronDown
@@ -145,7 +143,7 @@ export function MobileMenu({
                               }}
                             >
                               <div className="absolute inset-0 bg-white/5 opacity-0 transition-opacity duration-200 group-hover/item:opacity-100" />
-                              <span className="mr-2 h-1 w-1 rounded-full bg-pink-400 opacity-50 transition-all duration-200 group-hover/item:opacity-100" />
+                              <span className="bg-pittaya mr-2 h-1 w-1 rounded-full opacity-50 transition-all duration-200 group-hover/item:opacity-100" />
                               <span className="relative">{component.name}</span>
                             </Link>
                           ))}
@@ -168,10 +166,10 @@ export function MobileMenu({
                     }}
                     onClick={onClose}
                   >
-                    <div className="absolute inset-0 bg-gradient-to-r from-pink-500/10 to-purple-500/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                    <div className="from-pittaya-500/10 absolute inset-0 bg-gradient-to-r to-purple-500/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                     <div className="absolute inset-0 bg-white/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                     <span className="relative flex items-center">
-                      <span className="mr-3 h-1.5 w-1.5 rounded-full bg-pink-500 opacity-0 transition-all duration-300 group-hover:mr-4 group-hover:opacity-100" />
+                      <span className="bg-pittaya-500 mr-3 h-1.5 w-1.5 rounded-full opacity-0 transition-all duration-300 group-hover:mr-4 group-hover:opacity-100" />
                       {item.name}
                     </span>
                   </Link>
@@ -208,27 +206,7 @@ export function MobileMenu({
               <GithubStarsButton />
               <NpmDownloadsButton />
             </div>
-
-            {/* Decorative corner accent */}
-            <div className="pointer-events-none absolute top-0 right-0 h-20 w-20 bg-gradient-to-br from-pink-500/10 to-transparent blur-2xl" />
-            <div className="pointer-events-none absolute bottom-0 left-0 h-20 w-20 bg-gradient-to-tr from-purple-500/10 to-transparent blur-2xl" />
           </div>
-        </div>
-
-        {/* Background decoration */}
-        <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
-          <div
-            className={cn(
-              "absolute -top-1/2 -right-1/4 h-96 w-96 rounded-full bg-gradient-to-br from-pink-500/20 to-purple-500/20 blur-3xl transition-all duration-1000",
-              isOpen ? "scale-100 opacity-100" : "scale-50 opacity-0"
-            )}
-          />
-          <div
-            className={cn(
-              "absolute -bottom-1/2 -left-1/4 h-96 w-96 rounded-full bg-gradient-to-tr from-purple-500/20 to-pink-500/20 blur-3xl transition-all duration-1000",
-              isOpen ? "scale-100 opacity-100 delay-200" : "scale-50 opacity-0"
-            )}
-          />
         </div>
       </div>
     </div>

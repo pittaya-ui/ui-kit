@@ -30,17 +30,13 @@ export function Header() {
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
-            <Link
-              href="/"
-              className="group flex items-center space-x-2 transition-transform duration-200 hover:scale-105"
-            >
+            <Link href="/" className="flex items-center space-x-2">
               <div className="relative">
                 <Image
                   src="/pittaya-logo.png"
                   alt="Pittaya UI"
                   width={40}
                   height={40}
-                  className="rounded-full transition-all duration-300 group-hover:shadow-lg group-hover:shadow-pink-500/50"
                 />
               </div>
               <span className="text-xl font-semibold text-white">
