@@ -31,7 +31,7 @@ export function FeatureSection() {
   const iconsPerOrbit = Math.ceil(iconConfigs.length / orbitCount);
 
   return (
-    <section className="mx-auto w-full max-w-screen-xl px-4 pb-20">
+    <section className="mx-auto w-full max-w-screen-xl px-4 pb-20 sm:px-6 lg:px-8">
       <div className="border-border bg-card/30 relative flex flex-col overflow-hidden rounded-3xl border px-4 py-12 shadow-2xl md:h-[25rem] md:flex-row md:items-center md:justify-between md:px-8 md:py-0 dark:bg-black/20">
         <div className="bg-pittaya/20 dark:bg-pittaya/10 absolute -top-20 -left-20 h-64 w-64 rounded-full blur-[100px]" />
         <div className="absolute -right-20 -bottom-20 h-64 w-64 rounded-full bg-blue-500/10 blur-[100px]" />

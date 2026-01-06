@@ -45,6 +45,19 @@ export const componentsIndex: ComponentIndexItem[] = [
     tags: ["carousel", "images", "content"],
   },
   {
+    slug: "checkbox",
+    name: "Checkbox",
+    description: "An accessible checkbox with optional animation variant.",
+    category: "Forms",
+    status: "stable",
+    tags: ["checkbox", "form", "input", "selection"],
+    dependencies: [
+      "@radix-ui/react-checkbox",
+      "lucide-react",
+      "class-variance-authority",
+    ],
+  },
+  {
     slug: "command",
     name: "Command",
     description: "A fast command menu and search interface.",

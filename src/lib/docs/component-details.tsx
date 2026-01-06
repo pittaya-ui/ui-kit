@@ -3,6 +3,7 @@ import { badgeDoc } from "@/components/docs/contents/badge";
 import { buttonDoc } from "@/components/docs/contents/button";
 import { cardDoc } from "@/components/docs/contents/card";
 import { carouselDoc } from "@/components/docs/contents/carousel";
+import { checkboxDoc } from "@/components/docs/contents/checkbox/checkbox";
 import { commandDoc } from "@/components/docs/contents/command/command";
 import { copyButtonDoc } from "@/components/docs/contents/copy-button/copy-button";
 import { inputDoc } from "@/components/docs/contents/input/input";
@@ -21,6 +22,7 @@ const docs: Record<string, ComponentDoc> = {
   [buttonDoc.slug]: buttonDoc,
   [cardDoc.slug]: cardDoc,
   [carouselDoc.slug]: carouselDoc,
+  [checkboxDoc.slug]: checkboxDoc,
   [commandDoc.slug]: commandDoc,
   [copyButtonDoc.slug]: copyButtonDoc,
   [inputDoc.slug]: inputDoc,
