@@ -1,10 +1,14 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 import type { TocItem } from "@/lib/docs/types";
 import { cn } from "@/lib/utils";
+
+import { Button } from "../ui/button";
+import { Card } from "../ui/card";
 
 type SidebarLocalProps = {
   toc: TocItem[];
@@ -192,85 +196,133 @@ export function SidebarLocal({ toc }: SidebarLocalProps) {
   if (!toc.length) return null;
 
   return (
-    <nav className="flex h-full max-h-[calc(100vh-9rem)] flex-col gap-3 pl-2">
-      <p className="text-foreground shrink-0 pl-4 text-xs font-medium tracking-wide">
-        On This Page
-      </p>
+    <div className="flex h-full flex-col justify-between gap-6">
+      <nav className="flex min-h-0 flex-col gap-3 overflow-y-auto pl-2">
+        <p className="text-foreground shrink-0 pl-4 text-xs font-medium tracking-wide">
+          On This Page
+        </p>
 
-      {/* Scrollable Container */}
-      <div
-        className="relative flex-1 overflow-y-auto pr-2 pl-4 [scrollbar-width:thin]"
-        ref={scrollContainerRef}
-      >
-        {/* Wrapper ensures SVG and Content scroll together */}
-        <div className="relative min-h-full pb-4">
-          {/* SVG Track */}
-          <div className="pointer-events-none absolute top-0 bottom-0 left-0 w-[24px]">
-            <svg className="h-full w-full overflow-visible">
-              {/* Static Track (Reference for length calculation) */}
-              <path
-                ref={trackPathRef}
-                d={svgPath}
-                fill="none"
-                stroke="var(--border)"
-                strokeWidth="1.5"
-                strokeOpacity="0.4"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="transition-all duration-300 ease-in-out"
+        {/* Scrollable Container */}
+        <div className="relative pr-2 pl-4" ref={scrollContainerRef}>
+          {/* Wrapper ensures SVG and Content scroll together */}
+          <div className="relative pb-4">
+            {/* SVG Track */}
+            <div className="pointer-events-none absolute top-0 bottom-0 left-0 w-[24px]">
+              <svg className="h-full w-full overflow-visible">
+                {/* Static Track (Reference for length calculation) */}
+                <path
+                  ref={trackPathRef}
+                  d={svgPath}
+                  fill="none"
+                  stroke="var(--border)"
+                  strokeWidth="1.5"
+                  strokeOpacity="0.4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="transition-all duration-300 ease-in-out"
+                />
+                {/* Active Beam Segment - Overlay using Dasharray */}
+                <path
+                  d={svgPath}
+                  fill="none"
+                  stroke="var(--pittaya)"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="transition-all duration-500 ease-in-out"
+                  style={{
+                    opacity: activeBeamStyle.opacity,
+                    strokeDasharray: activeBeamStyle.dashArray,
+                    strokeDashoffset: activeBeamStyle.dashOffset,
+                    filter: "drop-shadow(0 0 3px var(--pittaya))",
+                  }}
+                />
+              </svg>
+            </div>
+
+            <ul ref={listRef} className="space-y-1 text-sm">
+              {toc.map((item, index) => {
+                // Add extra spacing before sub-items (level 3) to soften the curve
+                const isLevelChange =
+                  index > 0 && toc[index - 1].level !== item.level;
+
+                return (
+                  <li
+                    key={item.id}
+                    className={cn(
+                      item.level === 3 && "pl-4",
+                      isLevelChange && "mt-4" // Adds breathing room for curves
+                    )}
+                  >
+                    <Link
+                      href={`#${item.id}`}
+                      data-id={item.id}
+                      className={cn(
+                        "block rounded-md px-4 py-1.5 transition-colors duration-200",
+                        activeId === item.id
+                          ? "text-foreground font-medium"
+                          : "text-muted-foreground hover:text-foreground"
+                      )}
+                      onClick={() => setActiveId(item.id)}
+                    >
+                      {item.title}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div>
+        <Card
+          variant="shadowRight"
+          shadowColor="#b8ff01"
+          className="group relative flex flex-col gap-3 overflow-hidden p-4 dark:border-zinc-800 dark:bg-zinc-900/50"
+        >
+          <div className="relative z-10 flex flex-col gap-3">
+            <div className="h-8 w-fit">
+              <Image
+                src={"/amion-images/amion-horizontal-white-green.svg"}
+                alt="Am I On"
+                width={140}
+                height={35}
+                className="h-full w-auto object-contain"
               />
-              {/* Active Beam Segment - Overlay using Dasharray */}
-              <path
-                d={svgPath}
-                fill="none"
-                stroke="var(--pittaya)"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="transition-all duration-500 ease-in-out"
-                style={{
-                  opacity: activeBeamStyle.opacity,
-                  strokeDasharray: activeBeamStyle.dashArray,
-                  strokeDashoffset: activeBeamStyle.dashOffset,
-                  filter: "drop-shadow(0 0 3px var(--pittaya))",
-                }}
-              />
-            </svg>
+            </div>
+
+            <p className="text-muted-foreground text-xs leading-relaxed">
+              A unified platform to monitor websites, detect outages, and alert
+              the right teams instantly.
+            </p>
+
+            <Button
+              variant="default"
+              size="sm"
+              className="w-full bg-[#b8ff01] font-semibold text-black hover:bg-[#a3e600]"
+              asChild
+            >
+              <Link
+                href="https://amion.tech"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Get Started
+              </Link>
+            </Button>
           </div>
 
-          <ul ref={listRef} className="space-y-1 text-sm">
-            {toc.map((item, index) => {
-              // Add extra spacing before sub-items (level 3) to soften the curve
-              const isLevelChange =
-                index > 0 && toc[index - 1].level !== item.level;
-
-              return (
-                <li
-                  key={item.id}
-                  className={cn(
-                    item.level === 3 && "pl-4",
-                    isLevelChange && "mt-4" // Adds breathing room for curves
-                  )}
-                >
-                  <Link
-                    href={`#${item.id}`}
-                    data-id={item.id}
-                    className={cn(
-                      "block rounded-md px-4 py-1.5 transition-colors duration-200",
-                      activeId === item.id
-                        ? "text-foreground font-medium"
-                        : "text-muted-foreground hover:text-foreground"
-                    )}
-                    onClick={() => setActiveId(item.id)}
-                  >
-                    {item.title}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
+          <div className="pointer-events-none absolute -right-5 -bottom-5 opacity-10 grayscale transition-all duration-500 group-hover:opacity-20 group-hover:grayscale-0">
+            <Image
+              src={"/amion-images/amion-icon-green.svg"}
+              alt="Decorative Icon"
+              width={100}
+              height={100}
+              className="-rotate-12"
+            />
+          </div>
+        </Card>
       </div>
-    </nav>
+    </div>
   );
 }

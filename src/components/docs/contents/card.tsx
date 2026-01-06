@@ -108,6 +108,12 @@ export const cardDoc: ComponentDoc = createComponentDoc({
         "Defines the visual style of the card. Each variant offers a unique appearance suitable for different contexts.",
     },
     {
+      name: "shadowColor",
+      type: "string",
+      description:
+        "Custom color for the shadow when variant='shadowRight'. Accepts any valid CSS color (hex, rgb, color name). Defaults to black.",
+    },
+    {
       name: "gradientClassName",
       type: "string",
       description:
@@ -351,7 +357,11 @@ export function PricingCard() {
 
 export function StatsCard() {
   return (
-    <Card variant="shadowRight" className="max-w-xs">
+    <Card 
+      variant="shadowRight" 
+      shadowColor="#10b981"
+      className="max-w-xs"
+    >
       <CardHeader>
         <CardDescription>Sales this month</CardDescription>
         <CardTitle className="text-4xl">1,234</CardTitle>
@@ -367,7 +377,11 @@ export function StatsCard() {
 }`,
       preview: (
         <div className="flex justify-center">
-          <Card variant="shadowRight" className="max-w-xs">
+          <Card 
+            variant="shadowRight" 
+            shadowColor="#10b981"
+            className="max-w-xs"
+          >
             <CardHeader>
               <CardDescription>Sales this month</CardDescription>
               <CardTitle className="text-4xl">1,234</CardTitle>
@@ -379,6 +393,177 @@ export function StatsCard() {
                 </span>
                 <span className="text-muted-foreground">vs. last month</span>
               </div>
+            </CardContent>
+          </Card>
+        </div>
+      ),
+    },
+    {
+      id: "shadow-colors",
+      title: "Custom shadow colors",
+      description:
+        "Demonstration of shadowRight variant with different custom shadow colors to match your brand or design system.",
+      code: `import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "@/components/pittaya/ui/card";
+
+export function ShadowColorCards() {
+  return (
+    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <Card 
+        variant="shadowRight" 
+        shadowColor="#b8ff01"
+        className="max-w-xs"
+      >
+        <CardHeader>
+          <CardTitle>Neon Green</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p className="text-sm text-muted-foreground">
+            Perfect for highlighting premium or featured content.
+          </p>
+        </CardContent>
+      </Card>
+
+      <Card 
+        variant="shadowRight" 
+        shadowColor="#3b82f6"
+        className="max-w-xs"
+      >
+        <CardHeader>
+          <CardTitle>Blue</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p className="text-sm text-muted-foreground">
+            Great for information and trust indicators.
+          </p>
+        </CardContent>
+      </Card>
+
+      <Card 
+        variant="shadowRight" 
+        shadowColor="#ef4444"
+        className="max-w-xs"
+      >
+        <CardHeader>
+          <CardTitle>Red</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p className="text-sm text-muted-foreground">
+            Ideal for urgent notifications or alerts.
+          </p>
+        </CardContent>
+      </Card>
+
+      <Card 
+        variant="shadowRight" 
+        shadowColor="#8b5cf6"
+        className="max-w-xs"
+      >
+        <CardHeader>
+          <CardTitle>Purple</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p className="text-sm text-muted-foreground">
+            Works well for creative or premium features.
+          </p>
+        </CardContent>
+      </Card>
+
+      <Card 
+        variant="shadowRight" 
+        shadowColor="#f59e0b"
+        className="max-w-xs"
+      >
+        <CardHeader>
+          <CardTitle>Amber</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p className="text-sm text-muted-foreground">
+            Perfect for warnings or special offers.
+          </p>
+        </CardContent>
+      </Card>
+
+      <Card 
+        variant="shadowRight" 
+        shadowColor="rgba(0, 0, 0, 0.1)"
+        className="max-w-xs"
+      >
+        <CardHeader>
+          <CardTitle>Subtle</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p className="text-sm text-muted-foreground">
+            Minimal shadow for a clean, professional look.
+          </p>
+        </CardContent>
+      </Card>
+    </div>
+  );
+}`,
+      preview: (
+        <div className="grid gap-6 md:grid-cols-2">
+          <Card 
+            variant="shadowRight" 
+            shadowColor="#b8ff01"
+            className="max-w-xs"
+          >
+            <CardHeader>
+              <CardTitle>Neon Green</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-sm text-muted-foreground">
+                Perfect for highlighting premium content.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card 
+            variant="shadowRight" 
+            shadowColor="#3b82f6"
+            className="max-w-xs"
+          >
+            <CardHeader>
+              <CardTitle>Blue</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-sm text-muted-foreground">
+                Great for information indicators.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card 
+            variant="shadowRight" 
+            shadowColor="#ef4444"
+            className="max-w-xs"
+          >
+            <CardHeader>
+              <CardTitle>Red</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-sm text-muted-foreground">
+                Ideal for urgent notifications.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card 
+            variant="shadowRight" 
+            shadowColor="#8b5cf6"
+            className="max-w-xs"
+          >
+            <CardHeader>
+              <CardTitle>Purple</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-sm text-muted-foreground">
+                Works well for premium features.
+              </p>
             </CardContent>
           </Card>
         </div>
@@ -784,7 +969,10 @@ export function CardVariants() {
             <CardContent className="text-sm">Interactive elements</CardContent>
           </Card>
 
-          <Card variant="shadowRight">
+<Card 
+        variant="shadowRight"
+        shadowColor="#3b82f6"
+      >
             <CardHeader>
               <CardTitle>Shadow Right</CardTitle>
               <CardDescription>Side shadow</CardDescription>

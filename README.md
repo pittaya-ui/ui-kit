@@ -12,7 +12,7 @@
 [![License](https://img.shields.io/github/license/pittaya-ui/ui-kit?style=for-the-badge&color=fb7185)](./LICENSE)
 [![Last Commit](https://img.shields.io/github/last-commit/pittaya-ui/ui-kit?style=for-the-badge&color=fb7185)](https://github.com/pittaya-ui/ui-kit/commits/main)
 
-[Components](https://pittaya-ui.vercel.app/docs/components) · [Report Bug](https://github.com/pittaya-ui/ui-kit/issues) · [Request Feature](https://github.com/pittaya-ui/ui-kit/issues)
+[Components](https://ui.pittaya.org/docs/components) · [Report Bug](https://github.com/pittaya-ui/ui-kit/issues) · [Request Feature](https://github.com/pittaya-ui/ui-kit/issues)
 
 </div>
 
