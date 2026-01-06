@@ -302,11 +302,7 @@ export function SidebarLocal({ toc }: SidebarLocalProps) {
               className="w-full bg-[#b8ff01] font-semibold text-black hover:bg-[#a3e600]"
               asChild
             >
-              <Link
-                href="https://amion.tech"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <Link href="https://amion.app" target="_blank">
                 Get Started
               </Link>
             </Button>
