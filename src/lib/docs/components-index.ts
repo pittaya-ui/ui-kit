@@ -141,6 +141,16 @@ export const componentsIndex: ComponentIndexItem[] = [
     dependencies: ["@radix-ui/react-popover"],
   },
   {
+    slug: "radio-group",
+    name: "Radio Group",
+    description:
+      "A set of checkable buttons—known as radio buttons—where no more than one can be checked at a time.",
+    category: "Forms",
+    status: "stable",
+    tags: ["radio", "form", "input", "selection", "option"],
+    dependencies: ["@radix-ui/react-radio-group", "class-variance-authority"],
+  },
+  {
     slug: "tabs",
     name: "Tabs",
     description:
