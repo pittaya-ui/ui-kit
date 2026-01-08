@@ -160,6 +160,15 @@ export const componentsIndex: ComponentIndexItem[] = [
     tags: ["navigation", "tabs", "panels", "sections"],
     dependencies: ["@radix-ui/react-tabs"],
   },
+  {
+    slug: "textarea",
+    name: "Textarea",
+    description:
+      "A flexible textarea for multi-line text input, with examples including expanding and scrollable variants.",
+    category: "Forms",
+    status: "stable",
+    tags: ["form", "textarea", "multiline", "input"],
+  },
 ];
 
 export function getComponentsIndex(): ComponentIndexItem[] {
