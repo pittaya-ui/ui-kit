@@ -47,24 +47,26 @@ export function BasicTextareaPreview() {
 
 export function MinimalTextareaPreview() {
   return (
-    <Card className="w-full max-w-sm border-0 bg-gradient-to-br from-muted/30 to-muted/10 shadow-sm backdrop-blur-sm">
+    <Card className="from-muted/30 to-muted/10 w-full max-w-sm border-0 bg-gradient-to-br shadow-sm backdrop-blur-sm">
       <CardHeader className="pb-4">
         <div className="flex items-center justify-between">
           <CardTitle className="text-lg font-semibold">Quick Note</CardTitle>
           <div className="flex items-center gap-1.5">
-            <div className="h-1.5 w-1.5 rounded-full bg-green-500 animate-pulse" />
-            <span className="text-xs text-muted-foreground font-medium">Saved</span>
+            <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-green-500" />
+            <span className="text-muted-foreground text-xs font-medium">
+              Saved
+            </span>
           </div>
         </div>
       </CardHeader>
       <CardContent className="px-6">
         <Textarea
           placeholder="Start typing your thoughts..."
-          className="placeholder:text-muted-foreground/40 min-h-[120px] resize-none border-0 bg-white/50 dark:bg-black/20 px-4 py-3 shadow-none focus-visible:ring-0 focus-visible:bg-white dark:focus-visible:bg-black/30 transition-colors rounded-lg"
+          className="placeholder:text-muted-foreground/40 min-h-[120px] resize-none rounded-lg border-0 bg-white/50 px-4 py-3 shadow-none transition-colors focus-visible:bg-white focus-visible:ring-0 dark:bg-black/20 dark:focus-visible:bg-black/30"
         />
       </CardContent>
-      <CardFooter className="pt-2 pb-4 px-6">
-        <p className="text-xs text-muted-foreground/70">
+      <CardFooter className="px-6 pt-2 pb-4">
+        <p className="text-muted-foreground/70 text-xs">
           Auto-saves as you type
         </p>
       </CardFooter>
@@ -92,7 +94,7 @@ export function ExpandingTextareaPreview() {
             onFocus={() => setExpanded(true)}
             onBlur={() => !value && setExpanded(false)}
             className={cn(
-              "py-3 pr-12 resize-none transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]",
+              "resize-none py-3 pr-12 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]",
               expanded ? "h-32" : "h-10"
             )}
           />
@@ -100,7 +102,7 @@ export function ExpandingTextareaPreview() {
             size="icon"
             variant="ghost"
             className={cn(
-              "absolute top-2 right-2 h-7 w-7 transition-opacity duration-300 flex items-center justify-center",
+              "absolute top-2 right-2 flex h-7 w-7 items-center justify-center transition-opacity duration-300",
               expanded && value
                 ? "opacity-100"
                 : "pointer-events-none opacity-0"
@@ -126,7 +128,7 @@ export function ScrollableTextareaPreview() {
       </CardHeader>
       <CardContent>
         <Textarea
-          className="h-[200px] max-h-[200px] overflow-y-auto resize-none font-mono text-xs leading-relaxed"
+          className="h-[200px] max-h-[200px] resize-none overflow-y-auto font-mono text-xs leading-relaxed"
           readOnly
           defaultValue={`MIT License
 
