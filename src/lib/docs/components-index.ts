@@ -101,6 +101,15 @@ export const componentsIndex: ComponentIndexItem[] = [
     internalDependencies: ["label"],
   },
   {
+    slug: "textarea",
+    name: "Textarea",
+    description:
+      "A flexible textarea for multi-line text input, with examples including expanding and scrollable variants.",
+    category: "Forms",
+    status: "stable",
+    tags: ["form", "textarea", "multiline", "input"],
+  },
+  {
     slug: "label",
     name: "Label",
     description:
