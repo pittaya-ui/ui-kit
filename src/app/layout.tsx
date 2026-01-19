@@ -10,9 +10,10 @@ import { Toaster } from "@/components/ui/sonner";
 import { QueryProvider } from "@/providers/react-query";
 
 export const metadata: Metadata = {
-  title: "Pittaya UI",
+  metadataBase: new URL("https://ui.pittaya.org"),
+  title: "Pittaya UI - Components that scale with your ideas",
   description:
-    "The best UI library for Next.js, using Shadcn UI and Tailwind CSS.",
+    "A fully open-source UI library for React, powered by TypeScript and Tailwind CSS. Fast, composable, and ready for production.",
   keywords: [
     "React",
     "Next.js",
@@ -29,6 +30,30 @@ export const metadata: Metadata = {
   creator: "Pittaya",
   publisher: "Pittaya",
   category: "technology",
+  openGraph: {
+    title: "Pittaya UI - Components that scale with your ideas",
+    description:
+      "A fully open-source UI library for React, powered by TypeScript and Tailwind CSS. Fast, composable, and ready for production.",
+    url: "https://ui.pittaya.org",
+    siteName: "Pittaya UI",
+    images: [
+      {
+        url: "/og-image.svg",
+        width: 1200,
+        height: 630,
+        alt: "Pittaya UI - Modern UI Components for React",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pittaya UI - Components that scale with your ideas",
+    description:
+      "A fully open-source UI library for React, powered by TypeScript and Tailwind CSS. Fast, composable, and ready for production.",
+    images: ["/og-image.svg"],
+  },
   robots: {
     index: true,
     follow: true,
