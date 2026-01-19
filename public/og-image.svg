@@ -9,12 +9,6 @@
       <stop offset="50%" stop-color="#D7415F"/>
       <stop offset="100%" stop-color="#B92B44"/>
     </linearGradient>
-    
-    <linearGradient id="textGradient" x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#F9576C"/>
-      <stop offset="50%" stop-color="#FB7185"/>
-      <stop offset="100%" stop-color="#F9576C"/>
-    </linearGradient>
   </defs>
   
   <!-- Pittaya Logo Icon (simplified version) -->
@@ -44,23 +38,28 @@
   
   <!-- Feature badges -->
   <g transform="translate(450, 500)">
-    <rect width="130" height="40" rx="20" fill="#FB7185" fill-opacity="0.2"/>
-    <text x="65" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#FB7185" text-anchor="middle">
-      � Fast
+    <rect width="110" height="40" rx="20" fill="#FB7185" fill-opacity="0.2"/>
+    <text x="55" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#FB7185" text-anchor="middle">
+      Fast
     </text>
   </g>
   
-  <g transform="translate(600, 500)">
+  <g transform="translate(580, 500)">
+    <rect width="140" height="40" rx="20" fill="#FB7185" fill-opacity="0.2"/>
+    <text x="70" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#FB7185" text-anchor="middle">
+      Beautiful
+    </text>
+  </g>
+  
+  <g transform="translate(740, 500)">
     <rect width="150" height="40" rx="20" fill="#FB7185" fill-opacity="0.2"/>
     <text x="75" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#FB7185" text-anchor="middle">
-      <� Beautiful
+      Accessible
     </text>
   </g>
   
-  <g transform="translate(770, 500)">
-    <rect width="170" height="40" rx="20" fill="#FB7185" fill-opacity="0.2"/>
-    <text x="85" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#FB7185" text-anchor="middle">
-       Accessible
-    </text>
-  </g>
+  <!-- URL -->
+  <text x="450" y="580" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="500" fill="#6B7280">
+    ui.pittaya.org
+  </text>
 </svg>
