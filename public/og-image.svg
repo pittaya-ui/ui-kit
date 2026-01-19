@@ -1,0 +1,66 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <rect width="1200" height="630" fill="#0A0A0A"/>
+  <rect width="1200" height="630" fill="url(#gradient)" opacity="0.3"/>
+  
+  <defs>
+    <linearGradient id="gradient" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F9576C"/>
+      <stop offset="50%" stop-color="#D7415F"/>
+      <stop offset="100%" stop-color="#B92B44"/>
+    </linearGradient>
+    
+    <linearGradient id="textGradient" x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F9576C"/>
+      <stop offset="50%" stop-color="#FB7185"/>
+      <stop offset="100%" stop-color="#F9576C"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Pittaya Logo Icon (simplified version) -->
+  <g transform="translate(100, 150) scale(0.15)">
+    <path d="M1386.08 398.908C1358.08 514.303 1252.06 599.477 1196.29 630.875C1307.36 640.247 1551.97 589.637 1565.1 464.515C1578.22 339.394 1494.33 265.352 1453.1 276.599C1416.54 286.568 1409.51 302.373 1386.08 398.908Z" fill="#E48F4E"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M2169.32 874.864C2088.26 773.577 1996.96 659.501 2010.75 421.402C2029.21 102.824 1971.85 87.0923 1936.81 77.4825C1934.48 76.8438 1932.25 76.2322 1930.15 75.5606C1884.24 60.895 1805.97 95.2426 1656.01 315.494C1648.24 326.9 1640.77 337.95 1633.54 348.65C1523.34 511.639 1459.78 583.518 1264.9 620.851C1246.95 622.925 1223.18 626.491 1204.26 629.937C1050.4 652.899 671.439 817.853 346.686 1327.71C-61.4813 1914.42 71.1381 2557.56 628.326 2870.87C1237.53 3213.43 2084.33 2993.18 2329.41 2240.58C2458.54 1855.43 2467.07 1364.47 2269.49 1020.89C2264.3 1008.69 2255.8 994.339 2243.66 977.652C2223.04 941.979 2196.76 909.153 2169.32 874.864Z" fill="#F9576C"/>
+    <path d="M1946.51 2158.66C1583.86 2795.16 1005.81 2836.41 621.766 2607.5C355.122 2433.65 86.1341 2011.89 544.911 1328.65C887.94 843.553 1453.09 631.342 1787.95 843.553C2171.99 1072.45 2220.22 1678.24 1946.51 2158.66Z" fill="#FDF5E3"/>
+  </g>
+  
+  <!-- Title -->
+  <text x="450" y="260" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="800" fill="white">
+    Pittaya UI
+  </text>
+  
+  <!-- Tagline -->
+  <text x="450" y="340" font-family="system-ui, -apple-system, sans-serif" font-size="36" font-weight="500" fill="#D1D5DB">
+    Components that scale with your ideas
+  </text>
+  
+  <!-- Description -->
+  <text x="450" y="420" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="400" fill="#9CA3AF">
+    A fully open-source UI library for React, powered by
+  </text>
+  <text x="450" y="455" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="400" fill="#9CA3AF">
+    TypeScript and Tailwind CSS
+  </text>
+  
+  <!-- Feature badges -->
+  <g transform="translate(450, 500)">
+    <rect width="130" height="40" rx="20" fill="#FB7185" fill-opacity="0.2"/>
+    <text x="65" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#FB7185" text-anchor="middle">
+      � Fast
+    </text>
+  </g>
+  
+  <g transform="translate(600, 500)">
+    <rect width="150" height="40" rx="20" fill="#FB7185" fill-opacity="0.2"/>
+    <text x="75" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#FB7185" text-anchor="middle">
+      <� Beautiful
+    </text>
+  </g>
+  
+  <g transform="translate(770, 500)">
+    <rect width="170" height="40" rx="20" fill="#FB7185" fill-opacity="0.2"/>
+    <text x="85" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#FB7185" text-anchor="middle">
+       Accessible
+    </text>
+  </g>
+</svg>
