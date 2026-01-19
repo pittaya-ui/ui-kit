@@ -36,14 +36,6 @@ export const metadata: Metadata = {
       "A fully open-source UI library for React, powered by TypeScript and Tailwind CSS. Fast, composable, and ready for production.",
     url: "https://ui.pittaya.org",
     siteName: "Pittaya UI",
-    images: [
-      {
-        url: "/og-image.svg",
-        width: 1200,
-        height: 630,
-        alt: "Pittaya UI - Modern UI Components for React",
-      },
-    ],
     locale: "en_US",
     type: "website",
   },
@@ -52,7 +44,6 @@ export const metadata: Metadata = {
     title: "Pittaya UI - Components that scale with your ideas",
     description:
       "A fully open-source UI library for React, powered by TypeScript and Tailwind CSS. Fast, composable, and ready for production.",
-    images: ["/og-image.svg"],
   },
   robots: {
     index: true,
