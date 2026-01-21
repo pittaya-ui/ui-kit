@@ -13,6 +13,7 @@ import {
 import { useInView } from "@/hooks/useInView";
 import { componentsIndex } from "@/lib/docs/components-index";
 
+import { AnnouncementText } from "../ui/announcement-badge";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 
 interface Feature {
@@ -90,9 +91,10 @@ export function WhyPittaya() {
             }`}
           >
             <div className="bg-pittaya mr-2 h-1.5 w-1.5 animate-pulse rounded-full shadow-[0_0_10px_currentColor]" />
-            <span className="text-muted-foreground/80 font-mono text-xs tracking-[0.2em] uppercase">
-              System Architecture
-            </span>
+            <AnnouncementText
+              text="System Architecture"
+              className="border-none bg-transparent"
+            />
           </div>
 
           <div className="relative z-10">
