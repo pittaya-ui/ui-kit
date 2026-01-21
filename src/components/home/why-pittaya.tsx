@@ -13,8 +13,8 @@ import {
 import { useInView } from "@/hooks/useInView";
 import { componentsIndex } from "@/lib/docs/components-index";
 
+import { AnnouncementText } from "../ui/announcement-badge";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
-import { Separator } from "../ui/separator";
 
 interface Feature {
   icon: LucideIcon;
@@ -72,68 +72,97 @@ export function WhyPittaya() {
   const { ref, isInView } = useInView({ threshold: 0.1, triggerOnce: true });
 
   return (
-    <section ref={ref} className="relative py-24">
-      <div className="mx-auto max-w-screen-xl px-4 md:px-8">
-        <div className="relative mx-auto max-w-2xl text-center">
+    <section ref={ref} className="relative overflow-hidden py-32">
+      <div className="from-background via-background/60 pointer-events-none absolute top-0 right-0 left-0 z-10 h-40 bg-gradient-to-b to-transparent" />
+      {/* Tech Grid Background */}
+      <div className="pointer-events-none absolute inset-0 mx-auto border-x border-white/5 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] bg-[size:24px_24px]"></div>
+
+      {/* Lighting Effects */}
+      <div className="bg-pittaya/15 pointer-events-none absolute top-0 left-1/2 -z-10 h-[500px] w-[800px] -translate-x-1/2 rounded-full opacity-40 blur-[120px]" />
+
+      <div className="relative z-10 mx-auto max-w-screen-xl px-4 md:px-8">
+        {/* Header */}
+        <div className="relative mx-auto mb-24 max-w-3xl text-center">
+          <div
+            className={`mb-8 inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-3 py-1 backdrop-blur-sm transition-all duration-1000 ${
+              isInView
+                ? "transform-none opacity-100"
+                : "translate-y-4 opacity-0"
+            }`}
+          >
+            <div className="bg-pittaya mr-2 h-1.5 w-1.5 animate-pulse rounded-full shadow-[0_0_10px_currentColor]" />
+            <AnnouncementText
+              text="System Architecture"
+              className="border-none bg-transparent"
+            />
+          </div>
+
           <div className="relative z-10">
             <h3
-              className={`font-geist mt-4 text-3xl font-normal tracking-tighter transition-all sm:text-4xl md:text-5xl ${
-                isInView ? "animate-fade-in-up opacity-0" : "opacity-0"
-              }`}
-            >
-              Why Choose <span className="text-pittaya">Pittaya UI</span> ?
-            </h3>
-            <p
-              className={`font-geist text-foreground/60 mt-3 transition-all ${
+              className={`font-geist text-foreground text-5xl font-bold tracking-tighter transition-all duration-700 md:text-7xl ${
                 isInView
-                  ? "animate-fade-in-up animation-delay-200 opacity-0"
-                  : "opacity-0"
+                  ? "transform-none opacity-100"
+                  : "translate-y-10 opacity-0"
               }`}
             >
-              A fully open-source component library built on React, TypeScript,
-              Tailwind CSS, and Radix UI. Production-ready components with
-              complete documentation and live examples.
+              Why{" "}
+              <span className="text-pittaya relative inline-block drop-shadow-[0_0_15px_rgba(200,20,100,0.3)]">
+                Pittaya UI
+              </span>{" "}
+              ?
+            </h3>
+
+            <p
+              className={`font-geist text-muted-foreground/80 mx-auto mt-8 max-w-2xl text-xl transition-all delay-200 duration-700 ${
+                isInView
+                  ? "transform-none opacity-100"
+                  : "translate-y-10 opacity-0"
+              }`}
+            >
+              Forging the next generation of web interfaces. A fully open-source
+              library built for speed, precision, and scalability.
             </p>
           </div>
-          <div
-            className="absolute inset-0 mx-auto h-44 max-w-xs blur-[118px]"
-            style={{
-              background:
-                "linear-gradient(152.92deg, rgba(192, 15, 102, 0.2) 4.54%, rgba(192, 11, 109, 0.26) 34.2%, rgba(192, 15, 102, 0.1) 77.55%)",
-            }}
-          />
         </div>
-        <Separator
-          className={`bg-foreground/30 mx-auto mt-5 max-w-lg transition-all ${
-            isInView
-              ? "animate-scale-in animation-delay-400 opacity-0"
-              : "opacity-0"
-          }`}
-        />
-        <div className="relative mt-12">
-          <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+        {/* Feature Grid */}
+        <div className="relative">
+          <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {features.map((feature, idx) => (
-              <Card
+              <li
                 key={idx}
-                className={`transform-gpu gap-2 space-y-3 rounded-xl border bg-transparent p-4 transition-all ${
-                  isInView ? "animate-fade-in-up opacity-0" : "opacity-0"
+                className={`group relative transition-all duration-700 ${
+                  isInView
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-12 opacity-0"
                 }`}
                 style={{
-                  animationDelay: isInView ? `${600 + idx * 100}ms` : "0ms",
+                  transitionDelay: `${300 + idx * 100}ms`,
                 }}
               >
-                <CardHeader className="gap-4">
-                  <div className="text-primary w-fit transform-gpu rounded-full border p-4 [box-shadow:0_-20px_80px_-20px_#ff7aa40f_inset]">
-                    <feature.icon className="stroke-pittaya size-6" />
-                  </div>
-                  <CardTitle className="font-geist text-lg font-semibold">
-                    {feature.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="text-gray-500">
-                  {feature.description}
-                </CardContent>
-              </Card>
+                <Card className="bg-background/40 hover:border-pittaya/50 hover:bg-background/60 relative h-full overflow-hidden rounded-2xl border border-white/10 p-6 backdrop-blur-md transition-all duration-500 hover:shadow-[0_0_40px_-10px_rgba(192,15,102,0.2)]">
+                  <CardHeader className="relative z-10 p-0 pb-6">
+                    <div className="group-hover:border-pittaya/30 group-hover:bg-pittaya/10 relative inline-flex h-12 w-12 items-center justify-center rounded-lg border border-white/10 bg-white/5 transition-all duration-500">
+                      <feature.icon className="text-foreground/80 group-hover:text-pittaya h-6 w-6 transition-colors duration-500" />
+                    </div>
+                    <CardTitle className="font-geist mt-4 text-xl font-bold">
+                      {feature.title}
+                    </CardTitle>
+                  </CardHeader>
+
+                  <CardContent className="relative z-10 p-0">
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      {feature.description}
+                    </p>
+
+                    <div className="mt-8 flex items-center justify-between border-t border-white/5 pt-4">
+                      <span className="text-pittaya/60 group-hover:text-pittaya font-mono text-[10px] font-medium tracking-widest uppercase transition-colors">
+                        {feature.highlight}
+                      </span>
+                    </div>
+                  </CardContent>
+                </Card>
+              </li>
             ))}
           </ul>
         </div>
