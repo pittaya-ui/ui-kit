@@ -108,6 +108,7 @@ export function Hero() {
           </div>
         </div>
       </main>
+      <div className="from-background via-background/60 pointer-events-none absolute right-0 bottom-0 left-0 z-10 h-40 bg-gradient-to-t to-transparent" />
     </Beams>
   );
 }
