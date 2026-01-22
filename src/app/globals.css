@@ -180,6 +180,15 @@
     scrollbar-width: thin;
     scrollbar-color: oklch(71.2% 0.194 13.428) transparent;
   }
+
+  .scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 }
 
 @layer utilities {
