@@ -1,15 +1,13 @@
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Skeleton } from "@/components/ui/skeleton";
 import { createComponentDoc } from "@/helpers/component-doc";
 import type { ComponentDoc } from "@/lib/docs/types";
+
+import {
+  SkeletonExampleArticleList,
+  SkeletonExampleBasic,
+  SkeletonExampleProduct,
+  SkeletonExampleProfile,
+  SkeletonExampleVariants,
+} from "./skeleton-examples";
 
 export const skeletonDoc: ComponentDoc = createComponentDoc({
   slug: "skeleton",
@@ -167,10 +165,8 @@ export function BasicSkeleton() {
 }`,
       preview: (
         <div className="flex w-full justify-center">
-          <div className="w-full max-w-md space-y-4">
-            <Skeleton className="h-12 w-full" />
-            <Skeleton className="h-4 w-3/4" />
-            <Skeleton className="h-4 w-1/2" />
+          <div className="w-full max-w-md">
+            <SkeletonExampleBasic />
           </div>
         </div>
       ),
@@ -201,23 +197,7 @@ export function VariantsComparison() {
     </div>
   );
 }`,
-      preview: (
-        <div className="grid gap-8 md:grid-cols-2">
-          <div className="space-y-3">
-            <h3 className="text-sm font-medium">Pulse (default)</h3>
-            <Skeleton variant="pulse" className="h-32 w-full" />
-            <Skeleton variant="pulse" className="h-4 w-full" />
-            <Skeleton variant="pulse" className="h-4 w-4/5" />
-          </div>
-
-          <div className="space-y-3">
-            <h3 className="text-sm font-medium">Shimmer</h3>
-            <Skeleton variant="shimmer" className="h-32 w-full" />
-            <Skeleton variant="shimmer" className="h-4 w-full" />
-            <Skeleton variant="shimmer" className="h-4 w-4/5" />
-          </div>
-        </div>
-      ),
+      preview: <SkeletonExampleVariants />,
     },
     {
       id: "profile-card",
@@ -247,20 +227,7 @@ export function ProfileCardSkeleton() {
 }`,
       preview: (
         <div className="flex justify-center">
-          <Card className="max-w-sm">
-            <CardHeader className="items-center space-y-4">
-              <Skeleton variant="shimmer" className="size-20 rounded-full" />
-              <div className="w-full space-y-2 text-center">
-                <Skeleton variant="shimmer" className="mx-auto h-6 w-32" />
-                <Skeleton variant="shimmer" className="mx-auto h-4 w-24" />
-              </div>
-            </CardHeader>
-            <CardContent className="space-y-3">
-              <Skeleton variant="shimmer" className="h-4 w-full" />
-              <Skeleton variant="shimmer" className="h-4 w-full" />
-              <Skeleton variant="shimmer" className="h-4 w-3/4" />
-            </CardContent>
-          </Card>
+          <SkeletonExampleProfile />
         </div>
       ),
     },
@@ -294,25 +261,7 @@ export function ProductCardSkeleton() {
 }`,
       preview: (
         <div className="flex justify-center">
-          <Card className="max-w-sm">
-            <Skeleton
-              variant="shimmer"
-              className="h-48 w-full rounded-b-none rounded-t-xl"
-            />
-            <CardContent className="space-y-3 pt-6">
-              <Skeleton variant="shimmer" className="h-6 w-3/4" />
-              <Skeleton variant="shimmer" className="h-4 w-full" />
-              <Skeleton variant="shimmer" className="h-4 w-5/6" />
-              <div className="flex items-center justify-between pt-2">
-                <Skeleton variant="shimmer" className="h-8 w-24" />
-                <Skeleton variant="shimmer" className="h-6 w-16" />
-              </div>
-            </CardContent>
-            <CardFooter className="gap-2">
-              <Skeleton variant="shimmer" className="h-10 flex-1" />
-              <Skeleton variant="shimmer" className="h-10 w-10" />
-            </CardFooter>
-          </Card>
+          <SkeletonExampleProduct />
         </div>
       ),
     },
@@ -343,27 +292,7 @@ export function ArticleListSkeleton() {
     </div>
   );
 }`,
-      preview: (
-        <div className="space-y-6">
-          {Array.from({ length: 3 }).map((_, i) => (
-            <div key={i} className="flex gap-4">
-              <Skeleton
-                variant="shimmer"
-                className="size-24 shrink-0 rounded-lg"
-              />
-              <div className="flex-1 space-y-2">
-                <Skeleton variant="shimmer" className="h-5 w-full" />
-                <Skeleton variant="shimmer" className="h-4 w-11/12" />
-                <Skeleton variant="shimmer" className="h-4 w-4/5" />
-                <div className="flex gap-4 pt-2">
-                  <Skeleton variant="shimmer" className="h-3 w-20" />
-                  <Skeleton variant="shimmer" className="h-3 w-16" />
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      ),
+      preview: <SkeletonExampleArticleList />,
     },
   ],
   toc: [
