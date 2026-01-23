@@ -151,6 +151,16 @@ export const componentsIndex: ComponentIndexItem[] = [
     dependencies: ["@radix-ui/react-radio-group", "class-variance-authority"],
   },
   {
+    slug: "skeleton",
+    name: "Skeleton",
+    description:
+      "A placeholder component that displays a visual representation of loading content with customizable animation variants.",
+    category: "Feedback",
+    status: "stable",
+    tags: ["skeleton", "loading", "placeholder", "shimmer", "pulse"],
+    dependencies: ["class-variance-authority"],
+  },
+  {
     slug: "tabs",
     name: "Tabs",
     description:
