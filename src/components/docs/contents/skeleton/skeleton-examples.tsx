@@ -18,15 +18,15 @@ export function SkeletonExampleBasic() {
  */
 export function SkeletonExampleVariants() {
   return (
-    <div className="grid gap-8 md:grid-cols-2">
-      <div className="space-y-3">
+    <div className="grid gap-8 md:grid-cols-2 w-3/4">
+      <div className="space-y-3 rounded-lg border p-4">
         <h3 className="text-sm font-medium">Pulse (default)</h3>
         <Skeleton variant="pulse" className="h-32 w-full" />
         <Skeleton variant="pulse" className="h-4 w-full" />
         <Skeleton variant="pulse" className="h-4 w-4/5" />
       </div>
 
-      <div className="space-y-3">
+      <div className="space-y-3 rounded-lg border p-4">
         <h3 className="text-sm font-medium">Shimmer</h3>
         <Skeleton variant="shimmer" className="h-32 w-full" />
         <Skeleton variant="shimmer" className="h-4 w-full" />
@@ -70,9 +70,9 @@ export function SkeletonExampleProduct() {
         <Skeleton variant="shimmer" className="h-4 w-full" />
         <Skeleton variant="shimmer" className="h-4 w-5/6" />
       </div>
-      <div className="flex items-center justify-between">
+      <div className="flex items-center gap-2 justify-between">
         <Skeleton variant="shimmer" className="h-6 w-20" />
-        <Skeleton variant="shimmer" className="h-9 w-24" />
+        <Skeleton variant="shimmer" className="h-6 w-24" />
       </div>
     </div>
   );
