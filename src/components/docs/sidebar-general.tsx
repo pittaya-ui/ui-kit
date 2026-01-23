@@ -18,8 +18,8 @@ export function SidebarGeneral({
   }
 
   return (
-    <nav className="space-y-4">
-      <div className="space-y-2">
+    <nav className="relative max-h-[600px] overflow-y-auto scrollbar-hide">
+      <div className="space-y-2 pr-4">
         <div>
           <p className="text-primary text-xs font-semibold tracking-wide">
             Getting Started
@@ -59,6 +59,7 @@ export function SidebarGeneral({
           })}
         </ul>
       </div>
+      <div className="from-background via-background/60 pointer-events-none sticky right-0 bottom-0 left-0 h-30 bg-gradient-to-t to-transparent" />
     </nav>
   );
 }
