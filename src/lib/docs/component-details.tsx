@@ -13,6 +13,7 @@ import { multiSelectDoc } from "@/components/docs/contents/multi-select/multi-se
 import { orbitImagesDoc } from "@/components/docs/contents/orbit-images";
 import { popoverDoc } from "@/components/docs/contents/popover";
 import { radioGroupDoc } from "@/components/docs/contents/radio-group/radio-group";
+import { skeletonDoc } from "@/components/docs/contents/skeleton/skeleton";
 import { tabsDoc } from "@/components/docs/contents/tabs";
 import { textareaDoc } from "@/components/docs/contents/textarea/textarea";
 
@@ -34,6 +35,7 @@ const docs: Record<string, ComponentDoc> = {
   [orbitImagesDoc.slug]: orbitImagesDoc,
   [popoverDoc.slug]: popoverDoc,
   [radioGroupDoc.slug]: radioGroupDoc,
+  [skeletonDoc.slug]: skeletonDoc,
   [tabsDoc.slug]: tabsDoc,
   [textareaDoc.slug]: textareaDoc,
 };
