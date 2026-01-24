@@ -179,6 +179,17 @@ export const componentsIndex: ComponentIndexItem[] = [
     status: "stable",
     tags: ["form", "textarea", "multiline", "input"],
   },
+  {
+    slug: "tooltip",
+    name: "Tooltip",
+    description:
+      "Contextual hint overlay with animated variants for delightful UX.",
+    category: "Overlays",
+    status: "stable",
+    tags: ["tooltip", "overlay", "hint", "helper"],
+    dependencies: ["@radix-ui/react-tooltip", "framer-motion"],
+    internalDependencies: ["button"],
+  },
 ];
 
 export function getComponentsIndex(): ComponentIndexItem[] {
