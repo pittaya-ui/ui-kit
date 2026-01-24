@@ -298,4 +298,47 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     { id: "examples", title: "Examples", level: 2 },
     { id: "properties", title: "Properties", level: 2 },
   ],
+  showcase: {
+    code: `import { Button } from "@/components/pittaya/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/pittaya/ui/card";
+import { Label } from "@/components/pittaya/ui/label";
+import { Textarea } from "@/components/pittaya/ui/textarea";
+
+export function BasicTextarea() {
+  return (
+    <Card className="w-full max-w-sm">
+      <CardHeader>
+        <CardTitle>Profile Settings</CardTitle>
+        <CardDescription>
+          Update your public profile information.
+        </CardDescription>
+      </CardHeader>
+      <CardContent className="space-y-4">
+        <div className="space-y-2">
+          <Label htmlFor="bio">Bio</Label>
+          <Textarea
+            id="bio"
+            placeholder="Tell us a little bit about yourself..."
+            className="min-h-[100px]"
+          />
+          <p className="text-muted-foreground text-xs">
+            You can @mention other users and organizations.
+          </p>
+        </div>
+      </CardContent>
+      <CardFooter>
+        <Button>Save Changes</Button>
+      </CardFooter>
+    </Card>
+  );
+}`,
+    preview: <BasicTextareaPreview />,
+  },
 });

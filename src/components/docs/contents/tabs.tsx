@@ -565,4 +565,167 @@ export function NotificationsTabs() {
     { id: "examples", title: "Examples", level: 2 },
     { id: "properties", title: "Properties", level: 2 },
   ],
+  showcase: {
+    code: `import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/pittaya/ui/tabs";
+import { Button } from "@/components/pittaya/ui/button";
+
+export function LoginSignupTabs() {
+  return (
+    <Tabs defaultValue="login" className="w-full max-w-md">
+      <TabsList className="w-full">
+        <TabsTrigger value="login" className="flex-1">
+          Login
+        </TabsTrigger>
+        <TabsTrigger value="signup" className="flex-1">
+          Sign Up
+        </TabsTrigger>
+      </TabsList>
+      
+      <TabsContent value="login" className="animate-in fade-in-0 slide-in-from-left-4 space-y-4 duration-300">
+        <div className="space-y-2">
+          <label htmlFor="email" className="text-sm font-medium">
+            Email
+          </label>
+          <input
+            id="email"
+            type="email"
+            placeholder="name@example.com"
+            className="w-full rounded-md border px-3 py-2"
+          />
+        </div>
+        <div className="space-y-2">
+          <label htmlFor="password" className="text-sm font-medium">
+            Password
+          </label>
+          <input
+            id="password"
+            type="password"
+            placeholder="••••••••"
+            className="w-full rounded-md border px-3 py-2"
+          />
+        </div>
+        <Button className="w-full">Sign In</Button>
+      </TabsContent>
+      
+      <TabsContent value="signup" className="animate-in fade-in-0 slide-in-from-right-4 space-y-4 duration-300">
+        <div className="space-y-2">
+          <label htmlFor="name" className="text-sm font-medium">
+            Full Name
+          </label>
+          <input
+            id="name"
+            type="text"
+            placeholder="John Doe"
+            className="w-full rounded-md border px-3 py-2"
+          />
+        </div>
+        <div className="space-y-2">
+          <label htmlFor="signup-email" className="text-sm font-medium">
+            Email
+          </label>
+          <input
+            id="signup-email"
+            type="email"
+            placeholder="name@example.com"
+            className="w-full rounded-md border px-3 py-2"
+          />
+        </div>
+        <div className="space-y-2">
+          <label htmlFor="signup-password" className="text-sm font-medium">
+            Password
+          </label>
+          <input
+            id="signup-password"
+            type="password"
+            placeholder="••••••••"
+            className="w-full rounded-md border px-3 py-2"
+          />
+        </div>
+        <Button className="w-full">Create Account</Button>
+      </TabsContent>
+    </Tabs>
+  );
+}`,
+    preview: (
+      <Tabs defaultValue="login" className="w-full max-w-md">
+        <TabsList className="w-full">
+          <TabsTrigger value="login" className="flex-1">
+            Login
+          </TabsTrigger>
+          <TabsTrigger value="signup" className="flex-1">
+            Sign Up
+          </TabsTrigger>
+        </TabsList>
+
+        <TabsContent
+          value="login"
+          className="animate-in fade-in-0 slide-in-from-left-4 space-y-4 duration-300"
+        >
+          <div className="space-y-2">
+            <label htmlFor="email" className="text-sm font-medium">
+              Email
+            </label>
+            <input
+              id="email"
+              type="email"
+              placeholder="name@example.com"
+              className="border-input bg-background ring-offset-background placeholder:text-muted-foreground w-full rounded-md border px-3 py-2 text-sm"
+            />
+          </div>
+          <div className="space-y-2">
+            <label htmlFor="password" className="text-sm font-medium">
+              Password
+            </label>
+            <input
+              id="password"
+              type="password"
+              placeholder="••••••••"
+              className="border-input bg-background ring-offset-background placeholder:text-muted-foreground w-full rounded-md border px-3 py-2 text-sm"
+            />
+          </div>
+          <Button className="w-full">Sign In</Button>
+        </TabsContent>
+
+        <TabsContent
+          value="signup"
+          className="animate-in fade-in-0 slide-in-from-right-4 space-y-4 duration-300"
+        >
+          <div className="space-y-2">
+            <label htmlFor="name" className="text-sm font-medium">
+              Full Name
+            </label>
+            <input
+              id="name"
+              type="text"
+              placeholder="John Doe"
+              className="border-input bg-background ring-offset-background placeholder:text-muted-foreground w-full rounded-md border px-3 py-2 text-sm"
+            />
+          </div>
+          <div className="space-y-2">
+            <label htmlFor="signup-email" className="text-sm font-medium">
+              Email
+            </label>
+            <input
+              id="signup-email"
+              type="email"
+              placeholder="name@example.com"
+              className="border-input bg-background ring-offset-background placeholder:text-muted-foreground w-full rounded-md border px-3 py-2 text-sm"
+            />
+          </div>
+          <div className="space-y-2">
+            <label htmlFor="signup-password" className="text-sm font-medium">
+              Password
+            </label>
+            <input
+              id="signup-password"
+              type="password"
+              placeholder="••••••••"
+              className="border-input bg-background ring-offset-background placeholder:text-muted-foreground w-full rounded-md border px-3 py-2 text-sm"
+            />
+          </div>
+          <Button className="w-full">Create Account</Button>
+        </TabsContent>
+      </Tabs>
+    ),
+  },
 });

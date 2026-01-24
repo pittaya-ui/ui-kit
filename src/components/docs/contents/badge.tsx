@@ -1,6 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { createComponentDoc } from "@/helpers/component-doc";
 import type { ComponentDoc } from "@/lib/docs/types";
+import { CheckCircle } from "lucide-react";
 
 export const badgeDoc: ComponentDoc = createComponentDoc({
   slug: "badge",
@@ -259,4 +260,12 @@ export function BadgeAsLink() {
     { id: "examples", title: "Examples", level: 2 },
     { id: "properties", title: "Properties", level: 2 },
   ],
+  showcase: {
+    preview: <Badge>Stable</Badge>,
+    code: `import { Badge } from "@/components/pittaya/ui/badge";
+
+export function BadgeExample() {
+  return <Badge>Stable</Badge>;
+}`,
+  },
 });

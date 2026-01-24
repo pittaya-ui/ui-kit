@@ -188,4 +188,45 @@ export function OrbitDemo() {
     { id: "examples", title: "Examples", level: 2 },
     { id: "properties", title: "Properties", level: 2 },
   ],
+  showcase: {
+    code: `import { OrbitImages } from "@/components/pittaya/ui/orbit-images";
+
+const images = [
+  "https://github.com/marcosvbueno.png",
+  "https://github.com/lucasadsr.png",
+  "https://github.com/jjgouveia.png",
+  "https://github.com/marcosvbueno.png",
+  "https://github.com/lucasadsr.png",
+  "https://github.com/jjgouveia.png",
+];
+
+export function OrbitDemo() {
+  return (
+    <OrbitImages
+      title="Build trust and highlight your community with a dynamic orbit."
+      buttonText="Join the crew"
+      images={images}
+    />
+  );
+}`,
+    preview: (
+      <div className="flex h-full w-full items-center justify-center overflow-hidden">
+        <div className="scale-75 lg:scale-[0.65]">
+          <OrbitImages
+            title="Build trust and highlight your community with a dynamic orbit."
+            buttonText="Join the crew"
+            autoPlay
+            images={[
+              "https://github.com/marcosvbueno.png",
+              "https://github.com/lucasadsr.png",
+              "https://github.com/jjgouveia.png",
+              "https://github.com/marcosvbueno.png",
+              "https://github.com/lucasadsr.png",
+              "https://github.com/jjgouveia.png",
+            ]}
+          />
+        </div>
+      </div>
+    ),
+  },
 });

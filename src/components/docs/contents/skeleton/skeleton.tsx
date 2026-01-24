@@ -24,7 +24,7 @@ export const skeletonDoc: ComponentDoc = createComponentDoc({
       title: "When to use",
       level: 2,
       content: (
-        <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
+        <div className="text-muted-foreground space-y-4 text-base leading-relaxed">
           <p>
             Use Skeleton when you need to indicate that content is loading,
             providing users with visual feedback while data is being fetched or
@@ -44,7 +44,7 @@ export const skeletonDoc: ComponentDoc = createComponentDoc({
       title: "Best practices",
       level: 2,
       content: (
-        <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
+        <div className="text-muted-foreground space-y-4 text-base leading-relaxed">
           <ul className="list-disc space-y-2 pl-5">
             <li>
               Match the skeleton shape and size to the actual content that will
@@ -80,22 +80,23 @@ export const skeletonDoc: ComponentDoc = createComponentDoc({
       title: "Accessibility",
       level: 2,
       content: (
-        <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
+        <div className="text-muted-foreground space-y-4 text-base leading-relaxed">
           <p>
             The Skeleton component is primarily visual and should be used
             alongside proper ARIA attributes to communicate loading states to
             assistive technologies.
           </p>
           <p>
-            Consider wrapping skeleton content with <code>aria-busy=&quot;true&quot;</code>{" "}
-            and <code>aria-label=&quot;Loading content&quot;</code> on the
-            parent container. When content loads, ensure focus management is
-            handled appropriately for screen reader users.
+            Consider wrapping skeleton content with{" "}
+            <code>aria-busy=&quot;true&quot;</code> and{" "}
+            <code>aria-label=&quot;Loading content&quot;</code> on the parent
+            container. When content loads, ensure focus management is handled
+            appropriately for screen reader users.
           </p>
           <p>
-            The animations (pulse and shimmer) use <code>prefers-reduced-motion</code>{" "}
-            media query automatically through Tailwind, respecting user
-            preferences for reduced motion.
+            The animations (pulse and shimmer) use{" "}
+            <code>prefers-reduced-motion</code> media query automatically
+            through Tailwind, respecting user preferences for reduced motion.
           </p>
         </div>
       ),
@@ -105,10 +106,10 @@ export const skeletonDoc: ComponentDoc = createComponentDoc({
       title: "Variants",
       level: 2,
       content: (
-        <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
+        <div className="text-muted-foreground space-y-4 text-base leading-relaxed">
           <div className="space-y-3">
             <div>
-              <h4 className="mb-1 font-medium text-foreground">
+              <h4 className="text-foreground mb-1 font-medium">
                 Pulse (default)
               </h4>
               <p>
@@ -118,7 +119,7 @@ export const skeletonDoc: ComponentDoc = createComponentDoc({
               </p>
             </div>
             <div>
-              <h4 className="mb-1 font-medium text-foreground">Shimmer</h4>
+              <h4 className="text-foreground mb-1 font-medium">Shimmer</h4>
               <p>
                 A gradient reflection that moves across the skeleton from left
                 to right, creating a shimmering effect. This variant feels more
@@ -304,4 +305,32 @@ export function ArticleListSkeleton() {
     { id: "examples", title: "Examples", level: 2 },
     { id: "properties", title: "Properties", level: 2 },
   ],
+  showcase: {
+    code: `import { Card, CardContent, CardHeader } from "@/components/pittaya/ui/card";
+import { Skeleton } from "@/components/pittaya/ui/skeleton";
+
+export function ProfileCardSkeleton() {
+  return (
+    <Card className="max-w-sm">
+      <CardHeader className="items-center space-y-4">
+        <Skeleton variant="shimmer" className="size-20 rounded-full" />
+        <div className="w-full space-y-2 text-center">
+          <Skeleton variant="shimmer" className="mx-auto h-6 w-32" />
+          <Skeleton variant="shimmer" className="mx-auto h-4 w-24" />
+        </div>
+      </CardHeader>
+      <CardContent className="space-y-3">
+        <Skeleton variant="shimmer" className="h-4 w-full" />
+        <Skeleton variant="shimmer" className="h-4 w-full" />
+        <Skeleton variant="shimmer" className="h-4 w-3/4" />
+      </CardContent>
+    </Card>
+  );
+}`,
+    preview: (
+      <div className="flex justify-center">
+        <SkeletonExampleProfile />
+      </div>
+    ),
+  },
 });

@@ -335,4 +335,18 @@ export function MultipleCheckboxes() {
     { id: "examples", title: "Examples", level: 2 },
     { id: "properties", title: "Properties", level: 2 },
   ],
+  showcase: {
+    code: `import { Checkbox } from "@/components/pittaya/ui/checkbox";
+import { Label } from "@/components/pittaya/ui/label";
+
+export function BasicCheckbox() {
+  return (
+    <div className="flex items-center space-x-2">
+      <Checkbox id="terms" />
+      <Label htmlFor="terms">Accept terms and conditions</Label>
+    </div>
+  );
+}`,
+    preview: <BasicCheckboxExample />,
+  },
 });
