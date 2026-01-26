@@ -151,6 +151,16 @@ export const componentsIndex: ComponentIndexItem[] = [
     dependencies: ["@radix-ui/react-radio-group", "class-variance-authority"],
   },
   {
+    slug: "select",
+    name: "Select",
+    description:
+      "An accessible dropdown select component for choosing a single option from a list of choices.",
+    category: "Forms",
+    status: "stable",
+    tags: ["select", "dropdown", "form", "input", "picker"],
+    dependencies: ["@radix-ui/react-select", "lucide-react"],
+  },
+  {
     slug: "skeleton",
     name: "Skeleton",
     description:
