@@ -1,9 +1,9 @@
-import type { DocShowcase } from "@/lib/docs/types";
-
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Code, Eye } from "lucide-react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
+
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import type { DocShowcase } from "@/lib/docs/types";
 
 type ComponentShowcaseSectionProps = {
   showcase: DocShowcase;
