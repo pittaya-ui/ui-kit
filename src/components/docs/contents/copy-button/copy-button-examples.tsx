@@ -153,3 +153,24 @@ export function UrlShareExample() {
     </div>
   );
 }
+
+export function BasicCopyButtonExample() {
+  const shareUrl = "https://ui.pittaya.org/docs/components/copy-button";
+
+  return (
+    <div className="relative flex items-center gap-2">
+      <div className="border-border bg-primary/5 rounded-md border px-3 py-2">
+        <code className="text-foreground text-sm font-medium">{shareUrl}</code>
+      </div>
+      <CopyButton
+        text={shareUrl}
+        className="static p-5"
+        onCopy={() => {
+          toast.success("Link copied!", {
+            description: "Share it with your team.",
+          });
+        }}
+      />
+    </div>
+  );
+}

@@ -622,4 +622,37 @@ export function DisabledMultiSelect() {
     { id: "examples", title: "Examples", level: 2 },
     { id: "properties", title: "Properties", level: 2 },
   ],
+  showcase: {
+    code: `"use client";
+
+import { MultiSelect } from "@/components/pittaya/ui/multi-select";
+import { useState } from "react";
+
+export function BasicMultiSelect() {
+  const [selected, setSelected] = useState<string[]>([]);
+
+  const options = [
+    { label: "React", value: "react" },
+    { label: "Vue", value: "vue" },
+    { label: "Angular", value: "angular" },
+    { label: "Svelte", value: "svelte" },
+    { label: "Next.js", value: "nextjs" },
+  ];
+
+  return (
+    <div className="space-y-2">
+      <label className="text-sm font-medium">
+        Select your favorite frameworks
+      </label>
+      <MultiSelect
+        options={options}
+        value={selected}
+        onChange={setSelected}
+        placeholder="Choose frameworks..."
+      />
+    </div>
+  );
+}`,
+    preview: <BasicMultiSelectExample />,
+  },
 });

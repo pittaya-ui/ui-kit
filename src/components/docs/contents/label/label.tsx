@@ -439,4 +439,44 @@ export function LabelWithIcon() {
     { id: "examples", title: "Examples", level: 2 },
     { id: "properties", title: "Properties", level: 2 },
   ],
+  showcase: {
+    code: `import { Button } from "@/components/pittaya/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/pittaya/ui/card";
+import { Input } from "@/components/pittaya/ui/input";
+import { Label } from "@/components/pittaya/ui/label";
+
+export function BasicLabel() {
+  return (
+    <Card variant="shadowRight" className="w-full max-w-sm">
+      <CardHeader>
+        <CardTitle>Newsletter</CardTitle>
+        <CardDescription>
+          Subscribe to our newsletter to get the latest updates.
+        </CardDescription>
+      </CardHeader>
+      <CardContent className="space-y-4">
+        <div className="space-y-2">
+          <Label htmlFor="email-basic">Email address</Label>
+          <Input
+            id="email-basic"
+            type="email"
+            placeholder="Enter your email"
+          />
+        </div>
+      </CardContent>
+      <CardFooter>
+        <Button className="w-full">Subscribe</Button>
+      </CardFooter>
+    </Card>
+  );
+}`,
+    preview: <BasicLabel />,
+  },
 });

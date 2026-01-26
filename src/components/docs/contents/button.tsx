@@ -161,4 +161,12 @@ export function ButtonWithIcon() {
     { id: "examples", title: "Examples", level: 2 },
     { id: "properties", title: "Properties", level: 2 },
   ],
+  showcase: {
+    preview: <Button>See more</Button>,
+    code: `import { Button } from "@/components/pittaya/ui/button";
+
+export function ButtonExample() {
+  return <Button>See more</Button>;
+}`,
+  },
 });

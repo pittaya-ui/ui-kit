@@ -6,6 +6,7 @@ import { InstallationSection } from "../../ui/installation-section";
 import { ContentSections } from "./content-sections";
 import { ExamplesSection } from "./examples-section";
 import { PropertiesSection } from "./properties-section";
+import { ComponentShowcaseSection } from "./component-showcase-section";
 
 type ComponentContentProps = {
   doc: ComponentDoc;
@@ -43,6 +44,8 @@ export function ComponentContent({ doc }: ComponentContentProps) {
           </p>
         </div>
       </header>
+
+      <ComponentShowcaseSection showcase={doc.showcase} />
 
       <InstallationSection
         componentSlug={doc.slug}
