@@ -3,10 +3,10 @@ import type { ComponentDoc } from "@/lib/docs/types";
 
 import { Badge } from "../../ui/badge";
 import { InstallationSection } from "../../ui/installation-section";
+import { ComponentShowcaseSection } from "./component-showcase-section";
 import { ContentSections } from "./content-sections";
 import { ExamplesSection } from "./examples-section";
 import { PropertiesSection } from "./properties-section";
-import { ComponentShowcaseSection } from "./component-showcase-section";
 
 type ComponentContentProps = {
   doc: ComponentDoc;
