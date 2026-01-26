@@ -57,6 +57,11 @@ export type DocExample = {
   preview: ReactNode;
 };
 
+export type DocShowcase = {
+  code: string;
+  preview: ReactNode;
+};
+
 export type ComponentDoc = {
   slug: string;
   metadata: {
@@ -69,4 +74,5 @@ export type ComponentDoc = {
   props: DocProp[];
   examples: DocExample[];
   toc: TocItem[];
+  showcase: DocShowcase;
 };

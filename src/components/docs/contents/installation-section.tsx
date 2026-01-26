@@ -215,4 +215,34 @@ export function CustomCLI() {
     { id: "examples", title: "Examples", level: 2 },
     { id: "properties", title: "Properties", level: 2 },
   ],
+
+  showcase: {
+    code: `import { InstallationSection } from "@/components/pittaya/ui/installation-section";
+
+export function BasicInstallation() {
+  return (
+    <InstallationSection 
+      availableCommands={{ 
+        npm: "npm install @mylib/ui", 
+        yarn: "yarn add @mylib/ui", 
+        pnpm: "pnpm add @mylib/ui",
+        bun: "bun add @mylib/ui",
+      }} 
+      componentSlug="button" 
+      className="px-4" 
+    />
+  );
+}`,
+    preview: (
+      <InstallationSection
+        availableCommands={{
+          npm: "npm install @mylib/ui",
+          yarn: "yarn add @mylib/ui",
+          pnpm: "pnpm add @mylib/ui",
+        }}
+        componentSlug="button"
+        className="px-4"
+      />
+    ),
+  },
 });

@@ -1,5 +1,3 @@
-
-
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -377,8 +375,8 @@ export function StatsCard() {
 }`,
       preview: (
         <div className="flex justify-center">
-          <Card 
-            variant="shadowRight" 
+          <Card
+            variant="shadowRight"
             shadowColor="#10b981"
             className="max-w-xs"
           >
@@ -507,8 +505,8 @@ export function ShadowColorCards() {
 }`,
       preview: (
         <div className="grid gap-6 md:grid-cols-2">
-          <Card 
-            variant="shadowRight" 
+          <Card
+            variant="shadowRight"
             shadowColor="#b8ff01"
             className="max-w-xs"
           >
@@ -516,14 +514,14 @@ export function ShadowColorCards() {
               <CardTitle>Neon Green</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-muted-foreground text-sm">
                 Perfect for highlighting premium content.
               </p>
             </CardContent>
           </Card>
 
-          <Card 
-            variant="shadowRight" 
+          <Card
+            variant="shadowRight"
             shadowColor="#3b82f6"
             className="max-w-xs"
           >
@@ -531,14 +529,14 @@ export function ShadowColorCards() {
               <CardTitle>Blue</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-muted-foreground text-sm">
                 Great for information indicators.
               </p>
             </CardContent>
           </Card>
 
-          <Card 
-            variant="shadowRight" 
+          <Card
+            variant="shadowRight"
             shadowColor="#ef4444"
             className="max-w-xs"
           >
@@ -546,14 +544,14 @@ export function ShadowColorCards() {
               <CardTitle>Red</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-muted-foreground text-sm">
                 Ideal for urgent notifications.
               </p>
             </CardContent>
           </Card>
 
-          <Card 
-            variant="shadowRight" 
+          <Card
+            variant="shadowRight"
             shadowColor="#8b5cf6"
             className="max-w-xs"
           >
@@ -561,7 +559,7 @@ export function ShadowColorCards() {
               <CardTitle>Purple</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-muted-foreground text-sm">
                 Works well for premium features.
               </p>
             </CardContent>
@@ -969,10 +967,7 @@ export function CardVariants() {
             <CardContent className="text-sm">Interactive elements</CardContent>
           </Card>
 
-<Card 
-        variant="shadowRight"
-        shadowColor="#3b82f6"
-      >
+          <Card variant="shadowRight" shadowColor="#3b82f6">
             <CardHeader>
               <CardTitle>Shadow Right</CardTitle>
               <CardDescription>Side shadow</CardDescription>
@@ -1002,5 +997,34 @@ export function CardVariants() {
     { id: "examples", title: "Examples", level: 2 },
     { id: "properties", title: "Properties", level: 2 },
   ],
+  showcase: {
+    code: `import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/pittaya/ui/card";
+
+export function MinimalCard() {
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle>Default</CardTitle>
+        <CardDescription>Standard variant</CardDescription>
+      </CardHeader>
+      <CardContent className="text-sm">General use</CardContent>
+    </Card>
+  );
+}`,
+    preview: (
+      <Card>
+        <CardHeader>
+          <CardTitle>Default</CardTitle>
+          <CardDescription>Standard variant</CardDescription>
+        </CardHeader>
+        <CardContent className="text-sm">General use</CardContent>
+      </Card>
+    ),
+  },
 });
-  

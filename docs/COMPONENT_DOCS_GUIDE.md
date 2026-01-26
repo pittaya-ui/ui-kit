@@ -186,6 +186,22 @@ export function BasicInput() {
     { id: "examples", title: "Examples", level: 2 }, // 🎯 Examples are auto-expanded in TOC
     { id: "properties", title: "Properties", level: 2 },
   ],
+  showcase: {
+    code: `import { Input } from "@/components/pittaya/ui/input";
+
+export function ShowcaseInput() {
+  return (
+    <div className="space-y-2">
+      <Input type="email" placeholder="Enter your email" />
+    </div>
+  );
+}`,
+    preview: (
+      <div className="space-y-2">
+        <Input type="email" placeholder="Enter your email" />
+      </div>
+    ),
+  },
 });
 ```
 
@@ -240,6 +256,7 @@ export type ComponentDoc = {
   props: DocProp[]; // Component properties
   examples: DocExample[]; // Usage examples
   toc: TocItem[]; // Page table of contents
+  showcase?: DocShowcase; // Optional: Visual preview of the component
 };
 ```
 
@@ -264,6 +281,7 @@ Before finishing, check that you have:
 - [ ] ✅ Tested the page locally
 - [ ] ✅ **Added "Installation" as the first item in the TOC**
 - [ ] ✅ Added "examples" to TOC (individual examples are auto-generated)
+- [ ] ✅ **Added a showcase section**
 - [ ] ✅ Tested the page locally and verified the sidebar navigation
 
 ---

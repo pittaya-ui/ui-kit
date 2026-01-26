@@ -259,4 +259,12 @@ export function BadgeAsLink() {
     { id: "examples", title: "Examples", level: 2 },
     { id: "properties", title: "Properties", level: 2 },
   ],
+  showcase: {
+    preview: <Badge>Stable</Badge>,
+    code: `import { Badge } from "@/components/pittaya/ui/badge";
+
+export function BadgeExample() {
+  return <Badge>Stable</Badge>;
+}`,
+  },
 });

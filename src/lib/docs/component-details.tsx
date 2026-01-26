@@ -16,6 +16,7 @@ import { radioGroupDoc } from "@/components/docs/contents/radio-group/radio-grou
 import { skeletonDoc } from "@/components/docs/contents/skeleton/skeleton";
 import { tabsDoc } from "@/components/docs/contents/tabs";
 import { textareaDoc } from "@/components/docs/contents/textarea/textarea";
+import { tooltipDoc } from "@/components/docs/contents/tooltip";
 
 import type { ComponentDoc } from "./types";
 
@@ -38,6 +39,7 @@ const docs: Record<string, ComponentDoc> = {
   [skeletonDoc.slug]: skeletonDoc,
   [tabsDoc.slug]: tabsDoc,
   [textareaDoc.slug]: textareaDoc,
+  [tooltipDoc.slug]: tooltipDoc,
 };
 
 export function getComponentDoc(slug: string): ComponentDoc | undefined {

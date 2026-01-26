@@ -749,4 +749,40 @@ export function GalleryCarousel() {
     { id: "examples", title: "Examples", level: 2 },
     { id: "properties", title: "Properties", level: 2 },
   ],
+  showcase: {
+    code: `import { Carousel, CarouselItem } from "@/components/pittaya/ui/carousel";
+
+const numbers = [1, 2, 3];
+
+export function ProductCarousel() {
+  return (
+    <Carousel>
+      {numbers.map((number, index) => (
+        <CarouselItem
+          key={index}
+          className="flex h-[500px] items-center justify-center"
+        >
+          <div className="bg-border/75 flex size-11/12 items-center justify-center rounded-2xl text-4xl">
+            {number}
+          </div>
+        </CarouselItem>
+      ))}
+    </Carousel>
+  );
+}`,
+    preview: (
+      <Carousel>
+        {[1, 2, 3].map((number, i) => (
+          <CarouselItem
+            key={i}
+            className="flex h-[500px] items-center justify-center"
+          >
+            <div className="bg-border/75 flex size-11/12 items-center justify-center rounded-2xl text-4xl">
+              {number}
+            </div>
+          </CarouselItem>
+        ))}
+      </Carousel>
+    ),
+  },
 });

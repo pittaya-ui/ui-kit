@@ -25,7 +25,7 @@ export const radioGroupDoc: ComponentDoc = createComponentDoc({
       title: "When to use",
       level: 2,
       content: (
-        <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
+        <div className="text-muted-foreground space-y-4 text-base leading-relaxed">
           <p>
             Use the Radio Group component when you need users to select exactly
             one option from a list of mutually exclusive choices. Unlike
@@ -45,7 +45,7 @@ export const radioGroupDoc: ComponentDoc = createComponentDoc({
       title: "Best practices",
       level: 2,
       content: (
-        <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
+        <div className="text-muted-foreground space-y-4 text-base leading-relaxed">
           <ul className="list-disc space-y-2 pl-5">
             <li>
               Always provide clear and concise labels for each radio option.
@@ -68,8 +68,9 @@ export const radioGroupDoc: ComponentDoc = createComponentDoc({
               keyboard navigation direction (doesn&apos;t affect visual layout).
             </li>
             <li>
-              Ensure labels are clickable by properly associating them with radio
-              buttons using <code>id</code> and <code>htmlFor</code> attributes.
+              Ensure labels are clickable by properly associating them with
+              radio buttons using <code>id</code> and <code>htmlFor</code>{" "}
+              attributes.
             </li>
           </ul>
         </div>
@@ -80,25 +81,25 @@ export const radioGroupDoc: ComponentDoc = createComponentDoc({
       title: "Accessibility",
       level: 2,
       content: (
-        <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
+        <div className="text-muted-foreground space-y-4 text-base leading-relaxed">
           <p>
             The Radio Group component is built on top of Radix UI&apos;s radio
-            group primitive, providing full keyboard navigation and screen reader
-            support out of the box.
+            group primitive, providing full keyboard navigation and screen
+            reader support out of the box.
           </p>
           <ul className="list-disc space-y-2 pl-5">
             <li>
-              Keyboard support: Use <kbd>Tab</kbd> to focus the group, arrow keys
-              (<kbd>↑</kbd> <kbd>↓</kbd> <kbd>←</kbd> <kbd>→</kbd>) to navigate
-              between options, and <kbd>Space</kbd> to select.
+              Keyboard support: Use <kbd>Tab</kbd> to focus the group, arrow
+              keys (<kbd>↑</kbd> <kbd>↓</kbd> <kbd>←</kbd> <kbd>→</kbd>) to
+              navigate between options, and <kbd>Space</kbd> to select.
             </li>
             <li>
               Focus is clearly indicated with a ring outline for better
               visibility.
             </li>
             <li>
-              The component properly communicates the selected state to assistive
-              technologies using ARIA attributes.
+              The component properly communicates the selected state to
+              assistive technologies using ARIA attributes.
             </li>
             <li>
               Always wrap radio groups in a <code>&lt;fieldset&gt;</code> with a{" "}
@@ -117,11 +118,11 @@ export const radioGroupDoc: ComponentDoc = createComponentDoc({
       title: "Layout customization",
       level: 2,
       content: (
-        <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
+        <div className="text-muted-foreground space-y-4 text-base leading-relaxed">
           <p>
             By default, the Radio Group arranges options vertically. You can
-            customize the layout using className to arrange items horizontally or
-            in any other layout pattern:
+            customize the layout using className to arrange items horizontally
+            or in any other layout pattern:
           </p>
           <ul className="list-disc space-y-2 pl-5">
             <li>
@@ -280,8 +281,7 @@ export function DisabledRadioGroup() {
     {
       id: "with-description",
       title: "Subscription plans",
-      description:
-        "Plan selection with detailed descriptions for each option.",
+      description: "Plan selection with detailed descriptions for each option.",
       code: `import { Label } from "@/components/pittaya/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/pittaya/ui/radio-group";
 
@@ -418,5 +418,28 @@ export function FormRadioGroup() {
     { id: "examples", title: "Examples", level: 2 },
     { id: "properties", title: "Properties", level: 2 },
   ],
-});
+  showcase: {
+    code: `import { Label } from "@/components/pittaya/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/components/pittaya/ui/radio-group";
 
+export function BasicRadioGroup() {
+  return (
+    <RadioGroup defaultValue="typescript">
+      <div className="flex items-center space-x-2">
+        <RadioGroupItem value="typescript" id="lang-typescript" />
+        <Label htmlFor="lang-typescript">TypeScript</Label>
+      </div>
+      <div className="flex items-center space-x-2">
+        <RadioGroupItem value="javascript" id="lang-javascript" />
+        <Label htmlFor="lang-javascript">JavaScript</Label>
+      </div>
+      <div className="flex items-center space-x-2">
+        <RadioGroupItem value="python" id="lang-python" />
+        <Label htmlFor="lang-python">Python</Label>
+      </div>
+    </RadioGroup>
+  );
+}`,
+    preview: <BasicRadioGroupExample />,
+  },
+});

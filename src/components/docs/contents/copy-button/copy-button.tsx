@@ -3,6 +3,7 @@ import type { ComponentDoc } from "@/lib/docs/types";
 
 import {
   ApiKeyExample,
+  BasicCopyButtonExample,
   MultipleButtonsExample,
   UrlShareExample,
 } from "./copy-button-examples";
@@ -244,4 +245,41 @@ export function UrlShare() {
     { id: "examples", title: "Examples", level: 2 },
     { id: "properties", title: "Properties", level: 2 },
   ],
+  showcase: {
+    code: `import { CopyButton } from "@/components/pittaya/ui/copy-button";
+import { toast } from "sonner";
+
+export function UrlShare() {
+  const shareUrl = "https://pittaya.dev/docs/components/copy-button";
+
+  return (
+    <div className="relative rounded-lg border p-4 bg-gradient-to-br from-primary/5 to-primary/10">
+      <div className="space-y-3">
+        <div className="flex items-center gap-2">
+          <span className="text-lg">🔗</span>
+          <div>
+            <div className="text-sm font-medium">Share this page</div>
+            <div className="text-xs text-muted-foreground">
+              Copy link to clipboard
+            </div>
+          </div>
+        </div>
+        <div className="rounded border bg-background/50 p-2 pr-12">
+          <code className="text-xs break-all">{shareUrl}</code>
+        </div>
+      </div>
+      <CopyButton
+        text={shareUrl}
+        onCopy={() => {
+          toast.success("Link copied!", {
+            description: "Share it with your team.",
+          });
+        }}
+        className="top-4 right-4"
+      />
+    </div>
+  );
+}`,
+    preview: <BasicCopyButtonExample />,
+  },
 });

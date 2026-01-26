@@ -336,4 +336,34 @@ export function LucideAnnouncement() {
     { id: "examples", title: "Examples", level: 2 },
     { id: "properties", title: "Properties", level: 2 },
   ],
+  showcase: {
+    code: `import {
+  AnnouncementContainer,
+  AnnouncementSeparator,
+  AnnouncementIcon,
+  AnnouncementTitle,
+} from "@/components/pittaya/ui/announcement-badge";
+import { Megaphone } from "lucide-react";
+
+export function BadgeAnnouncement() {
+  return (
+    <AnnouncementContainer variant={"default"}>
+      <AnnouncementIcon icon={Megaphone} />
+      <AnnouncementSeparator className="bg-white/30" />
+      <AnnouncementTitle>
+        Introducing Pittaya UI <ArrowUpRight className="size-4" />
+      </AnnouncementTitle>
+    </AnnouncementContainer>
+  );
+}`,
+    preview: (
+      <AnnouncementContainer variant={"default"}>
+        <AnnouncementIcon icon={Megaphone} />
+        <AnnouncementSeparator className="bg-white/30" />
+        <AnnouncementTitle>
+          Introducing Pittaya UI <ArrowUpRight className="size-4" />
+        </AnnouncementTitle>
+      </AnnouncementContainer>
+    ),
+  },
 });
