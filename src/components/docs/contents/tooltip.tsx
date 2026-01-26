@@ -294,4 +294,71 @@ export function CreativeTooltip() {
     { id: "examples", title: "Examples", level: 2 },
     { id: "properties", title: "Properties", level: 2 },
   ],
+  showcase: {
+    code: `import { Button } from "@/components/pittaya/ui/button";
+import { Tooltip, TooltipTrigger, TooltipContentAnimated } from "@/components/pittaya/ui/tooltip";
+
+export function ShowcaseTooltip() {
+  return (
+    <div className="flex flex-wrap gap-4">
+      <Tooltip>
+        <TooltipTrigger asChild>
+          <Button variant="outline">Hover me</Button>
+        </TooltipTrigger>
+        <TooltipContentAnimated>
+          Smooth animated tooltip
+        </TooltipContentAnimated>
+      </Tooltip>
+      
+      <Tooltip>
+        <TooltipTrigger asChild>
+          <Button variant="default">Product info</Button>
+        </TooltipTrigger>
+        <TooltipContentAnimated side="right">
+          Positioned at right
+        </TooltipContentAnimated>
+      </Tooltip>
+      
+      <Tooltip>
+        <TooltipTrigger asChild>
+          <Button variant="secondary">Check status</Button>
+        </TooltipTrigger>
+        <TooltipContentAnimated side="bottom">
+          ✅ All systems operational
+        </TooltipContentAnimated>
+      </Tooltip>
+    </div>
+  );
+}`,
+    preview: (
+      <div className="flex flex-wrap gap-4">
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <Button variant="outline">Hover me</Button>
+          </TooltipTrigger>
+          <TooltipContentAnimated>
+            Smooth animated tooltip
+          </TooltipContentAnimated>
+        </Tooltip>
+
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <Button variant="default">Product info</Button>
+          </TooltipTrigger>
+          <TooltipContentAnimated side="right">
+            Positioned at right
+          </TooltipContentAnimated>
+        </Tooltip>
+
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <Button variant="secondary">Check status</Button>
+          </TooltipTrigger>
+          <TooltipContentAnimated side="bottom">
+            ✅ All systems operational
+          </TooltipContentAnimated>
+        </Tooltip>
+      </div>
+    ),
+  },
 });
