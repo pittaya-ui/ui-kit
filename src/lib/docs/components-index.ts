@@ -10,6 +10,16 @@ export const componentsIndex: ComponentIndexItem[] = [
     tags: ["badge", "announcement", "alert"],
   },
   {
+    slug: "avatar",
+    name: "Avatar",
+    description:
+      "Displays a user avatar with image, fallback, and group support.",
+    category: "Components",
+    status: "stable",
+    tags: ["avatar", "profile", "image", "user"],
+    dependencies: ["@radix-ui/react-avatar"],
+  },
+  {
     slug: "badge",
     name: "Badge",
     description: "Displays a badge for status, labels, or metadata.",
