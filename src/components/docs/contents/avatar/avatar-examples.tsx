@@ -11,7 +11,7 @@ export function BasicAvatarExample() {
   return (
     <Avatar>
       <AvatarImage src="https://github.com/pittaya-ui.png" alt="@pittaya-ui" />
-      <AvatarFallback>CN</AvatarFallback>
+      <AvatarFallback>PU</AvatarFallback>
     </Avatar>
   );
 }
@@ -24,28 +24,28 @@ export function AvatarSizesExample() {
           src="https://github.com/pittaya-ui.png"
           alt="@pittaya-ui"
         />
-        <AvatarFallback>CN</AvatarFallback>
+        <AvatarFallback>PU</AvatarFallback>
       </Avatar>
       <Avatar size="md">
         <AvatarImage
           src="https://github.com/pittaya-ui.png"
           alt="@pittaya-ui"
         />
-        <AvatarFallback>CN</AvatarFallback>
+        <AvatarFallback>PU</AvatarFallback>
       </Avatar>
       <Avatar size="lg">
         <AvatarImage
           src="https://github.com/pittaya-ui.png"
           alt="@pittaya-ui"
         />
-        <AvatarFallback>CN</AvatarFallback>
+        <AvatarFallback>PU</AvatarFallback>
       </Avatar>
       <Avatar size="xl">
         <AvatarImage
           src="https://github.com/pittaya-ui.png"
           alt="@pittaya-ui"
         />
-        <AvatarFallback>CN</AvatarFallback>
+        <AvatarFallback>PU</AvatarFallback>
       </Avatar>
     </div>
   );
@@ -168,7 +168,7 @@ export function AvatarWithStatusExample() {
             src="https://github.com/pittaya-ui.png"
             alt="@pittaya-ui"
           />
-          <AvatarFallback>CN</AvatarFallback>
+          <AvatarFallback>PU</AvatarFallback>
         </Avatar>
         <span className="ring-background absolute right-0 bottom-0 block h-3 w-3 rounded-full bg-green-500 ring-2" />
       </div>
