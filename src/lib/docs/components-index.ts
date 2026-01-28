@@ -10,6 +10,16 @@ export const componentsIndex: ComponentIndexItem[] = [
     tags: ["badge", "announcement", "alert"],
   },
   {
+    slug: "avatar",
+    name: "Avatar",
+    description:
+      "Displays a user avatar with image, fallback, and group support.",
+    category: "Components",
+    status: "stable",
+    tags: ["avatar", "profile", "image", "user"],
+    dependencies: ["@radix-ui/react-avatar"],
+  },
+  {
     slug: "badge",
     name: "Badge",
     description: "Displays a badge for status, labels, or metadata.",
@@ -169,6 +179,16 @@ export const componentsIndex: ComponentIndexItem[] = [
     status: "stable",
     tags: ["skeleton", "loading", "placeholder", "shimmer", "pulse"],
     dependencies: ["class-variance-authority"],
+  },
+  {
+    slug: "switch",
+    name: "Switch",
+    description:
+      "A toggle switch component with glassmorphism variant and customizable glow effects.",
+    category: "Forms",
+    status: "stable",
+    tags: ["switch", "toggle", "form", "input", "glassmorphism", "glow"],
+    dependencies: ["@radix-ui/react-switch", "class-variance-authority"],
   },
   {
     slug: "tabs",

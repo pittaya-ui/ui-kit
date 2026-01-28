@@ -1,4 +1,5 @@
 import { announcementBadgeDoc } from "@/components/docs/contents/announcement-badge";
+import { avatarDoc } from "@/components/docs/contents/avatar/avatar";
 import { badgeDoc } from "@/components/docs/contents/badge";
 import { buttonDoc } from "@/components/docs/contents/button";
 import { cardDoc } from "@/components/docs/contents/card";
@@ -15,6 +16,7 @@ import { popoverDoc } from "@/components/docs/contents/popover";
 import { radioGroupDoc } from "@/components/docs/contents/radio-group/radio-group";
 import { selectDoc } from "@/components/docs/contents/select/select";
 import { skeletonDoc } from "@/components/docs/contents/skeleton/skeleton";
+import { switchDoc } from "@/components/docs/contents/switch/switch";
 import { tabsDoc } from "@/components/docs/contents/tabs";
 import { textareaDoc } from "@/components/docs/contents/textarea/textarea";
 import { tooltipDoc } from "@/components/docs/contents/tooltip";
@@ -23,6 +25,7 @@ import type { ComponentDoc } from "./types";
 
 const docs: Record<string, ComponentDoc> = {
   [announcementBadgeDoc.slug]: announcementBadgeDoc,
+  [avatarDoc.slug]: avatarDoc,
   [badgeDoc.slug]: badgeDoc,
   [buttonDoc.slug]: buttonDoc,
   [cardDoc.slug]: cardDoc,
@@ -39,6 +42,7 @@ const docs: Record<string, ComponentDoc> = {
   [radioGroupDoc.slug]: radioGroupDoc,
   [selectDoc.slug]: selectDoc,
   [skeletonDoc.slug]: skeletonDoc,
+  [switchDoc.slug]: switchDoc,
   [tabsDoc.slug]: tabsDoc,
   [textareaDoc.slug]: textareaDoc,
   [tooltipDoc.slug]: tooltipDoc,
