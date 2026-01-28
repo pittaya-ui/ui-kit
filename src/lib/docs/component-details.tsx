@@ -15,6 +15,7 @@ import { popoverDoc } from "@/components/docs/contents/popover";
 import { radioGroupDoc } from "@/components/docs/contents/radio-group/radio-group";
 import { selectDoc } from "@/components/docs/contents/select/select";
 import { skeletonDoc } from "@/components/docs/contents/skeleton/skeleton";
+import { switchDoc } from "@/components/docs/contents/switch/switch";
 import { tabsDoc } from "@/components/docs/contents/tabs";
 import { textareaDoc } from "@/components/docs/contents/textarea/textarea";
 import { tooltipDoc } from "@/components/docs/contents/tooltip";
@@ -39,6 +40,7 @@ const docs: Record<string, ComponentDoc> = {
   [radioGroupDoc.slug]: radioGroupDoc,
   [selectDoc.slug]: selectDoc,
   [skeletonDoc.slug]: skeletonDoc,
+  [switchDoc.slug]: switchDoc,
   [tabsDoc.slug]: tabsDoc,
   [textareaDoc.slug]: textareaDoc,
   [tooltipDoc.slug]: tooltipDoc,
