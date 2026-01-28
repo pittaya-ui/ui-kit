@@ -1,4 +1,5 @@
 import { announcementBadgeDoc } from "@/components/docs/contents/announcement-badge";
+import { avatarDoc } from "@/components/docs/contents/avatar/avatar";
 import { badgeDoc } from "@/components/docs/contents/badge";
 import { buttonDoc } from "@/components/docs/contents/button";
 import { cardDoc } from "@/components/docs/contents/card";
@@ -24,6 +25,7 @@ import type { ComponentDoc } from "./types";
 
 const docs: Record<string, ComponentDoc> = {
   [announcementBadgeDoc.slug]: announcementBadgeDoc,
+  [avatarDoc.slug]: avatarDoc,
   [badgeDoc.slug]: badgeDoc,
   [buttonDoc.slug]: buttonDoc,
   [cardDoc.slug]: cardDoc,
