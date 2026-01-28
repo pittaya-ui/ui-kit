@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { Switch } from "@/components/ui/switch";
+
 import { Label } from "@/components/ui/label";
+import { Switch } from "@/components/ui/switch";
 
 export function BasicSwitchPreview() {
   return (
