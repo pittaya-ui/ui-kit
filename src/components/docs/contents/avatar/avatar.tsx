@@ -444,9 +444,16 @@ export function ShowcaseAvatar() {
   );
 }`,
     preview: (
-      <div className="space-y-6">
-        <BasicAvatarExample />
-        <AvatarGroupExample />
+      <div className="flex items-center justify-center gap-10">
+        <div className="flex flex-col items-center justify-center gap-3">
+          <small className="text-muted-foreground">Basic Avatar</small>
+          <BasicAvatarExample />
+        </div>
+        <div className="bg-muted h-8 w-px" />
+        <div className="flex flex-col items-center justify-center gap-3">
+          <small className="text-muted-foreground">Avatar Group</small>
+          <AvatarGroupExample />
+        </div>
       </div>
     ),
   },
