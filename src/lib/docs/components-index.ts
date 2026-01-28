@@ -171,6 +171,16 @@ export const componentsIndex: ComponentIndexItem[] = [
     dependencies: ["class-variance-authority"],
   },
   {
+    slug: "switch",
+    name: "Switch",
+    description:
+      "A toggle switch component with glassmorphism variant and customizable glow effects.",
+    category: "Forms",
+    status: "stable",
+    tags: ["switch", "toggle", "form", "input", "glassmorphism", "glow"],
+    dependencies: ["@radix-ui/react-switch", "class-variance-authority"],
+  },
+  {
     slug: "tabs",
     name: "Tabs",
     description:
@@ -188,16 +198,6 @@ export const componentsIndex: ComponentIndexItem[] = [
     category: "Forms",
     status: "stable",
     tags: ["form", "textarea", "multiline", "input"],
-  },
-  {
-    slug: "switch",
-    name: "Switch",
-    description:
-      "A toggle switch component with glassmorphism variant and customizable glow effects.",
-    category: "Forms",
-    status: "stable",
-    tags: ["switch", "toggle", "form", "input", "glassmorphism", "glow"],
-    dependencies: ["@radix-ui/react-switch", "class-variance-authority"],
   },
   {
     slug: "tooltip",
