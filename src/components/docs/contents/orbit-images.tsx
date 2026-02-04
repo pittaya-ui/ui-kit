@@ -139,7 +139,7 @@ export const orbitImagesDoc: ComponentDoc = createComponentDoc({
       title: "Basic orbit",
       description:
         "Scroll until the orbit reaches 80% of the viewport to expand the circles and trigger the rotation.",
-      code: `import { OrbitImages } from "@/components/pittaya/ui/orbit-images";
+      code: `import { OrbitImages } from "@/components/ui/orbit-images";
 
 const images = [
   "https://github.com/marcosvbueno.png",
@@ -189,7 +189,7 @@ export function OrbitDemo() {
     { id: "properties", title: "Properties", level: 2 },
   ],
   showcase: {
-    code: `import { OrbitImages } from "@/components/pittaya/ui/orbit-images";
+    code: `import { OrbitImages } from "@/components/ui/orbit-images";
 
 const images = [
   "https://github.com/marcosvbueno.png",

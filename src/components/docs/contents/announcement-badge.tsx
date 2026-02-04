@@ -148,7 +148,7 @@ export const announcementBadgeDoc: ComponentDoc = createComponentDoc({
   AnnouncementSeparator,
   AnnouncementIcon,
   AnnouncementTitle,
-} from "@/components/pittaya/ui/announcement-badge";
+} from "@/components/ui/announcement-badge";
 import { Megaphone } from "lucide-react";
 
 export function BadgeAnnouncement() {
@@ -182,7 +182,7 @@ export function BadgeAnnouncement() {
   AnnouncementText,
   AnnouncementSeparator,
   AnnouncementTitle,
-} from "@/components/pittaya/ui/announcement-badge";
+} from "@/components/ui/announcement-badge";
 
 export function TextBadgeAnnouncement() {
   return (
@@ -214,7 +214,7 @@ import {
   AnnouncementSeparator,
   AnnouncementText,
   AnnouncementTitle,
-} from "@/components/pittaya/ui/announcement-badge";
+} from "@/components/ui/announcement-badge";
 
 export function LinkAnnouncement() {
   return (
@@ -253,7 +253,7 @@ import {
   AnnouncementIcon,
   AnnouncementSeparator,
   AnnouncementTitle,
-} from "@/components/pittaya/ui/announcement-badge";
+} from "@/components/ui/announcement-badge";
 
 export function GlassAnnouncement() {
   return (
@@ -298,7 +298,7 @@ import {
   AnnouncementIcon,
   AnnouncementSeparator,
   AnnouncementTitle,
-} from "@/components/pittaya/ui/announcement-badge";
+} from "@/components/ui/announcement-badge";
  
 import Link from "next/link";
 
@@ -342,7 +342,7 @@ export function LucideAnnouncement() {
   AnnouncementSeparator,
   AnnouncementIcon,
   AnnouncementTitle,
-} from "@/components/pittaya/ui/announcement-badge";
+} from "@/components/ui/announcement-badge";
 import { Megaphone } from "lucide-react";
 
 export function BadgeAnnouncement() {

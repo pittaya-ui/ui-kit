@@ -26,7 +26,7 @@ export const switchDoc: ComponentDoc = createComponentDoc({
       title: "When to use",
       level: 2,
       content: (
-        <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
+        <div className="text-muted-foreground space-y-4 text-base leading-relaxed">
           <p>
             Use the Switch component when you need to toggle between two states
             (on/off, enabled/disabled). It's ideal for settings, preferences,
@@ -45,7 +45,7 @@ export const switchDoc: ComponentDoc = createComponentDoc({
       title: "Best practices",
       level: 2,
       content: (
-        <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
+        <div className="text-muted-foreground space-y-4 text-base leading-relaxed">
           <ul className="list-disc space-y-2 pl-5">
             <li>
               Always provide a clear label describing what the switch controls
@@ -53,9 +53,7 @@ export const switchDoc: ComponentDoc = createComponentDoc({
             <li>
               Use the switch for binary options that take immediate effect
             </li>
-            <li>
-              For actions that require confirmation, use a button instead
-            </li>
+            <li>For actions that require confirmation, use a button instead</li>
             <li>
               Choose glow colors that match your brand or provide semantic
               meaning
@@ -74,7 +72,7 @@ export const switchDoc: ComponentDoc = createComponentDoc({
       title: "Accessibility",
       level: 2,
       content: (
-        <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
+        <div className="text-muted-foreground space-y-4 text-base leading-relaxed">
           <p>
             The Switch component is built on Radix UI primitives and includes
             full accessibility support:
@@ -141,13 +139,15 @@ export const switchDoc: ComponentDoc = createComponentDoc({
       name: "disabled",
       type: "boolean",
       defaultValue: "false",
-      description: "When true, prevents the user from interacting with the switch.",
+      description:
+        "When true, prevents the user from interacting with the switch.",
     },
     {
       name: "required",
       type: "boolean",
       defaultValue: "false",
-      description: "When true, indicates that the user must check the switch before submitting.",
+      description:
+        "When true, indicates that the user must check the switch before submitting.",
     },
     {
       name: "name",
@@ -196,7 +196,7 @@ export function SwitchSizes() {
 }`,
       preview: <SwitchSizesPreview />,
     },
-        {
+    {
       id: "settings-panel",
       title: "Settings panel",
       description: "Real-world example of switches in a settings interface.",
@@ -356,7 +356,6 @@ export function DisabledSwitch() {
 }`,
       preview: <DisabledSwitchPreview />,
     },
-
   ],
   toc: [
     { id: "installation", title: "Installation", level: 2 },
@@ -367,7 +366,7 @@ export function DisabledSwitch() {
     { id: "properties", title: "Properties", level: 2 },
   ],
   showcase: {
-    code: `import { Switch } from "@/components/pittaya/ui/switch";
+    code: `import { Switch } from "@/components/ui/switch";
 
 export function ShowcaseSwitch() {
   return (

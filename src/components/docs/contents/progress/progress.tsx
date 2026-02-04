@@ -120,7 +120,7 @@ export const progressDoc: ComponentDoc = createComponentDoc({
       id: "basic",
       title: "Basic usage",
       description: "A simple progress bar showing 65% completion.",
-      code: `import { Progress } from "@/components/pittaya/ui/progress";
+      code: `import { Progress } from "@/components/ui/progress";
 
 export function BasicProgress() {
   return (
@@ -140,7 +140,7 @@ export function BasicProgress() {
       title: "File upload simulation",
       description:
         "An animated progress bar simulating a file upload operation with automatic progression.",
-      code: `import { Progress } from "@/components/pittaya/ui/progress";
+      code: `import { Progress } from "@/components/ui/progress";
 import { useEffect, useState } from "react";
 
 export function FileUploadProgress() {
@@ -180,7 +180,7 @@ export function FileUploadProgress() {
       title: "Progress variants",
       description:
         "Different visual styles for various use cases and contexts.",
-      code: `import { Progress } from "@/components/pittaya/ui/progress";
+      code: `import { Progress } from "@/components/ui/progress";
 
 export function ProgressVariants() {
   return (
@@ -226,8 +226,8 @@ export function ProgressVariants() {
       title: "Multi-step form progress",
       description:
         "Progress indicator for a multi-step form showing current completion status.",
-      code: `import { Progress } from "@/components/pittaya/ui/progress";
-import { Button } from "@/components/pittaya/ui/button";
+      code: `import { Progress } from "@/components/ui/progress";
+import { Button } from "@/components/ui/button";
 import { useState } from "react";
 
 export function MultiStepProgress() {
@@ -279,7 +279,7 @@ export function MultiStepProgress() {
     { id: "properties", title: "Properties", level: 2 },
   ],
   showcase: {
-    code: `import { Progress } from "@/components/pittaya/ui/progress";
+    code: `import { Progress } from "@/components/ui/progress";
 import { useEffect, useState } from "react";
 
 export function FileUploadProgress() {

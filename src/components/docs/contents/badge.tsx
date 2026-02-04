@@ -107,7 +107,7 @@ export const badgeDoc: ComponentDoc = createComponentDoc({
       title: "All variants",
       description:
         "Demonstration of all available badge variants for different use cases.",
-      code: `import { Badge } from "@/components/pittaya/ui/badge";
+      code: `import { Badge } from "@/components/ui/badge";
 
 export function BadgeVariants() {
   return (
@@ -140,7 +140,7 @@ export function BadgeVariants() {
       description:
         "Combine badges with icons to provide additional visual context and improve recognition.",
       code: `import { CheckCircle, AlertCircle, Clock } from "lucide-react";
-import { Badge } from "@/components/pittaya/ui/badge";
+import { Badge } from "@/components/ui/badge";
 
 export function BadgeWithIcon() {
   return (
@@ -219,7 +219,7 @@ export function BadgeWithIcon() {
       title: "Interactive badge",
       description:
         "Use the asChild prop to render badges as clickable links while maintaining their visual style.",
-      code: `import { Badge } from "@/components/pittaya/ui/badge";
+      code: `import { Badge } from "@/components/ui/badge";
 
 export function BadgeAsLink() {
   return (
@@ -261,7 +261,7 @@ export function BadgeAsLink() {
   ],
   showcase: {
     preview: <Badge>Stable</Badge>,
-    code: `import { Badge } from "@/components/pittaya/ui/badge";
+    code: `import { Badge } from "@/components/ui/badge";
 
 export function BadgeExample() {
   return <Badge>Stable</Badge>;

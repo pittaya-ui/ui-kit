@@ -25,7 +25,7 @@ export const selectDoc: ComponentDoc = createComponentDoc({
       title: "When to use",
       level: 2,
       content: (
-        <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
+        <div className="text-muted-foreground space-y-4 text-base leading-relaxed">
           <p>
             Use Select when you need users to choose a single option from a
             predefined list of 5 or more items. For shorter lists (2-4 options),
@@ -34,8 +34,8 @@ export const selectDoc: ComponentDoc = createComponentDoc({
           </p>
           <p>
             Select components are ideal for forms where space is limited but you
-            need to present multiple options. They work well for settings, filters,
-            configuration panels, and data entry forms.
+            need to present multiple options. They work well for settings,
+            filters, configuration panels, and data entry forms.
           </p>
         </div>
       ),
@@ -45,7 +45,7 @@ export const selectDoc: ComponentDoc = createComponentDoc({
       title: "Best practices",
       level: 2,
       content: (
-        <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
+        <div className="text-muted-foreground space-y-4 text-base leading-relaxed">
           <ul className="list-disc space-y-2 pl-5">
             <li>
               Always provide a clear placeholder or default value that describes
@@ -56,16 +56,16 @@ export const selectDoc: ComponentDoc = createComponentDoc({
               that might be truncated.
             </li>
             <li>
-              Sort options in a logical order: alphabetically, numerically, or by
-              frequency of use.
+              Sort options in a logical order: alphabetically, numerically, or
+              by frequency of use.
             </li>
             <li>
               Use <code>SelectGroup</code> and <code>SelectLabel</code> to
               organize related options into categories for better scanability.
             </li>
             <li>
-              Provide visual feedback for disabled states and ensure proper error
-              messaging when validation fails.
+              Provide visual feedback for disabled states and ensure proper
+              error messaging when validation fails.
             </li>
             <li>
               For searchable or very long lists, consider using a Combobox or
@@ -80,10 +80,10 @@ export const selectDoc: ComponentDoc = createComponentDoc({
       title: "Accessibility",
       level: 2,
       content: (
-        <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
+        <div className="text-muted-foreground space-y-4 text-base leading-relaxed">
           <p>
-            The Select component is built on Radix UI primitives and follows WAI-ARIA
-            design patterns for accessible dropdown menus. It includes:
+            The Select component is built on Radix UI primitives and follows
+            WAI-ARIA design patterns for accessible dropdown menus. It includes:
           </p>
           <ul className="list-disc space-y-2 pl-5">
             <li>
@@ -91,15 +91,14 @@ export const selectDoc: ComponentDoc = createComponentDoc({
               End)
             </li>
             <li>
-              Proper ARIA attributes for screen readers (<code>aria-expanded</code>,{" "}
-              <code>aria-haspopup</code>, <code>role="combobox"</code>)
+              Proper ARIA attributes for screen readers (
+              <code>aria-expanded</code>, <code>aria-haspopup</code>,{" "}
+              <code>role="combobox"</code>)
             </li>
             <li>
               Focus management that traps focus within the dropdown when open
             </li>
-            <li>
-              Type-ahead functionality for quick option selection
-            </li>
+            <li>Type-ahead functionality for quick option selection</li>
           </ul>
           <p>
             Always pair Select with a visible <code>Label</code> component for
@@ -125,14 +124,14 @@ export const selectDoc: ComponentDoc = createComponentDoc({
     {
       name: "onValueChange",
       type: "(value: string) => void",
-      description:
-        "Event handler called when the selected value changes.",
+      description: "Event handler called when the selected value changes.",
     },
     {
       name: "disabled",
       type: "boolean",
       defaultValue: "false",
-      description: "When true, prevents the user from interacting with the select.",
+      description:
+        "When true, prevents the user from interacting with the select.",
     },
     {
       name: "name",
@@ -177,7 +176,7 @@ export const selectDoc: ComponentDoc = createComponentDoc({
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/pittaya/ui/select";
+} from "@/components/ui/select";
 
 export function SelectExample() {
   return (
