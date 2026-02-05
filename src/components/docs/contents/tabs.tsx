@@ -149,8 +149,8 @@ export const tabsDoc: ComponentDoc = createComponentDoc({
       title: "Login and Sign Up",
       description:
         "A common use case for tabs: switching between login and registration forms.",
-      code: `import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/pittaya/ui/tabs";
-import { Button } from "@/components/pittaya/ui/button";
+      code: `import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Button } from "@/components/ui/button";
 
 export function LoginSignupTabs() {
   return (
@@ -316,8 +316,8 @@ export function LoginSignupTabs() {
       title: "Notifications Center",
       description:
         "Organize notifications by status - a practical example for dashboards and user interfaces.",
-      code: `import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/pittaya/ui/tabs";
-import { Button } from "@/components/pittaya/ui/button";
+      code: `import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Button } from "@/components/ui/button";
 
 export function NotificationsTabs() {
   return (
@@ -566,8 +566,8 @@ export function NotificationsTabs() {
     { id: "properties", title: "Properties", level: 2 },
   ],
   showcase: {
-    code: `import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/pittaya/ui/tabs";
-import { Button } from "@/components/pittaya/ui/button";
+    code: `import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Button } from "@/components/ui/button";
 
 export function LoginSignupTabs() {
   return (

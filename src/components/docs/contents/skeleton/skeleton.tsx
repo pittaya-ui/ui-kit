@@ -153,7 +153,7 @@ export const skeletonDoc: ComponentDoc = createComponentDoc({
       title: "Basic usage",
       description:
         "Simple skeleton loaders with different dimensions demonstrating the default pulse animation.",
-      code: `import { Skeleton } from "@/components/pittaya/ui/skeleton";
+      code: `import { Skeleton } from "@/components/ui/skeleton";
 
 export function BasicSkeleton() {
   return (
@@ -177,7 +177,7 @@ export function BasicSkeleton() {
       title: "Animation variants",
       description:
         "Side-by-side comparison of pulse and shimmer animation variants.",
-      code: `import { Skeleton } from "@/components/pittaya/ui/skeleton";
+      code: `import { Skeleton } from "@/components/ui/skeleton";
 
 export function VariantsComparison() {
   return (
@@ -205,8 +205,8 @@ export function VariantsComparison() {
       title: "User profile skeleton",
       description:
         "A realistic skeleton for a user profile card, demonstrating how to structure loading states for complex layouts.",
-      code: `import { Card, CardContent, CardHeader } from "@/components/pittaya/ui/card";
-import { Skeleton } from "@/components/pittaya/ui/skeleton";
+      code: `import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export function ProfileCardSkeleton() {
   return (
@@ -237,8 +237,8 @@ export function ProfileCardSkeleton() {
       title: "Product card skeleton",
       description:
         "Loading state for an e-commerce product card with image, title, price, and action button placeholders.",
-      code: `import { Card, CardContent, CardFooter } from "@/components/pittaya/ui/card";
-import { Skeleton } from "@/components/pittaya/ui/skeleton";
+      code: `import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export function ProductCardSkeleton() {
   return (
@@ -271,7 +271,7 @@ export function ProductCardSkeleton() {
       title: "Article list skeleton",
       description:
         "Loading state for a blog or news article list, showing multiple skeleton items in a vertical layout.",
-      code: `import { Skeleton } from "@/components/pittaya/ui/skeleton";
+      code: `import { Skeleton } from "@/components/ui/skeleton";
 
 export function ArticleListSkeleton() {
   return (
@@ -306,8 +306,8 @@ export function ArticleListSkeleton() {
     { id: "properties", title: "Properties", level: 2 },
   ],
   showcase: {
-    code: `import { Card, CardContent, CardHeader } from "@/components/pittaya/ui/card";
-import { Skeleton } from "@/components/pittaya/ui/skeleton";
+    code: `import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export function ProfileCardSkeleton() {
   return (

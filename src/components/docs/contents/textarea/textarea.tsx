@@ -95,7 +95,7 @@ export const textareaDoc: ComponentDoc = createComponentDoc({
       id: "basic",
       title: "Basic",
       description: "Standard textarea for multi-line text input.",
-      code: `import { Button } from "@/components/pittaya/ui/button";
+      code: `import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -103,9 +103,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/pittaya/ui/card";
-import { Label } from "@/components/pittaya/ui/label";
-import { Textarea } from "@/components/pittaya/ui/textarea";
+} from "@/components/ui/card";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
 
 export function BasicTextarea() {
   return (
@@ -148,8 +148,8 @@ export function BasicTextarea() {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/pittaya/ui/card";
-import { Textarea } from "@/components/pittaya/ui/textarea";
+} from "@/components/ui/card";
+import { Textarea } from "@/components/ui/textarea";
 
 export function MinimalTextarea() {
   return (
@@ -189,14 +189,14 @@ export function MinimalTextarea() {
 import { Send } from "lucide-react";
 import * as React from "react";
 
-import { Button } from "@/components/pittaya/ui/button";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
-} from "@/components/pittaya/ui/card";
-import { Textarea } from "@/components/pittaya/ui/textarea";
+} from "@/components/ui/card";
+import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
 
 export function ExpandingTextarea() {
@@ -247,15 +247,15 @@ export function ExpandingTextarea() {
       id: "scrollable",
       title: "Scrollable",
       description: "Use a taller textarea with scroll when content is long.",
-      code: `import { Button } from "@/components/pittaya/ui/button";
+      code: `import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/pittaya/ui/card";
-import { Textarea } from "@/components/pittaya/ui/textarea";
+} from "@/components/ui/card";
+import { Textarea } from "@/components/ui/textarea";
 
 export function ScrollableTextarea() {
   return (
@@ -299,7 +299,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     { id: "properties", title: "Properties", level: 2 },
   ],
   showcase: {
-    code: `import { Button } from "@/components/pittaya/ui/button";
+    code: `import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -307,9 +307,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/pittaya/ui/card";
-import { Label } from "@/components/pittaya/ui/label";
-import { Textarea } from "@/components/pittaya/ui/textarea";
+} from "@/components/ui/card";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
 
 export function BasicTextarea() {
   return (

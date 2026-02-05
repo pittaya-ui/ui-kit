@@ -129,7 +129,7 @@ export const cardDoc: ComponentDoc = createComponentDoc({
       title: "Product card",
       description:
         "A typical card for displaying products in e-commerce, combining image, title, description, price, and purchase action.",
-      code: `import { Button } from "@/components/pittaya/ui/button";
+      code: `import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -137,7 +137,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/pittaya/ui/card";
+} from "@/components/ui/card";
 
 export function ProductCard() {
   return (
@@ -201,7 +201,7 @@ export function ProductCard() {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/pittaya/ui/card";
+} from "@/components/ui/card";
 
 export function UserProfile() {
   return (
@@ -255,7 +255,7 @@ export function UserProfile() {
       title: "Premium pricing card",
       description:
         "Gradient variant to highlight premium plans or special offers on pricing pages.",
-      code: `import { Button } from "@/components/pittaya/ui/button";
+      code: `import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -263,7 +263,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/pittaya/ui/card";
+} from "@/components/ui/card";
 
 export function PricingCard() {
   return (
@@ -351,7 +351,7 @@ export function PricingCard() {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/pittaya/ui/card";
+} from "@/components/ui/card";
 
 export function StatsCard() {
   return (
@@ -406,7 +406,7 @@ export function StatsCard() {
   CardContent,
   CardHeader,
   CardTitle,
-} from "@/components/pittaya/ui/card";
+} from "@/components/ui/card";
 
 export function ShadowColorCards() {
   return (
@@ -579,7 +579,7 @@ export function ShadowColorCards() {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/pittaya/ui/card";
+} from "@/components/ui/card";
 
 export function BlogPostCard() {
   return (
@@ -647,7 +647,7 @@ export function BlogPostCard() {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/pittaya/ui/card";
+} from "@/components/ui/card";
 
 export function NotificationCard() {
   return (
@@ -687,7 +687,7 @@ export function NotificationCard() {
       title: "Gradient feature card",
       description:
         "Gradient variant with custom colors to highlight premium features or special offers.",
-      code: `import { Button } from "@/components/pittaya/ui/button";
+      code: `import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -695,7 +695,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/pittaya/ui/card";
+} from "@/components/ui/card";
 
 export function GradientFeatureCard() {
   return (
@@ -795,7 +795,7 @@ export function GradientFeatureCard() {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/pittaya/ui/card";
+} from "@/components/ui/card";
 
 export function TechnicalCard() {
   return (
@@ -882,7 +882,7 @@ export function TechnicalCard() {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/pittaya/ui/card";
+} from "@/components/ui/card";
 
 export function CardVariants() {
   return (
@@ -1004,7 +1004,7 @@ export function CardVariants() {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/pittaya/ui/card";
+} from "@/components/ui/card";
 
 export function MinimalCard() {
   return (

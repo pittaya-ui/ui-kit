@@ -163,7 +163,7 @@ export const commandDoc: ComponentDoc = createComponentDoc({
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/components/pittaya/ui/command";
+} from "@/components/ui/command";
 
 export function BasicCommand() {
   return (
@@ -225,7 +225,7 @@ import {
   CommandItem,
   CommandList,
   CommandSeparator,
-} from "@/components/pittaya/ui/command";
+} from "@/components/ui/command";
 
 export function CommandWithIcons() {
   return (
@@ -404,7 +404,7 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/components/pittaya/ui/command";
+} from "@/components/ui/command";
 
 export function CommandDialogExample() {
   const [open, setOpen] = useState(false);
@@ -470,7 +470,7 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/components/pittaya/ui/command";
+} from "@/components/ui/command";
 
 export function ControlledCommand() {
   const [value, setValue] = useState("");
@@ -514,7 +514,7 @@ export function ControlledCommand() {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/components/pittaya/ui/command";
+} from "@/components/ui/command";
 
 export function BasicCommand() {
   return (

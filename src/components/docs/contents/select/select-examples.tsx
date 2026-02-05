@@ -23,7 +23,7 @@ export const selectExamples: DocExample[] = [
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/pittaya/ui/select";
+} from "@/components/ui/select";
 
 export function BasicSelect() {
   return (
@@ -61,14 +61,14 @@ export function BasicSelect() {
     title: "With label",
     description:
       "Select paired with a label for better accessibility and form structure.",
-    code: `import { Label } from "@/components/pittaya/ui/label";
+    code: `import { Label } from "@/components/ui/label";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/pittaya/ui/select";
+} from "@/components/ui/select";
 
 export function SelectWithLabel() {
   return (
@@ -120,7 +120,7 @@ export function SelectWithLabel() {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/components/pittaya/ui/select";
+} from "@/components/ui/select";
 
 export function GroupedSelect() {
   return (
@@ -179,7 +179,7 @@ export function GroupedSelect() {
   SelectSeparator,
   SelectTrigger,
   SelectValue,
-} from "@/components/pittaya/ui/select";
+} from "@/components/ui/select";
 
 export function SelectWithSeparator() {
   return (
@@ -227,7 +227,7 @@ export function SelectWithSeparator() {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/pittaya/ui/select";
+} from "@/components/ui/select";
 
 export function DisabledSelect() {
   return (
@@ -267,7 +267,7 @@ export function DisabledSelect() {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/pittaya/ui/select";
+} from "@/components/ui/select";
 
 export function SelectWithDisabledItems() {
   return (
@@ -313,7 +313,7 @@ export function SelectWithDisabledItems() {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/pittaya/ui/select";
+} from "@/components/ui/select";
 
 export function SelectWithDefault() {
   return (

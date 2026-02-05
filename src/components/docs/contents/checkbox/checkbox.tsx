@@ -180,8 +180,8 @@ export const checkboxDoc: ComponentDoc = createComponentDoc({
       id: "basic",
       title: "Basic usage",
       description: "A simple checkbox with a label.",
-      code: `import { Checkbox } from "@/components/pittaya/ui/checkbox";
-import { Label } from "@/components/pittaya/ui/label";
+      code: `import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
 
 export function BasicCheckbox() {
   return (
@@ -197,8 +197,8 @@ export function BasicCheckbox() {
       id: "animated",
       title: "Animated ",
       description: "Checkbox with a smooth zoom-in animation when checked.",
-      code: `import { Checkbox } from "@/components/pittaya/ui/checkbox";
-import { Label } from "@/components/pittaya/ui/label";
+      code: `import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
 
 export function AnimatedCheckbox() {
   return (
@@ -214,8 +214,8 @@ export function AnimatedCheckbox() {
       id: "disabled",
       title: "Disabled state",
       description: "Checkbox in disabled state, both checked and unchecked.",
-      code: `import { Checkbox } from "@/components/pittaya/ui/checkbox";
-import { Label } from "@/components/pittaya/ui/label";
+      code: `import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
 
 export function DisabledCheckbox() {
   return (
@@ -241,8 +241,8 @@ export function DisabledCheckbox() {
       id: "with-text",
       title: "With description",
       description: "Checkbox with a label and additional descriptive text.",
-      code: `import { Checkbox } from "@/components/pittaya/ui/checkbox";
-import { Label } from "@/components/pittaya/ui/label";
+      code: `import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
 
 export function CheckboxWithText() {
   return (
@@ -267,8 +267,8 @@ export function CheckboxWithText() {
       description: "A checkbox with controlled state using React state.",
       code: `"use client";
 
-import { Checkbox } from "@/components/pittaya/ui/checkbox";
-import { Label } from "@/components/pittaya/ui/label";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
 import { useState } from "react";
 
 export function ControlledCheckbox() {
@@ -297,8 +297,8 @@ export function ControlledCheckbox() {
       id: "multiple",
       title: "Multiple checkboxes",
       description: "A group of related checkboxes for multiple selections.",
-      code: `import { Checkbox } from "@/components/pittaya/ui/checkbox";
-import { Label } from "@/components/pittaya/ui/label";
+      code: `import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
 
 export function MultipleCheckboxes() {
   return (
@@ -336,8 +336,8 @@ export function MultipleCheckboxes() {
     { id: "properties", title: "Properties", level: 2 },
   ],
   showcase: {
-    code: `import { Checkbox } from "@/components/pittaya/ui/checkbox";
-import { Label } from "@/components/pittaya/ui/label";
+    code: `import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
 
 export function BasicCheckbox() {
   return (
