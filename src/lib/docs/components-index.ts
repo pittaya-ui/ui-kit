@@ -151,6 +151,16 @@ export const componentsIndex: ComponentIndexItem[] = [
     dependencies: ["@radix-ui/react-popover"],
   },
   {
+    slug: "progress",
+    name: "Progress",
+    description:
+      "Displays an indicator showing the completion progress of a task or operation.",
+    category: "Feedback",
+    status: "stable",
+    tags: ["progress", "indicator", "loading", "status"],
+    dependencies: ["@radix-ui/react-progress"],
+  },
+  {
     slug: "radio-group",
     name: "Radio Group",
     description:

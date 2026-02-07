@@ -135,7 +135,7 @@ export const labelDoc: ComponentDoc = createComponentDoc({
       title: "Basic usage",
       description:
         "A simple label associated with an input field using the htmlFor attribute.",
-      code: `import { Button } from "@/components/pittaya/ui/button";
+      code: `import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -143,9 +143,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/pittaya/ui/card";
-import { Input } from "@/components/pittaya/ui/input";
-import { Label } from "@/components/pittaya/ui/label";
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 export function BasicLabel() {
   return (
@@ -179,7 +179,7 @@ export function BasicLabel() {
       title: "With helper text",
       description:
         "Label combined with helper text to provide additional context to users.",
-      code: `import { Button } from "@/components/pittaya/ui/button";
+      code: `import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -187,9 +187,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/pittaya/ui/card";
-import { Input } from "@/components/pittaya/ui/input";
-import { Label } from "@/components/pittaya/ui/label";
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { Info } from "lucide-react";
 
 export function LabelWithHelper() {
@@ -224,7 +224,7 @@ export function LabelWithHelper() {
       title: "Required field",
       description:
         "Label with a visual indicator for required fields using an asterisk.",
-      code: `import { Button } from "@/components/pittaya/ui/button";
+      code: `import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -232,9 +232,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/pittaya/ui/card";
-import { Input } from "@/components/pittaya/ui/input";
-import { Label } from "@/components/pittaya/ui/label";
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 export function RequiredLabel() {
   return (
@@ -280,9 +280,9 @@ export function RequiredLabel() {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/pittaya/ui/card";
-import { Input } from "@/components/pittaya/ui/input";
-import { Label } from "@/components/pittaya/ui/label";
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { Shield } from "lucide-react";
 
 export function DisabledLabel() {
@@ -322,10 +322,10 @@ export function DisabledLabel() {
       title: "Form group",
       description:
         "Multiple labels and inputs organized in a complete form layout.",
-      code: `import { Button } from "@/components/pittaya/ui/button";
-import { Card } from "@/components/pittaya/ui/card";
-import { Input } from "@/components/pittaya/ui/input";
-import { Label } from "@/components/pittaya/ui/label";
+      code: `import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 export function FormGroup() {
   return (
@@ -381,7 +381,7 @@ export function FormGroup() {
       title: "With icon",
       description:
         "Label with an icon for enhanced visual communication and better user experience.",
-      code: `import { Button } from "@/components/pittaya/ui/button";
+      code: `import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -389,9 +389,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/pittaya/ui/card";
-import { Input } from "@/components/pittaya/ui/input";
-import { Label } from "@/components/pittaya/ui/label";
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { Mail } from "lucide-react";
 
 export function LabelWithIcon() {
@@ -440,7 +440,7 @@ export function LabelWithIcon() {
     { id: "properties", title: "Properties", level: 2 },
   ],
   showcase: {
-    code: `import { Button } from "@/components/pittaya/ui/button";
+    code: `import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -448,9 +448,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/pittaya/ui/card";
-import { Input } from "@/components/pittaya/ui/input";
-import { Label } from "@/components/pittaya/ui/label";
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 export function BasicLabel() {
   return (

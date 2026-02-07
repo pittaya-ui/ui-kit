@@ -198,7 +198,7 @@ export const multiSelectDoc: ComponentDoc = createComponentDoc({
       description: "A simple Multi-Select example with state control.",
       code: `"use client";
 
-import { MultiSelect } from "@/components/pittaya/ui/multi-select";
+import { MultiSelect } from "@/components/ui/multi-select";
 import { useState } from "react";
 
 export function BasicMultiSelect() {
@@ -235,7 +235,7 @@ export function BasicMultiSelect() {
         "Complete integration with React Hook Form including validation and error handling.",
       code: `"use client";
 
-import { MultiSelect } from "@/components/pittaya/ui/multi-select";
+import { MultiSelect } from "@/components/ui/multi-select";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm, Controller } from "react-hook-form";
 import { z } from "zod";
@@ -350,7 +350,7 @@ export function ReactHookFormExample() {
         "Use maxCount to show a counter when many items are selected.",
       code: `"use client";
 
-import { MultiSelect } from "@/components/pittaya/ui/multi-select";
+import { MultiSelect } from "@/components/ui/multi-select";
 import { useState } from "react";
 
 export function MultiSelectWithMaxCount() {
@@ -392,7 +392,7 @@ export function MultiSelectWithMaxCount() {
         "Practical example of selecting users to add to a project or group.",
       code: `"use client";
 
-import { MultiSelect } from "@/components/pittaya/ui/multi-select";
+import { MultiSelect } from "@/components/ui/multi-select";
 import { useState } from "react";
 
 export function TeamMemberSelection() {
@@ -442,7 +442,7 @@ export function TeamMemberSelection() {
         "Example of usage in e-commerce filters for categories, brands, and tags.",
       code: `"use client";
 
-import { MultiSelect } from "@/components/pittaya/ui/multi-select";
+import { MultiSelect } from "@/components/ui/multi-select";
 import { useState } from "react";
 
 export function ProductFilters() {
@@ -518,7 +518,7 @@ export function ProductFilters() {
         "Example of a professional profile form with skills selection.",
       code: `"use client";
 
-import { MultiSelect } from "@/components/pittaya/ui/multi-select";
+import { MultiSelect } from "@/components/ui/multi-select";
 import { useState } from "react";
 
 export function SkillsSelection() {
@@ -582,7 +582,7 @@ export function SkillsSelection() {
       description: "Multi-Select can be disabled to prevent interaction.",
       code: `"use client";
 
-import { MultiSelect } from "@/components/pittaya/ui/multi-select";
+import { MultiSelect } from "@/components/ui/multi-select";
 
 export function DisabledMultiSelect() {
   const options = [
@@ -625,7 +625,7 @@ export function DisabledMultiSelect() {
   showcase: {
     code: `"use client";
 
-import { MultiSelect } from "@/components/pittaya/ui/multi-select";
+import { MultiSelect } from "@/components/ui/multi-select";
 import { useState } from "react";
 
 export function BasicMultiSelect() {

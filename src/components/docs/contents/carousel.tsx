@@ -154,8 +154,8 @@ export const carouselDoc: ComponentDoc = createComponentDoc({
       title: "Product showcase",
       description:
         "Display featured products with real images, names, prices and call-to-action buttons.",
-      code: `import { Button } from "@/components/pittaya/ui/button";
-import { Carousel, CarouselItem } from "@/components/pittaya/ui/carousel";
+      code: `import { Button } from "@/components/ui/button";
+import { Carousel, CarouselItem } from "@/components/ui/carousel";
 import { ShoppingCart } from "lucide-react";
 import Image from "next/image";
 
@@ -292,7 +292,7 @@ export function ProductCarousel() {
       title: "Customer testimonials",
       description:
         "Showcase customer reviews with real photos and autoplay for social proof.",
-      code: `import { Carousel, CarouselItem } from "@/components/pittaya/ui/carousel";
+      code: `import { Carousel, CarouselItem } from "@/components/ui/carousel";
 import Image from "next/image";
 
 const testimonials = [
@@ -459,8 +459,8 @@ export function TestimonialsCarousel() {
       title: "Promotional banners",
       description:
         "Display marketing campaigns with stunning background images and compelling CTAs.",
-      code: `import { Button } from "@/components/pittaya/ui/button";
-import { Carousel, CarouselItem } from "@/components/pittaya/ui/carousel";
+      code: `import { Button } from "@/components/ui/button";
+import { Carousel, CarouselItem } from "@/components/ui/carousel";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 
@@ -616,7 +616,7 @@ export function PromotionalCarousel() {
       title: "Image gallery",
       description:
         "Showcase portfolio work or project images with clean overlay design.",
-      code: `import { Carousel, CarouselItem } from "@/components/pittaya/ui/carousel";
+      code: `import { Carousel, CarouselItem } from "@/components/ui/carousel";
 import Image from "next/image";
 
 const projects = [
@@ -750,7 +750,7 @@ export function GalleryCarousel() {
     { id: "properties", title: "Properties", level: 2 },
   ],
   showcase: {
-    code: `import { Carousel, CarouselItem } from "@/components/pittaya/ui/carousel";
+    code: `import { Carousel, CarouselItem } from "@/components/ui/carousel";
 
 const numbers = [1, 2, 3];
 

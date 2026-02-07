@@ -197,8 +197,8 @@ export const radioGroupDoc: ComponentDoc = createComponentDoc({
       title: "Programming language",
       description:
         "A simple example for selecting a preferred programming language.",
-      code: `import { Label } from "@/components/pittaya/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/components/pittaya/ui/radio-group";
+      code: `import { Label } from "@/components/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 
 export function BasicRadioGroup() {
   return (
@@ -225,8 +225,8 @@ export function BasicRadioGroup() {
       title: "Deploy environments",
       description:
         "Horizontal layout ideal for selecting deployment environments.",
-      code: `import { Label } from "@/components/pittaya/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/components/pittaya/ui/radio-group";
+      code: `import { Label } from "@/components/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 
 export function HorizontalRadioGroup() {
   return (
@@ -253,8 +253,8 @@ export function HorizontalRadioGroup() {
       title: "Deployment options",
       description:
         "Example with disabled option for features under development.",
-      code: `import { Label } from "@/components/pittaya/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/components/pittaya/ui/radio-group";
+      code: `import { Label } from "@/components/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 
 export function DisabledRadioGroup() {
   return (
@@ -282,8 +282,8 @@ export function DisabledRadioGroup() {
       id: "with-description",
       title: "Subscription plans",
       description: "Plan selection with detailed descriptions for each option.",
-      code: `import { Label } from "@/components/pittaya/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/components/pittaya/ui/radio-group";
+      code: `import { Label } from "@/components/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 
 export function WithDescriptionRadioGroup() {
   return (
@@ -327,8 +327,8 @@ export function WithDescriptionRadioGroup() {
         "Controlled radio group with React state showing selection in real-time.",
       code: `"use client";
 
-import { Label } from "@/components/pittaya/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/components/pittaya/ui/radio-group";
+import { Label } from "@/components/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useState } from "react";
 
 export function ControlledRadioGroup() {
@@ -374,8 +374,8 @@ export function ControlledRadioGroup() {
       title: "Backup configuration",
       description:
         "Form integration with fieldset for system configuration settings.",
-      code: `import { Label } from "@/components/pittaya/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/components/pittaya/ui/radio-group";
+      code: `import { Label } from "@/components/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 
 export function FormRadioGroup() {
   return (
@@ -419,8 +419,8 @@ export function FormRadioGroup() {
     { id: "properties", title: "Properties", level: 2 },
   ],
   showcase: {
-    code: `import { Label } from "@/components/pittaya/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/components/pittaya/ui/radio-group";
+    code: `import { Label } from "@/components/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 
 export function BasicRadioGroup() {
   return (

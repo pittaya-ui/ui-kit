@@ -184,13 +184,13 @@ export const avatarDoc: ComponentDoc = createComponentDoc({
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/components/pittaya/ui/avatar";
+} from "@/components/ui/avatar";
 
 export function BasicAvatarExample() {
   return (
     <Avatar>
-      <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-      <AvatarFallback>CN</AvatarFallback>
+      <AvatarImage src="https://github.com/pittaya-ui.png" alt="@pittaya-ui" />
+      <AvatarFallback>PU</AvatarFallback>
     </Avatar>
   );
 }`,
@@ -205,26 +205,26 @@ export function BasicAvatarExample() {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/components/pittaya/ui/avatar";
+} from "@/components/ui/avatar";
 
 export function AvatarSizesExample() {
   return (
     <div className="flex items-center gap-4">
       <Avatar size="sm">
-        <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-        <AvatarFallback>CN</AvatarFallback>
+        <AvatarImage src="https://github.com/pittaya-ui.png" alt="@pittaya-ui" />
+        <AvatarFallback>PU</AvatarFallback>
       </Avatar>
       <Avatar size="md">
-        <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-        <AvatarFallback>CN</AvatarFallback>
+        <AvatarImage src="https://github.com/pittaya-ui.png" alt="@pittaya-ui" />
+        <AvatarFallback>PU</AvatarFallback>
       </Avatar>
       <Avatar size="lg">
-        <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-        <AvatarFallback>CN</AvatarFallback>
+        <AvatarImage src="https://github.com/pittaya-ui.png" alt="@pittaya-ui" />
+        <AvatarFallback>PU</AvatarFallback>
       </Avatar>
       <Avatar size="xl">
-        <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-        <AvatarFallback>CN</AvatarFallback>
+        <AvatarImage src="https://github.com/pittaya-ui.png" alt="@pittaya-ui" />
+        <AvatarFallback>PU</AvatarFallback>
       </Avatar>
     </div>
   );
@@ -240,7 +240,7 @@ export function AvatarSizesExample() {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/components/pittaya/ui/avatar";
+} from "@/components/ui/avatar";
 
 export function AvatarFallbackExample() {
   return (
@@ -272,13 +272,13 @@ export function AvatarFallbackExample() {
   AvatarFallback,
   AvatarGroup,
   AvatarImage,
-} from "@/components/pittaya/ui/avatar";
+} from "@/components/ui/avatar";
 
 export function AvatarGroupExample() {
   return (
     <AvatarGroup max={3}>
       <Avatar>
-        <AvatarImage src="https://github.com/shadcn.png" alt="User 1" />
+        <AvatarImage src="https://github.com/pittaya-ui.png" alt="User 1" />
         <AvatarFallback>U1</AvatarFallback>
       </Avatar>
       <Avatar>
@@ -310,7 +310,7 @@ export function AvatarGroupExample() {
   AvatarFallback,
   AvatarGroup,
   AvatarImage,
-} from "@/components/pittaya/ui/avatar";
+} from "@/components/ui/avatar";
 
 export function AvatarGroupSizesExample() {
   return (
@@ -319,7 +319,7 @@ export function AvatarGroupSizesExample() {
         <p className="text-sm text-muted-foreground mb-2">Small</p>
         <AvatarGroup max={3} size="sm">
           <Avatar>
-            <AvatarImage src="https://github.com/shadcn.png" alt="User 1" />
+            <AvatarImage src="https://github.com/pittaya-ui.png" alt="User 1" />
             <AvatarFallback>U1</AvatarFallback>
           </Avatar>
           <Avatar>
@@ -338,7 +338,7 @@ export function AvatarGroupSizesExample() {
         <p className="text-sm text-muted-foreground mb-2">Large</p>
         <AvatarGroup max={3} size="lg">
           <Avatar>
-            <AvatarImage src="https://github.com/shadcn.png" alt="User 1" />
+            <AvatarImage src="https://github.com/pittaya-ui.png" alt="User 1" />
             <AvatarFallback>U1</AvatarFallback>
           </Avatar>
           <Avatar>
@@ -367,14 +367,14 @@ export function AvatarGroupSizesExample() {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/components/pittaya/ui/avatar";
+} from "@/components/ui/avatar";
 
 export function AvatarWithStatusExample() {
   return (
     <div className="flex items-center gap-6">
       <div className="relative">
         <Avatar>
-          <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+          <AvatarImage src="https://github.com/pittaya-ui.png" alt="@pittaya-ui" />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
         <span className="absolute bottom-0 right-0 block h-3 w-3 rounded-full bg-green-500 ring-2 ring-background" />
@@ -414,19 +414,19 @@ export function AvatarWithStatusExample() {
   AvatarFallback,
   AvatarGroup,
   AvatarImage,
-} from "@/components/pittaya/ui/avatar";
+} from "@/components/ui/avatar";
 
 export function ShowcaseAvatar() {
   return (
     <div className="space-y-6">
       <Avatar size="lg">
-        <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-        <AvatarFallback>CN</AvatarFallback>
+        <AvatarImage src="https://github.com/pittaya-ui.png" alt="@pittaya-ui" />
+        <AvatarFallback>PU</AvatarFallback>
       </Avatar>
       
       <AvatarGroup max={3}>
         <Avatar>
-          <AvatarImage src="https://github.com/shadcn.png" alt="User 1" />
+          <AvatarImage src="https://github.com/pittaya-ui.png" alt="User 1" />
           <AvatarFallback>U1</AvatarFallback>
         </Avatar>
         <Avatar>

@@ -113,8 +113,8 @@ export const tooltipDoc: ComponentDoc = createComponentDoc({
       id: "basic",
       title: "Basic tooltip",
       description: "A simple tooltip triggered by a button.",
-      code: `import { Button } from "@/components/pittaya/ui/button";
-import { Tooltip, TooltipTrigger, TooltipContent } from "@/components/pittaya/ui/tooltip";
+      code: `import { Button } from "@/components/ui/button";
+import { Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip";
 
 export function BasicTooltip() {
   return (
@@ -139,8 +139,8 @@ export function BasicTooltip() {
       id: "animated",
       title: "Animated variant",
       description: "Elegant motion that responds to pointer position.",
-      code: `import { Button } from "@/components/pittaya/ui/button";
-import { Tooltip, TooltipTrigger, TooltipContentAnimated } from "@/components/pittaya/ui/tooltip";
+      code: `import { Button } from "@/components/ui/button";
+import { Tooltip, TooltipTrigger, TooltipContentAnimated } from "@/components/ui/tooltip";
 
 export function AnimatedTooltipExample() {
   return (
@@ -169,8 +169,8 @@ export function AnimatedTooltipExample() {
       id: "swing",
       title: "Swing variant",
       description: "Single swing on open, then settles.",
-      code: `import { Button } from "@/components/pittaya/ui/button";
-import { Tooltip, TooltipTrigger, TooltipContentSwing } from "@/components/pittaya/ui/tooltip";
+      code: `import { Button } from "@/components/ui/button";
+import { Tooltip, TooltipTrigger, TooltipContentSwing } from "@/components/ui/tooltip";
 
 export function SwingTooltipExample() {
   return (
@@ -197,8 +197,8 @@ export function SwingTooltipExample() {
       id: "flip",
       title: "Flip 3D variant",
       description: "A 3D flip entry with perspective.",
-      code: `import { Button } from "@/components/pittaya/ui/button";
-import { Tooltip, TooltipTrigger, TooltipContentFlip } from "@/components/pittaya/ui/tooltip";
+      code: `import { Button } from "@/components/ui/button";
+import { Tooltip, TooltipTrigger, TooltipContentFlip } from "@/components/ui/tooltip";
 
 export function FlipTooltipExample() {
   return (
@@ -225,8 +225,8 @@ export function FlipTooltipExample() {
       id: "positioning",
       title: "Positioning",
       description: "Control placement using the side prop.",
-      code: `import { Button } from "@/components/pittaya/ui/button";
-import { Tooltip, TooltipTrigger, TooltipContent } from "@/components/pittaya/ui/tooltip";
+      code: `import { Button } from "@/components/ui/button";
+import { Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip";
 
 export function TooltipPositioning() {
   return (
@@ -259,8 +259,8 @@ export function TooltipPositioning() {
       id: "creative",
       title: "Creative accent",
       description: "A stylish tooltip with accent lines and emoji.",
-      code: `import { Button } from "@/components/pittaya/ui/button";
-import { Tooltip, TooltipTrigger, TooltipContentAnimated } from "@/components/pittaya/ui/tooltip";
+      code: `import { Button } from "@/components/ui/button";
+import { Tooltip, TooltipTrigger, TooltipContentAnimated } from "@/components/ui/tooltip";
 
 export function CreativeTooltip() {
   return (
@@ -295,8 +295,8 @@ export function CreativeTooltip() {
     { id: "properties", title: "Properties", level: 2 },
   ],
   showcase: {
-    code: `import { Button } from "@/components/pittaya/ui/button";
-import { Tooltip, TooltipTrigger, TooltipContentAnimated } from "@/components/pittaya/ui/tooltip";
+    code: `import { Button } from "@/components/ui/button";
+import { Tooltip, TooltipTrigger, TooltipContentAnimated } from "@/components/ui/tooltip";
 
 export function ShowcaseTooltip() {
   return (

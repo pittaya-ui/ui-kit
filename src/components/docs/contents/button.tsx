@@ -103,7 +103,7 @@ export const buttonDoc: ComponentDoc = createComponentDoc({
       title: "Default variants",
       description:
         "Demonstration of available variants to communicate action hierarchy.",
-      code: `import { Button } from "@/components/pittaya/ui/button";
+      code: `import { Button } from "@/components/ui/button";
 
 export function ButtonVariants() {
   return (
@@ -133,7 +133,7 @@ export function ButtonVariants() {
       title: "With icon",
       description: "Use icons to reinforce context when space is limited.",
       code: `import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/pittaya/ui/button";
+import { Button } from "@/components/ui/button";
 
 export function ButtonWithIcon() {
   return (
@@ -163,7 +163,7 @@ export function ButtonWithIcon() {
   ],
   showcase: {
     preview: <Button>See more</Button>,
-    code: `import { Button } from "@/components/pittaya/ui/button";
+    code: `import { Button } from "@/components/ui/button";
 
 export function ButtonExample() {
   return <Button>See more</Button>;

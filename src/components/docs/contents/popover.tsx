@@ -152,12 +152,12 @@ export const popoverDoc: ComponentDoc = createComponentDoc({
       id: "basic",
       title: "Basic popover",
       description: "A simple popover with text content triggered by a button.",
-      code: `import { Button } from "@/components/pittaya/ui/button";
+      code: `import { Button } from "@/components/ui/button";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/pittaya/ui/popover";
+} from "@/components/ui/popover";
 
 export function BasicPopover() {
   return (
@@ -196,12 +196,12 @@ export function BasicPopover() {
       id: "with-form",
       title: "With form controls",
       description: "Popover containing form elements for quick data entry.",
-      code: `import { Button } from "@/components/pittaya/ui/button";
+      code: `import { Button } from "@/components/ui/button";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/pittaya/ui/popover";
+} from "@/components/ui/popover";
 
 export function PopoverWithForm() {
   return (
@@ -296,12 +296,12 @@ export function PopoverWithForm() {
       id: "positioning",
       title: "Custom positioning",
       description: "Control the popover position using side and align props.",
-      code: `import { Button } from "@/components/pittaya/ui/button";
+      code: `import { Button } from "@/components/ui/button";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/pittaya/ui/popover";
+} from "@/components/ui/popover";
 
 export function PopoverPositioning() {
   return (
@@ -389,12 +389,12 @@ export function PopoverPositioning() {
       title: "User menu",
       description: "Real-world example of a user menu with profile actions.",
       code: `import { LogOut, Settings, User } from "lucide-react";
-import { Button } from "@/components/pittaya/ui/button";
+import { Button } from "@/components/ui/button";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/pittaya/ui/popover";
+} from "@/components/ui/popover";
 
 export function UserMenuPopover() {
   return (
@@ -522,12 +522,12 @@ export function UserMenuPopover() {
     { id: "properties", title: "Properties", level: 2 },
   ],
   showcase: {
-    code: `import { Button } from "@/components/pittaya/ui/button";
+    code: `import { Button } from "@/components/ui/button";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/pittaya/ui/popover";
+} from "@/components/ui/popover";
 
 export function BasicPopover() {
   return (

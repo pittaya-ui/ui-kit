@@ -194,7 +194,7 @@ export const inputDoc: ComponentDoc = createComponentDoc({
       title: "Default input",
       description:
         "Standard input field with traditional styling, best used with an external Label component.",
-      code: `import { Button } from "@/components/pittaya/ui/button";
+      code: `import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -202,9 +202,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/pittaya/ui/card";
-import { Input } from "@/components/pittaya/ui/input";
-import { Label } from "@/components/pittaya/ui/label";
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 export function DefaultInput() {
   return (
@@ -238,7 +238,7 @@ export function DefaultInput() {
       title: "Floating label",
       description:
         "Label starts inside the input and floats above the border when focused or filled, creating a modern space-efficient design.",
-      code: `import { Button } from "@/components/pittaya/ui/button";
+      code: `import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -246,8 +246,8 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/pittaya/ui/card";
-import { Input } from "@/components/pittaya/ui/input";
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
 
 export function FloatingInput() {
   return (
@@ -275,7 +275,7 @@ export function FloatingInput() {
       title: "Floating label inside",
       description:
         "Label animates from center to top-left corner, remaining within the input boundaries. Perfect for compact forms.",
-      code: `import { Button } from "@/components/pittaya/ui/button";
+      code: `import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -283,8 +283,8 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/pittaya/ui/card";
-import { Input } from "@/components/pittaya/ui/input";
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
 
 export function FloatingInsideInput() {
   return (
@@ -315,7 +315,7 @@ export function FloatingInsideInput() {
       title: "Outlined input",
       description:
         "Material Design style with label positioned on the border. Label animates from inside to the border on focus or when filled.",
-      code: `import { Button } from "@/components/pittaya/ui/button";
+      code: `import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -323,8 +323,8 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/pittaya/ui/card";
-import { Input } from "@/components/pittaya/ui/input";
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
 
 export function OutlinedInput() {
   return (
@@ -360,9 +360,9 @@ export function OutlinedInput() {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/pittaya/ui/card";
-import { Input } from "@/components/pittaya/ui/input";
-import { Label } from "@/components/pittaya/ui/label";
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 export function DisabledInput() {
   return (
@@ -401,10 +401,10 @@ export function DisabledInput() {
       title: "Complete form",
       description:
         "A complete form example demonstrating different input variants working together.",
-      code: `import { Button } from "@/components/pittaya/ui/button";
-import { Card } from "@/components/pittaya/ui/card";
-import { Input } from "@/components/pittaya/ui/input";
-import { Label } from "@/components/pittaya/ui/label";
+      code: `import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { User } from "lucide-react";
 
 export function FormExample() {
@@ -466,9 +466,9 @@ export function FormExample() {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/pittaya/ui/card";
-import { Input } from "@/components/pittaya/ui/input";
-import { Label } from "@/components/pittaya/ui/label";
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { Building2, Globe, Lock, Search } from "lucide-react";
 
 export function VariantsComparison() {
@@ -553,7 +553,7 @@ export function VariantsComparison() {
   ],
 
   showcase: {
-    code: `import { Button } from "@/components/pittaya/ui/button";
+    code: `import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -561,9 +561,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/pittaya/ui/card";
-import { Input } from "@/components/pittaya/ui/input";
-import { Label } from "@/components/pittaya/ui/label";
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 export function DefaultInput() {
   return (
