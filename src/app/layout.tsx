@@ -48,8 +48,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="dark flex min-h-screen flex-col antialiased">
+    <html lang="en" suppressHydrationWarning>
+      <body className="dark flex min-h-screen flex-col antialiased" suppressHydrationWarning>
         <QueryProvider>
           <Header />
           <main className="flex-1">{children}</main>

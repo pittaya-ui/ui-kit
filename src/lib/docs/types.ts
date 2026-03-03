@@ -70,3 +70,30 @@ export type ComponentDoc = {
   examples: DocExample[];
   toc: TocItem[];
 };
+
+export type BlockIndexItem = {
+  slug: string;
+  name: string;
+  description?: string;
+  category: string;
+  tags?: string[];
+};
+
+export type BlockFile = {
+  id: string;
+  name: string;
+  path: string;
+  code: string;
+  language?: string;
+};
+
+export type BlockDoc = {
+  slug: string;
+  metadata: {
+    name: string;
+    description: string;
+    category: string;
+  };
+  preview: ReactNode;
+  files: BlockFile[];
+};
